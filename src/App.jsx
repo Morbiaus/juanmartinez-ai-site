@@ -297,7 +297,7 @@ export default function JuanProfessionalLandingPage() {
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-stone-200">
               <a href="mailto:sgmmartinez@gmail.com" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
               <a href="tel:9105514562" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Phone: 910-551-4562</a>
-              <a href="https://linkedin.com/in/juan-martinez-diaz-50943411" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn: linkedin.com/in/juan-martinez-diaz-50943411</a>
+              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn: linkedin.com/in/juan-martinez-diaz-mba-itil-50943411</a>
               <a href="#" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Resume: PDF link coming next</a>
             </div>
           </div>
