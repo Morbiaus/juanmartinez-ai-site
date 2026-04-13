@@ -71,7 +71,7 @@ export default function JuanProfessionalLandingPage() {
     {
       title: 'Why Control Environments Fail Under Pressure',
       text: 'A practical look at the gap between elegant control language and what actually happens inside stressed operating environments.',
-      status: 'Planned',
+      status: 'Coming next',
       href: '#'
     }
   ];
