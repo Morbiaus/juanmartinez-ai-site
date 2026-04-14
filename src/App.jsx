@@ -124,19 +124,19 @@ export default function JuanProfessionalLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-100">
-      <header className="sticky top-0 z-50 border-b border-stone-800 bg-stone-950/95 backdrop-blur">
+    <div className="min-h-screen text-[var(--oc-text)]">
+      <header className="sticky top-0 z-50 border-b border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.82)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <div>
-            <div className="text-xl font-semibold tracking-wide">Juan A. Martinez Diaz</div>
-            <div className="text-sm text-stone-400">AI governance, technology risk, operational resilience, and executive leadership</div>
+            <div className="text-xl font-semibold tracking-wide text-[var(--oc-text)]">Juan A. Martinez Diaz</div>
+            <div className="text-sm text-[var(--oc-muted)]">AI governance, technology risk, operational resilience, and executive leadership</div>
           </div>
-          <nav className="hidden gap-6 text-sm text-stone-300 md:flex">
-            <a href="#about" className="hover:text-white">About</a>
-            <a href="#impact" className="hover:text-white">Impact</a>
-            <a href="#flagship" className="hover:text-white">Flagship Perspective</a>
-            <a href="#point-of-view" className="hover:text-white">Point of View</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+          <nav className="hidden gap-6 text-sm text-[var(--oc-muted)] md:flex">
+            <a href="#about" className="hover:text-[var(--oc-cyan)]">About</a>
+            <a href="#impact" className="hover:text-[var(--oc-cyan)]">Impact</a>
+            <a href="#flagship" className="hover:text-[var(--oc-cyan)]">Flagship Perspective</a>
+            <a href="#point-of-view" className="hover:text-[var(--oc-cyan)]">Point of View</a>
+            <a href="#contact" className="hover:text-[var(--oc-cyan)]">Contact</a>
           </nav>
         </div>
       </header>
@@ -145,40 +145,40 @@ export default function JuanProfessionalLandingPage() {
         <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-start">
             <div>
-              <div className="inline-flex rounded-full border border-stone-700 px-3 py-1 text-xs uppercase tracking-[0.2em] text-stone-300">
+              <div className="inline-flex rounded-full border border-[color:var(--oc-line-strong)] bg-[rgba(10,18,37,0.55)] px-3 py-1 text-xs uppercase tracking-[0.2em] text-[var(--oc-cyan)] shadow-[0_0_20px_rgba(67,231,255,0.08)]">
                 AI Governance • Technology Risk • Executive Judgment • Regulated Environments
               </div>
               <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
                 AI, Technology Risk, and Governance Leadership for Regulated Environments
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-stone-300 md:text-lg">
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--oc-muted)] md:text-lg">
                 Juan Martinez helps leaders translate artificial intelligence, technology risk, governance complexity, and operational pressure into decisions they can actually use.
               </p>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-stone-300 md:text-lg">
+              <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--oc-muted)] md:text-lg">
                 He brings a practical executive perspective shaped by real operating environments where control quality, resilience, and disciplined execution matter. The focus is not technology theater. It is helping organizations adopt change in ways that are useful, governable, and credible under pressure.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#flagship"
-                  className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-stone-900 shadow-lg transition hover:-translate-y-0.5"
+                  className="rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f] shadow-[0_0_24px_rgba(67,231,255,0.18)] transition hover:-translate-y-0.5"
                 >
                   Read the flagship perspective
                 </a>
                 <a
                   href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411"
-                  className="rounded-2xl border border-stone-700 px-5 py-3 text-sm font-medium text-stone-100 transition hover:border-stone-500"
+                  className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-[var(--oc-text)] transition hover:border-[color:var(--oc-line-strong)]"
                 >
                   Connect on LinkedIn
                 </a>
               </div>
             </div>
 
-            <aside className="rounded-[2rem] border border-stone-800 bg-stone-900 p-6 shadow-2xl">
+            <aside className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.72)] p-6 shadow-[0_12px_40px_rgba(0,0,0,0.28),0_0_22px_rgba(67,231,255,0.08)] backdrop-blur-xl">
               <div className="space-y-4">
                 {audiencePaths.map((item) => (
-                  <a key={item.title} href={item.href} className="block rounded-2xl border border-stone-800 bg-stone-950 p-5 transition hover:border-stone-700">
-                    <div className="text-sm text-stone-400">{item.title}</div>
-                    <div className="mt-2 text-[15px] leading-7 text-stone-200">{item.text}</div>
+                  <a key={item.title} href={item.href} className="block rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-5 transition hover:border-[color:var(--oc-line-strong)] hover:shadow-[0_0_20px_rgba(67,231,255,0.08)]">
+                    <div className="text-sm text-[var(--oc-cyan)]">{item.title}</div>
+                    <div className="mt-2 text-[15px] leading-7 text-[var(--oc-text)]">{item.text}</div>
                   </a>
                 ))}
               </div>
@@ -186,7 +186,7 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
-        <section id="impact" className="border-y border-stone-900 bg-stone-900/30">
+        <section id="impact" className="border-y border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.42)] backdrop-blur-sm">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Selected Impact</p>
@@ -197,7 +197,7 @@ export default function JuanProfessionalLandingPage() {
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {impactItems.map((item) => (
-                <div key={item.metric} className="rounded-[2rem] border border-stone-800 bg-stone-950 p-6">
+                <div key={item.metric} className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-6 shadow-[0_0_18px_rgba(99,170,255,0.05)]">
                   <div className="text-3xl font-semibold text-white">{item.metric}</div>
                   <p className="mt-3 leading-7 text-stone-300">{item.label}</p>
                 </div>
@@ -206,7 +206,7 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
-        <section id="about" className="border-t border-stone-900 bg-stone-950">
+        <section id="about" className="border-t border-[color:var(--oc-line)] bg-transparent">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <div className="grid gap-10 md:grid-cols-2">
               <div>
@@ -253,7 +253,7 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
-        <section id="flagship" className="border-y border-stone-900 bg-stone-900/30">
+        <section id="flagship" className="border-y border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.42)] backdrop-blur-sm">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Flagship Perspective</p>
             <h2 className="mt-3 max-w-4xl text-3xl font-semibold md:text-5xl">Practical AI Governance and Executive Judgment in Regulated Environments</h2>
@@ -270,13 +270,13 @@ export default function JuanProfessionalLandingPage() {
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2">
               {flagshipSections.map((section) => (
-                <div key={section.title} className="rounded-[2rem] border border-stone-800 bg-stone-950 p-7 shadow-xl">
+                <div key={section.title} className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.78)] p-7 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(67,231,255,0.06)] backdrop-blur-xl">
                   <h3 className="text-xl font-medium text-white">{section.title}</h3>
                   <p className="mt-4 leading-7 text-stone-300">{section.text}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-12 rounded-[2rem] border border-stone-800 bg-stone-950 p-8 shadow-2xl">
+            <div className="mt-12 rounded-[2rem] border border-[color:var(--oc-line-strong)] bg-[rgba(8,16,31,0.82)] p-8 shadow-[0_14px_40px_rgba(0,0,0,0.28),0_0_24px_rgba(67,231,255,0.08)] backdrop-blur-xl">
               <h3 className="text-2xl font-medium text-white">Questions executive teams should be asking now</h3>
               <div className="mt-6 grid gap-4 md:grid-cols-2">
                 {questionItems.map((item) => (
@@ -292,14 +292,14 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
-        <section id="point-of-view" className="border-y border-stone-900 bg-stone-950/60">
+        <section id="point-of-view" className="border-y border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.35)] backdrop-blur-sm">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Point of View</p>
             <h2 className="mt-3 max-w-3xl text-3xl font-semibold">Original thinking is how people remember you.</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {povItems.map((item) => (
-                <a key={item.title} href={item.href} className="block rounded-[2rem] border border-stone-800 bg-stone-900 p-7 shadow-xl transition hover:-translate-y-1 hover:border-stone-700">
-                  <div className="text-sm text-stone-400">{item.status}</div>
+                <a key={item.title} href={item.href} className="block rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.72)] p-7 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(99,170,255,0.06)] transition hover:-translate-y-1 hover:border-[color:var(--oc-line-strong)] hover:shadow-[0_14px_36px_rgba(0,0,0,0.24),0_0_20px_rgba(67,231,255,0.1)] backdrop-blur-xl">
+                  <div className="text-sm text-[var(--oc-cyan)]">{item.status}</div>
                   <h3 className="mt-2 text-xl font-medium text-white">{item.title}</h3>
                   <p className="mt-4 leading-7 text-stone-300">{item.text}</p>
                   <div className="mt-5 text-sm font-medium text-stone-200">{item.status === 'Coming next' ? 'In development' : 'Read perspective'}</div>
@@ -310,7 +310,7 @@ export default function JuanProfessionalLandingPage() {
         </section>
 
         <section id="article-mythos" className="mx-auto max-w-4xl px-6 py-20">
-          <div className="rounded-[2rem] border border-stone-800 bg-stone-900 p-8 shadow-2xl md:p-12">
+          <div className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-8 shadow-[0_14px_36px_rgba(0,0,0,0.26),0_0_22px_rgba(99,170,255,0.06)] backdrop-blur-xl md:p-12">
             <div className="text-sm uppercase tracking-[0.2em] text-stone-400">Featured Article</div>
             <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">{mythosArticle.title}</h2>
             <p className="mt-4 text-lg leading-8 text-stone-300">{mythosArticle.subtitle}</p>
@@ -323,7 +323,7 @@ export default function JuanProfessionalLandingPage() {
         </section>
 
         <section id="coming-next" className="mx-auto max-w-6xl px-6 py-20 pt-0">
-          <div className="rounded-[2rem] border border-stone-800 bg-stone-900 p-8 shadow-2xl md:p-12">
+          <div className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-8 shadow-[0_14px_36px_rgba(0,0,0,0.26),0_0_22px_rgba(99,170,255,0.06)] backdrop-blur-xl md:p-12">
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Coming Next</p>
             <h2 className="mt-3 text-3xl font-semibold">Why Control Environments Fail Under Pressure</h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-stone-300">
@@ -333,7 +333,7 @@ export default function JuanProfessionalLandingPage() {
         </section>
 
         <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-          <div className="rounded-[2rem] border border-stone-800 bg-stone-900 p-8 shadow-2xl md:p-12">
+          <div className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-8 shadow-[0_14px_36px_rgba(0,0,0,0.26),0_0_22px_rgba(99,170,255,0.06)] backdrop-blur-xl md:p-12">
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Contact</p>
             <h2 className="mt-3 text-3xl font-semibold">If your organization needs calm, clear thinking in a noisy environment, we should talk.</h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-stone-300">

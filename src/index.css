@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+:root {
+  --oc-bg0: #040814;
+  --oc-bg1: #081121;
+  --oc-bg2: #0c1730;
+  --oc-panel: rgba(10, 18, 37, 0.72);
+  --oc-panel-strong: rgba(10, 18, 37, 0.88);
+  --oc-line: rgba(96, 165, 250, 0.18);
+  --oc-line-strong: rgba(67, 231, 255, 0.22);
+  --oc-text: #eaf2ff;
+  --oc-muted: #91a6c7;
+  --oc-cyan: #43e7ff;
+  --oc-blue: #63aaff;
+  --oc-violet: #8b7cff;
+  --oc-green: #44e3a7;
+  --oc-amber: #ffcb6b;
+}
+
+html {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(67,231,255,0.10), transparent 26%),
+    radial-gradient(circle at 80% 15%, rgba(139,124,255,0.12), transparent 24%),
+    radial-gradient(circle at 50% 75%, rgba(99,170,255,0.08), transparent 28%),
+    linear-gradient(180deg, var(--oc-bg2), var(--oc-bg1) 40%, var(--oc-bg0));
+  color: var(--oc-text);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--oc-text);
+  background: transparent;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99,170,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,170,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 92%);
+  pointer-events: none;
+  opacity: 0.28;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.42), transparent),
+    radial-gradient(1.5px 1.5px at 90px 120px, rgba(67,231,255,.28), transparent),
+    radial-gradient(1.5px 1.5px at 160px 40px, rgba(255,255,255,.24), transparent);
+  background-size: 220px 220px;
+  pointer-events: none;
+  opacity: 0.14;
+}
