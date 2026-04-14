@@ -1,4 +1,22 @@
 export default function JuanProfessionalLandingPage() {
+  const audiencePaths = [
+    {
+      title: 'For Executive Recruiters',
+      text: 'See how Juan connects artificial intelligence, governance, resilience, and executive judgment in complex organizations.',
+      href: '#recruiters'
+    },
+    {
+      title: 'For Banking and Regulated-Industry Leaders',
+      text: 'Explore how AI adoption, control quality, and operational discipline intersect where credibility matters.',
+      href: '#flagship'
+    },
+    {
+      title: 'For AI and Governance Decision Makers',
+      text: 'Read practical perspectives on governance, operating-model design, accountability, and execution reality.',
+      href: '#point-of-view'
+    }
+  ];
+
   const impactItems = [
     {
       metric: '15+ years',
@@ -18,35 +36,15 @@ export default function JuanProfessionalLandingPage() {
     }
   ];
 
-  const workItems = [
-    {
-      title: 'Risk and control leadership',
-      text: 'Helping organizations identify where technology, information security, emerging technology, and operational weaknesses can disrupt execution or create avoidable exposure.'
-    },
-    {
-      title: 'Operational translation',
-      text: 'Connecting executive priorities to the processes, systems, and behaviors that determine whether a control environment is strong, scalable, and real.'
-    },
-    {
-      title: 'Practical artificial intelligence',
-      text: 'Helping leaders connect artificial intelligence opportunity to governance, operating model decisions, responsible adoption, and measurable execution.'
-    }
+  const valueItems = [
+    'Translate AI opportunity into governable execution',
+    'Connect technology risk to executive decision-making',
+    'Strengthen control quality and resilience under pressure',
+    'Clarify operating-model decisions in complex environments',
+    'Reduce noise and increase decision usefulness'
   ];
 
-  const beliefItems = [
-    'A control is only as good as the reality it can withstand. Elegant documentation does not fix weak execution.',
-    'Artificial intelligence will not eliminate the need for judgment. It will raise the premium on people who can apply judgment well.',
-    'The best leaders do not add noise. They make the right things easier to see, easier to understand, and harder to ignore.'
-  ];
-
-  const currentFocus = [
-    'Artificial intelligence governance and agent design for regulated environments',
-    'Technology and operational resilience leadership roles',
-    'Control quality, issue detection, and practical automation',
-    'Executive roles where judgment, clarity, and disciplined execution matter'
-  ];
-
-  const signatureWins = [
+  const proofItems = [
     {
       title: 'Enterprise risk translation',
       text: 'Translated emerging-technology risk, resilience, and governance issues into executive narratives that informed strategic decisions and prioritization.'
@@ -61,18 +59,53 @@ export default function JuanProfessionalLandingPage() {
     }
   ];
 
-  const writingItems = [
+  const flagshipSections = [
     {
-      title: 'What Anthropic’s Mythos Decision Signals for Banks and Other Regulated Firms',
-      text: 'Anthropic’s decision to restrict Mythos is more than a product story. It is an early warning that frontier artificial intelligence is forcing institutions to rethink cyber risk, model access, governance, and executive accountability.',
-      status: 'Featured article',
-      href: '#article-mythos'
+      title: 'Why this matters now',
+      text: 'Artificial intelligence has moved from experimentation to expectation. Boards are asking about it. Executive teams are under pressure to show movement. The real question is whether leaders can introduce value without weakening governance, obscuring accountability, or increasing operational fragility.'
+    },
+    {
+      title: 'Where organizations go wrong',
+      text: 'Organizations rarely fail because they lacked governance language. They fail because their operating reality cannot support the ambition they declared. AI is too often treated as a tool decision instead of an operating-model decision.'
+    },
+    {
+      title: 'Why judgment matters more',
+      text: 'Better automation does not remove the need for judgment. It raises the premium on it. Leaders still have to decide where automation belongs, where oversight must remain strong, and how to detect confidence that is not deserved.'
+    },
+    {
+      title: 'What strong AI governance looks like',
+      text: 'Strong AI governance is operational, not performative. It depends on clear accountability, practical risk translation, integration with the real control environment, visible decision rights, and measurable execution discipline.'
+    }
+  ];
+
+  const questionItems = [
+    'What problem are we actually trying to solve with AI?',
+    'What decision or process changes if this works?',
+    'What could fail quietly if this is implemented badly?',
+    'Which controls matter most if adoption expands quickly?',
+    'Where are we relying on documentation instead of execution proof?',
+    'Which leaders own approval, oversight, and intervention rights?',
+    'How will we know whether the operating model is holding under pressure?'
+  ];
+
+  const povItems = [
+    {
+      title: 'Practical AI Governance and Executive Judgment in Regulated Environments',
+      text: 'How leaders can adopt artificial intelligence without losing control, credibility, or execution discipline.',
+      href: '#flagship',
+      status: 'Flagship perspective'
     },
     {
       title: 'Why Control Environments Fail Under Pressure',
       text: 'A practical look at the gap between elegant control language and what actually happens inside stressed operating environments.',
-      status: 'Coming next',
-      href: '#'
+      href: '#coming-next',
+      status: 'Coming next'
+    },
+    {
+      title: 'What Anthropic’s Mythos Decision Signals for Banks and Other Regulated Firms',
+      text: 'A restricted frontier model is not just a product story. It is a signal that capability is beginning to outpace the governance habits of many institutions.',
+      href: '#article-mythos',
+      status: 'Featured article'
     }
   ];
 
@@ -96,12 +129,12 @@ export default function JuanProfessionalLandingPage() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <div>
             <div className="text-xl font-semibold tracking-wide">Juan A. Martinez Diaz</div>
-            <div className="text-sm text-stone-400">Executive partnership. Enterprise AI adoption. Governance-led transformation.</div>
+            <div className="text-sm text-stone-400">AI governance, technology risk, operational resilience, and executive leadership</div>
           </div>
           <nav className="hidden gap-6 text-sm text-stone-300 md:flex">
             <a href="#about" className="hover:text-white">About</a>
             <a href="#impact" className="hover:text-white">Impact</a>
-            <a href="#work" className="hover:text-white">Work</a>
+            <a href="#flagship" className="hover:text-white">Flagship Perspective</a>
             <a href="#point-of-view" className="hover:text-white">Point of View</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </nav>
@@ -113,48 +146,40 @@ export default function JuanProfessionalLandingPage() {
           <div className="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-start">
             <div>
               <div className="inline-flex rounded-full border border-stone-700 px-3 py-1 text-xs uppercase tracking-[0.2em] text-stone-300">
-                Enterprise AI Adoption • Technology Risk • Governance-Led Transformation
+                AI Governance • Technology Risk • Executive Judgment • Regulated Environments
               </div>
               <h1 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
-                I help organizations see risk clearly, speak plainly, and make better decisions before problems become headlines.
+                AI, Technology Risk, and Governance Leadership for Regulated Environments
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-stone-300 md:text-lg">
-                Most executive profiles sound interchangeable. I am not interested in that. My work has lived where technology, operations, accountability, and judgment meet. I have spent years helping leaders sort signal from noise, challenge weak assumptions, and bring structure to issues that can damage trust, resilience, and execution.
+                Juan Martinez helps leaders translate artificial intelligence, technology risk, governance complexity, and operational pressure into decisions they can actually use.
               </p>
               <p className="mt-4 max-w-2xl text-base leading-8 text-stone-300 md:text-lg">
-                Lately, that includes a strong focus on artificial intelligence in regulated environments: not the hype, but the real work of making these systems useful, governable, and worth trusting.
+                He brings a practical executive perspective shaped by real operating environments where control quality, resilience, and disciplined execution matter. The focus is not technology theater. It is helping organizations adopt change in ways that are useful, governable, and credible under pressure.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="#impact"
+                  href="#flagship"
                   className="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-stone-900 shadow-lg transition hover:-translate-y-0.5"
                 >
-                  See selected impact
+                  Read the flagship perspective
                 </a>
                 <a
-                  href="#point-of-view"
+                  href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411"
                   className="rounded-2xl border border-stone-700 px-5 py-3 text-sm font-medium text-stone-100 transition hover:border-stone-500"
                 >
-                  Read my perspective
+                  Connect on LinkedIn
                 </a>
-              </div>
-              <div className="mt-6 text-sm text-stone-400">
-                Best fit: Chief Information Officer, Head of Technology Risk, Controls Executive, Operational Resilience, Executive AI Partnership, or Artificial Intelligence governance leadership roles.
               </div>
             </div>
 
             <aside className="rounded-[2rem] border border-stone-800 bg-stone-900 p-6 shadow-2xl">
               <div className="space-y-4">
-                {[
-                  ['What I do', 'Help senior leaders translate emerging technology, artificial intelligence, and control complexity into decisions they can actually use.'],
-                  ['How I work', 'Direct, structured, and grounded in the real operating environment rather than theory.'],
-                  ['Where I add value', 'Highly regulated, high-consequence environments where credibility, judgment, and disciplined execution matter.'],
-                  ['What I care about now', 'Helping organizations adopt artificial intelligence in ways that are useful, governable, and tied to measurable execution.']
-                ].map(([label, value]) => (
-                  <div key={label} className="rounded-2xl border border-stone-800 bg-stone-950 p-5">
-                    <div className="text-sm text-stone-400">{label}</div>
-                    <div className="mt-2 text-[15px] leading-7 text-stone-200">{value}</div>
-                  </div>
+                {audiencePaths.map((item) => (
+                  <a key={item.title} href={item.href} className="block rounded-2xl border border-stone-800 bg-stone-950 p-5 transition hover:border-stone-700">
+                    <div className="text-sm text-stone-400">{item.title}</div>
+                    <div className="mt-2 text-[15px] leading-7 text-stone-200">{item.text}</div>
+                  </a>
                 ))}
               </div>
             </aside>
@@ -167,7 +192,7 @@ export default function JuanProfessionalLandingPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Selected Impact</p>
               <h2 className="mt-3 text-3xl font-semibold">Credibility comes from proof, not posture.</h2>
               <p className="mt-4 text-base leading-8 text-stone-300">
-                The story matters, but measurable scope matters too. Here are a few indicators of the environments I have worked in and the scale at which I have operated.
+                The site should make clear that this is executive-grade work in serious environments. Here are a few indicators of scope, complexity, and operating context.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -190,13 +215,13 @@ export default function JuanProfessionalLandingPage() {
               </div>
               <div className="space-y-5 text-base leading-8 text-stone-300">
                 <p>
-                  My background spans banking, military leadership, technology operations, and enterprise risk. That mix matters because it changed how I see organizations. I do not look at risk as a checklist exercise. I look at it as the point where people, systems, incentives, and pressure reveal what is actually true.
+                  Juan's background spans banking, military leadership, technology operations, and enterprise risk. That mix matters because it shapes a view of organizations that is grounded in what actually happens when pressure, incentives, and weak assumptions collide.
                 </p>
                 <p>
-                  I am drawn to environments where the stakes are real, the facts are messy, and leaders need someone who can bring clarity without drama. I respect strong controls, but I also believe control language is useless if it cannot survive contact with real operations.
+                  This perspective is most useful in environments where the stakes are real, the facts are messy, and leaders need clarity without drama. Strong controls matter, but control language is useless if it cannot survive contact with real operations.
                 </p>
-                <p>
-                  Outside the office, I am deeply interested in science, Bitcoin, exercise physiology, and the future of artificial intelligence. Those interests shape how I think: stay curious, test ideas, and never confuse confidence with understanding.
+                <p id="recruiters">
+                  For executive recruiters and hiring leaders, the core through-line is clear: Juan works where artificial intelligence, governance, resilience, and executive judgment meet, especially in regulated or high-consequence environments.
                 </p>
               </div>
             </div>
@@ -204,10 +229,22 @@ export default function JuanProfessionalLandingPage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-6 py-20">
-          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Signature Wins</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold">A better story is useful. Specific wins are better.</h2>
+          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">What Juan Helps Leaders Do</p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold">Useful authority starts with useful outcomes.</h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {valueItems.map((item) => (
+              <div key={item} className="rounded-2xl border border-stone-800 bg-stone-900 px-5 py-4 text-stone-200 shadow-xl">
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-20 pt-0">
+          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Proof and Leadership Scope</p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold">A stronger signal for recruiters, peers, and decision makers.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {signatureWins.map((item) => (
+            {proofItems.map((item) => (
               <div key={item.title} className="rounded-[2rem] border border-stone-800 bg-stone-900 p-7 shadow-xl">
                 <h3 className="text-xl font-medium text-white">{item.title}</h3>
                 <p className="mt-4 leading-7 text-stone-300">{item.text}</p>
@@ -216,58 +253,56 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
-        <section id="work" className="mx-auto max-w-6xl px-6 py-20 pt-0">
-          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Work</p>
-          <h2 className="mt-3 max-w-3xl text-3xl font-semibold">The through-line in my work is simple: make the important things visible early enough to act on them.</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {workItems.map((item) => (
-              <div key={item.title} className="rounded-[2rem] border border-stone-800 bg-stone-900 p-7 shadow-xl">
-                <h3 className="text-xl font-medium text-white">{item.title}</h3>
-                <p className="mt-4 leading-7 text-stone-300">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="border-y border-stone-900 bg-stone-900/30">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1fr_1fr]">
-            <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">What I’m Focused On</p>
-              <h2 className="mt-3 text-3xl font-semibold">Where I am leaning in now.</h2>
-              <div className="mt-8 space-y-4">
-                {currentFocus.map((item) => (
-                  <div key={item} className="rounded-2xl border border-stone-800 bg-stone-950 px-5 py-4 text-stone-200">
+        <section id="flagship" className="border-y border-stone-900 bg-stone-900/30">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Flagship Perspective</p>
+            <h2 className="mt-3 max-w-4xl text-3xl font-semibold md:text-5xl">Practical AI Governance and Executive Judgment in Regulated Environments</h2>
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-300">
+              How leaders can adopt artificial intelligence without losing control, credibility, or execution discipline.
+            </p>
+            <div className="mt-8 max-w-3xl space-y-5 text-base leading-8 text-stone-200">
+              <p>
+                Artificial intelligence is becoming an executive issue, not just a technical one. In regulated environments, the question is not simply where AI can create value. The question is whether leaders can adopt it in ways that preserve accountability, protect control quality, and strengthen execution rather than weaken it.
+              </p>
+              <p>
+                Useful AI depends on governance, operating discipline, clear decision rights, and an honest understanding of where complexity can break a system that looks stable on paper.
+              </p>
+            </div>
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {flagshipSections.map((section) => (
+                <div key={section.title} className="rounded-[2rem] border border-stone-800 bg-stone-950 p-7 shadow-xl">
+                  <h3 className="text-xl font-medium text-white">{section.title}</h3>
+                  <p className="mt-4 leading-7 text-stone-300">{section.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 rounded-[2rem] border border-stone-800 bg-stone-950 p-8 shadow-2xl">
+              <h3 className="text-2xl font-medium text-white">Questions executive teams should be asking now</h3>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                {questionItems.map((item) => (
+                  <div key={item} className="rounded-2xl border border-stone-800 bg-stone-900 px-5 py-4 text-stone-200">
                     {item}
                   </div>
                 ))}
               </div>
-            </div>
-
-            <div id="point-of-view">
-              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Point of View</p>
-              <h2 className="mt-3 text-3xl font-semibold">A few things I believe.</h2>
-              <div className="mt-8 space-y-4">
-                {beliefItems.map((item) => (
-                  <div key={item} className="rounded-[2rem] border border-stone-800 bg-stone-950 p-6">
-                    <p className="leading-8 text-stone-200">{item}</p>
-                  </div>
-                ))}
+              <div className="mt-8 max-w-3xl text-base leading-8 text-stone-300">
+                Juan Martinez works at the intersection of artificial intelligence, technology risk, governance, resilience, and operating reality. His focus is practical: helping leaders translate emerging technology into decisions they can use, connect AI opportunity to governance reality, and keep transformation useful, governable, and grounded in real work.
               </div>
             </div>
           </div>
         </section>
 
-        <section className="border-y border-stone-900 bg-stone-950/60">
+        <section id="point-of-view" className="border-y border-stone-900 bg-stone-950/60">
           <div className="mx-auto max-w-6xl px-6 py-20">
-            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Writing</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Point of View</p>
             <h2 className="mt-3 max-w-3xl text-3xl font-semibold">Original thinking is how people remember you.</h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {writingItems.map((item) => (
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {povItems.map((item) => (
                 <a key={item.title} href={item.href} className="block rounded-[2rem] border border-stone-800 bg-stone-900 p-7 shadow-xl transition hover:-translate-y-1 hover:border-stone-700">
                   <div className="text-sm text-stone-400">{item.status}</div>
                   <h3 className="mt-2 text-xl font-medium text-white">{item.title}</h3>
                   <p className="mt-4 leading-7 text-stone-300">{item.text}</p>
-                  <div className="mt-5 text-sm font-medium text-stone-200">{item.status === 'Featured article' ? 'Read article' : 'Coming soon'}</div>
+                  <div className="mt-5 text-sm font-medium text-stone-200">{item.status === 'Coming next' ? 'In development' : 'Read perspective'}</div>
                 </a>
               ))}
             </div>
@@ -287,18 +322,27 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
+        <section id="coming-next" className="mx-auto max-w-6xl px-6 py-20 pt-0">
+          <div className="rounded-[2rem] border border-stone-800 bg-stone-900 p-8 shadow-2xl md:p-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Coming Next</p>
+            <h2 className="mt-3 text-3xl font-semibold">Why Control Environments Fail Under Pressure</h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-stone-300">
+              A practical look at the gap between elegant control language and what actually happens inside stressed operating environments. This will be the next authority page added to the site.
+            </p>
+          </div>
+        </section>
+
         <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
           <div className="rounded-[2rem] border border-stone-800 bg-stone-900 p-8 shadow-2xl md:p-12">
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Contact</p>
             <h2 className="mt-3 text-3xl font-semibold">If your organization needs calm, clear thinking in a noisy environment, we should talk.</h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-stone-300">
-              This site is less about self-promotion and more about signal. If the problems you are working through involve enterprise artificial intelligence adoption, technology risk, governance, control quality, or operational resilience, there is a good chance we will have something useful to talk about.
+              This site is less about self-promotion and more about signal. If the problems you are working through involve enterprise artificial intelligence adoption, technology risk, governance, control quality, or operational resilience, there is a good chance there is something useful to discuss.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-stone-200">
               <a href="mailto:sgmmartinez@gmail.com" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
               <a href="tel:9105514562" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Phone: 910-551-4562</a>
-              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn: linkedin.com/in/juan-martinez-diaz-mba-itil-50943411</a>
-              <a href="#" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Resume: PDF link coming next</a>
+              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
             </div>
           </div>
         </section>
