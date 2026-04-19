@@ -102,24 +102,25 @@ export default function JuanProfessionalLandingPage() {
       status: 'Coming next'
     },
     {
-      title: 'What Anthropic’s Mythos Decision Signals for Banks and Other Regulated Firms',
-      text: 'A restricted frontier model is not just a product story. It is a signal that capability is beginning to outpace the governance habits of many institutions.',
-      href: '#article-mythos',
+      title: 'The Quiet Erosion of White-Collar Work',
+      text: 'The newest 2025 data suggests AI is no longer just a productivity story. It is beginning to compress the task base of white-collar work and weaken the career ladder that once built professional expertise.',
+      href: '#article-white-collar',
       status: 'Featured article'
     }
   ];
 
-  const mythosArticle = {
-    title: 'What Anthropic’s Mythos Decision Signals for Banks and Other Regulated Firms',
-    subtitle: 'A restricted frontier model is not just a product story. It is a signal that capability is beginning to outpace the governance habits of many institutions.',
+  const featuredArticle = {
+    title: 'The Quiet Erosion of White-Collar Work',
+    subtitle: 'The newest evidence suggests AI is not just automating tasks. It is beginning to erode the white-collar career ladder itself.',
     body: [
-      'Anthropic’s decision to keep Claude Mythos Preview out of general public hands is not just a product release choice. It is an early signal that frontier artificial intelligence is beginning to cross a threshold where capability itself changes the risk environment.',
-      'That matters because the conversation is no longer only about productivity, copilots, or faster content generation. It is now about systems that can materially alter cyber risk, accelerate exploit discovery, and compress the time between vulnerability identification and possible misuse.',
-      'For banks and other regulated firms, the lesson is straightforward. The old model of artificial intelligence governance is already becoming outdated. It is no longer enough to ask whether a model is accurate, useful, or efficient. Institutions now have to ask who gets access, what the model is allowed to touch, what workflows it can influence, what data boundaries matter, what actions require human validation, and how leadership will know when a capability has crossed into a higher-risk category.',
-      'This is why the Mythos moment matters beyond cybersecurity. It reveals a broader truth: frontier artificial intelligence will not arrive in a neat, evenly distributed way. Some capabilities will remain fit for broad use. Others will require restricted access, strong controls, monitored environments, and a much tighter connection between technical teams, business leadership, legal, compliance, and risk.',
-      'My prediction is that over the next 12 to 24 months, regulated firms will begin separating artificial intelligence into tiers. One tier will cover low-risk productivity use cases that can be broadly deployed with standard safeguards. Another tier will cover higher-consequence systems such as agentic workflows, code generation, vulnerability discovery, autonomous decision support, and models with access to sensitive internal knowledge or infrastructure. Those higher tiers will need tighter access controls, better logging, human-in-the-loop requirements, stronger vendor oversight, and clearer executive ownership.',
-      'That is the real opportunity for leaders in risk, governance, and operational resilience. The value is no longer in saying “be careful with artificial intelligence.” The value is in helping the institution answer harder questions. Which use cases deserve promotion into production? Which ones should remain constrained? What evidence should be required before scale? What fallback mechanisms should exist if the model behaves unexpectedly? What controls prove that a system is not just impressive, but governable?',
-      'The institutions that win in this next phase will not be the ones with the loudest artificial intelligence story. They will be the ones with the strongest ability to govern real capability before capability outruns control.'
+      'For years, automation was discussed as if it were mainly a threat to repetitive manual labor. That framing is now badly outdated. The newest evidence suggests the pressure is moving deeper into white-collar work, not always by eliminating entire occupations overnight, but by steadily absorbing the tasks that once justified headcount, built experience, and sustained the professional middle.',
+      'Recent 2025 data paints a more immediate picture. Pew Research reported in February 2025 that 52% of U.S. workers are more worried than hopeful about the future impact of AI in the workplace. Thirty-two percent believe it will lead to fewer job opportunities for them in the long run. Only 6% believe it will create more opportunities for them.',
+      'By October 2025, Pew also reported that the share of U.S. workers saying at least some of their work is done with AI had risen from 16% to 21% in about a year. Among workers with a bachelor’s degree or more, usage rose from 20% to 28%. That is an important clue. The acceleration is not limited to low-complexity or highly routine work. It is growing inside the educated layers of the economy, where drafting, summarization, research, analysis, and communication are core to how value is created.',
+      'The employer side is equally revealing. The World Economic Forum’s Future of Jobs Report 2025 estimates that structural labor-market transformation through 2030 will affect 22% of today’s jobs, including the displacement of 92 million roles globally. It also reports that 40% of employers expect to reduce workforce where AI can automate tasks. Workforce compression is no longer an impolite suspicion. It is part of the operating plan.',
+      'White-collar displacement does not look like factory displacement. In many cases, the role title remains and the org chart still exists. But if AI drafts the memo, summarizes the meeting, handles the research pass, reviews the contract language, or compiles the report, the task load begins to thin out. Once enough of the work is absorbed, companies do not need to eliminate every role. They simply need fewer people.',
+      'The deeper risk is the erosion of the career ladder. Historically, junior professionals built judgment through drafting, organizing, summarizing, coordinating, and reviewing. That work was not disposable. It was developmental. If AI absorbs too much of that layer before organizations deliberately redesign how people are trained, the damage will not stop at today’s headcount. It will affect tomorrow’s pipeline of experienced talent.',
+      'The strategic question is no longer whether AI can increase productivity. It clearly can. The better question is what happens to institutional capability if organizations use AI mainly to compress labor before they redesign human development. We are not just deciding how much work AI can do. We are deciding what happens to the structure of professional development itself.',
+      'Sources: Pew Research Center (Feb. 25, 2025), Pew Research Center (Oct. 6, 2025), and World Economic Forum Future of Jobs Report 2025.'
     ]
   };
 
@@ -309,13 +310,13 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
-        <section id="article-mythos" className="mx-auto max-w-4xl px-6 py-20">
+        <section id="article-white-collar" className="mx-auto max-w-4xl px-6 py-20">
           <div className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-8 shadow-[0_14px_36px_rgba(0,0,0,0.26),0_0_22px_rgba(99,170,255,0.06)] backdrop-blur-xl md:p-12">
             <div className="text-sm uppercase tracking-[0.2em] text-stone-400">Featured Article</div>
-            <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">{mythosArticle.title}</h2>
-            <p className="mt-4 text-lg leading-8 text-stone-300">{mythosArticle.subtitle}</p>
+            <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">{featuredArticle.title}</h2>
+            <p className="mt-4 text-lg leading-8 text-stone-300">{featuredArticle.subtitle}</p>
             <div className="mt-10 space-y-6 text-base leading-8 text-stone-200">
-              {mythosArticle.body.map((paragraph, index) => (
+              {featuredArticle.body.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
