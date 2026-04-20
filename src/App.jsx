@@ -105,13 +105,23 @@ export default function JuanProfessionalLandingPage() {
       title: 'The Quiet Erosion of White-Collar Work',
       text: 'The newest 2025 data suggests AI is no longer just a productivity story. It is beginning to compress the task base of white-collar work and weaken the career ladder that once built professional expertise.',
       href: '#article-white-collar',
-      status: 'Featured article'
+      status: 'Currently featured'
     }
   ];
 
   const featuredArticle = {
     title: 'The Quiet Erosion of White-Collar Work',
     subtitle: 'The newest evidence suggests AI is not just automating tasks. It is beginning to erode the white-collar career ladder itself.',
+    originalVisiblePostingDate: 'April 14, 2026',
+    homepageFeaturedDate: 'April 14, 2026',
+    archiveNote: 'When a new featured article replaces this one, this article should move into the featured archive with its original posting date preserved.',
+    archive: [
+      {
+        title: 'The Quiet Erosion of White-Collar Work',
+        originalVisiblePostingDate: 'April 14, 2026',
+        status: 'Current featured article and first entry in archive sequence'
+      }
+    ],
     body: [
       'For years, automation was discussed as if it were mainly a threat to repetitive manual labor. That framing is now badly outdated. The newest evidence suggests the pressure is moving deeper into white-collar work, not always by eliminating entire occupations overnight, but by steadily absorbing the tasks that once justified headcount, built experience, and sustained the professional middle.',
       'Recent 2025 data paints a more immediate picture. Pew Research reported in February 2025 that 52% of U.S. workers are more worried than hopeful about the future impact of AI in the workplace. Thirty-two percent believe it will lead to fewer job opportunities for them in the long run. Only 6% believe it will create more opportunities for them.',
@@ -315,10 +325,28 @@ export default function JuanProfessionalLandingPage() {
             <div className="text-sm uppercase tracking-[0.2em] text-stone-400">Featured Article</div>
             <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">{featuredArticle.title}</h2>
             <p className="mt-4 text-lg leading-8 text-stone-300">{featuredArticle.subtitle}</p>
+            <div className="mt-6 space-y-3 text-sm text-stone-400">
+              <div>Originally published: {featuredArticle.originalVisiblePostingDate}</div>
+              <div>Featured on homepage: {featuredArticle.homepageFeaturedDate}</div>
+              <div>{featuredArticle.archiveNote}</div>
+            </div>
             <div className="mt-10 space-y-6 text-base leading-8 text-stone-200">
               {featuredArticle.body.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+            </div>
+            <div className="mt-10 rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-6 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(99,170,255,0.06)] backdrop-blur-xl">
+              <div className="text-sm uppercase tracking-[0.2em] text-stone-400">Featured Archive</div>
+              <p className="mt-3 text-sm leading-7 text-stone-300">Each featured article keeps its original visible publish date when rotated off the homepage.</p>
+              <div className="mt-5 space-y-3">
+                {featuredArticle.archive.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.72)] p-5">
+                    <div className="text-sm text-stone-400">{item.originalVisiblePostingDate}</div>
+                    <div className="mt-2 text-base font-medium text-white">{item.title}</div>
+                    <div className="mt-2 text-sm leading-7 text-stone-300">{item.status}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
