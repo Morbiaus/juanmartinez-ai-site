@@ -102,35 +102,41 @@ export default function JuanProfessionalLandingPage() {
       status: 'Coming next'
     },
     {
-      title: 'The Quiet Erosion of White-Collar Work',
-      text: 'The newest 2025 data suggests AI is no longer just a productivity story. It is beginning to compress the task base of white-collar work and weaken the career ladder that once built professional expertise.',
+      title: 'The White-Collar Squeeze Has Already Begun',
+      text: 'AI is not only automating tasks. It is eroding the career ladders, entry points, and institutional norms that once made white-collar work feel durable.',
       href: '#article-white-collar',
       status: 'Currently featured'
     }
   ];
 
   const featuredArticle = {
-    title: 'The Quiet Erosion of White-Collar Work',
-    subtitle: 'The newest evidence suggests AI is not just automating tasks. It is beginning to erode the white-collar career ladder itself.',
-    originalVisiblePostingDate: 'April 14, 2026',
-    homepageFeaturedDate: 'April 14, 2026',
+    title: 'The White-Collar Squeeze Has Already Begun',
+    subtitle: 'AI is not only automating tasks. It is eroding the career ladders, entry points, and institutional norms that once made white-collar work feel durable.',
+    originalVisiblePostingDate: 'May 4, 2026',
+    homepageFeaturedDate: 'May 4, 2026',
     archiveNote: 'When a new featured article replaces this one, this article should move into the featured archive with its original posting date preserved.',
     archive: [
       {
+        title: 'The White-Collar Squeeze Has Already Begun',
+        originalVisiblePostingDate: 'May 4, 2026',
+        status: 'Current featured article'
+      },
+      {
         title: 'The Quiet Erosion of White-Collar Work',
         originalVisiblePostingDate: 'April 14, 2026',
-        status: 'Current featured article and first entry in archive sequence'
+        status: 'Previously featured article'
       }
     ],
     body: [
-      'For years, automation was discussed as if it were mainly a threat to repetitive manual labor. That framing is now badly outdated. The newest evidence suggests the pressure is moving deeper into white-collar work, not always by eliminating entire occupations overnight, but by steadily absorbing the tasks that once justified headcount, built experience, and sustained the professional middle.',
-      'Recent 2025 data paints a more immediate picture. Pew Research reported in February 2025 that 52% of U.S. workers are more worried than hopeful about the future impact of AI in the workplace. Thirty-two percent believe it will lead to fewer job opportunities for them in the long run. Only 6% believe it will create more opportunities for them.',
-      'By October 2025, Pew also reported that the share of U.S. workers saying at least some of their work is done with AI had risen from 16% to 21% in about a year. Among workers with a bachelor’s degree or more, usage rose from 20% to 28%. That is an important clue. The acceleration is not limited to low-complexity or highly routine work. It is growing inside the educated layers of the economy, where drafting, summarization, research, analysis, and communication are core to how value is created.',
-      'The employer side is equally revealing. The World Economic Forum’s Future of Jobs Report 2025 estimates that structural labor-market transformation through 2030 will affect 22% of today’s jobs, including the displacement of 92 million roles globally. It also reports that 40% of employers expect to reduce workforce where AI can automate tasks. Workforce compression is no longer an impolite suspicion. It is part of the operating plan.',
-      'White-collar displacement does not look like factory displacement. In many cases, the role title remains and the org chart still exists. But if AI drafts the memo, summarizes the meeting, handles the research pass, reviews the contract language, or compiles the report, the task load begins to thin out. Once enough of the work is absorbed, companies do not need to eliminate every role. They simply need fewer people.',
-      'The deeper risk is the erosion of the career ladder. Historically, junior professionals built judgment through drafting, organizing, summarizing, coordinating, and reviewing. That work was not disposable. It was developmental. If AI absorbs too much of that layer before organizations deliberately redesign how people are trained, the damage will not stop at today’s headcount. It will affect tomorrow’s pipeline of experienced talent.',
-      'The strategic question is no longer whether AI can increase productivity. It clearly can. The better question is what happens to institutional capability if organizations use AI mainly to compress labor before they redesign human development. We are not just deciding how much work AI can do. We are deciding what happens to the structure of professional development itself.',
-      'Sources: Pew Research Center (Feb. 25, 2025), Pew Research Center (Oct. 6, 2025), and World Economic Forum Future of Jobs Report 2025.'
+      'For years, the public story around automation was simple. Machines would come for repetitive factory labor first, while white-collar work would remain relatively protected because judgment, synthesis, and communication were supposed to be harder to automate. That assumption is breaking down in plain sight.',
+      'The most important shift in the AI economy is not just that machines can now generate language, code, analysis, and presentation-quality output. It is that they are beginning to erode the very layers of work that once served as the training ground for professional life.',
+      'We keep debating whether AI will replace jobs as if the only danger worth noticing is a clean, dramatic act of substitution. In reality, the first shock may be quieter and more destabilizing: fewer junior seats, thinner teams, compressed promotion ladders, more algorithmic oversight, and rising expectations that one high-leverage worker can now do the work that once required several.',
+      'Brookings found in late 2024 that more than 30% of workers could see at least 50% of their occupation’s tasks disrupted by generative AI, with exposure concentrated in cognitive and nonroutine work, especially in middle- and higher-paid professions. OpenAI’s labor-market analysis likewise estimated that roughly 80% of the U.S. workforce could have at least 10% of their tasks affected, while about 19% could see at least half their tasks affected.',
+      'One of the most useful empirical studies here comes from the National Bureau of Economic Research. In a real-world deployment of a generative AI assistant in customer support, researchers found a 14% average productivity gain, with much larger gains for novice and lower-skilled workers. Better tools can raise performance and shorten learning curves, but they can also make organizations less dependent on large junior cohorts and more tempted to restructure around smaller groups of highly trusted operators sitting on top of automated systems.',
+      'That is why the deeper issue is not just displacement. It is pathway compression. Historically, junior professionals built judgment through drafting, organizing, summarizing, coordinating, and reviewing. If AI absorbs too much of that layer before organizations deliberately redesign how people are trained, the damage will not stop at today’s headcount. It will affect tomorrow’s pipeline of experienced talent.',
+      'The future of work is not just about replacement. It is about access, legitimacy, and distribution. Who still gets a first shot at professional life? Who captures the productivity gains? Who gets judged by opaque systems in hiring, promotion, or termination? Those are not side questions. They are the core of the transition.',
+      'If we do not deliberately shape this moment, the likely near-term outcome is narrower opportunity, harsher competition for fewer white-collar launchpads, and deeper inequality between those who command AI systems and those displaced by them. The white-collar squeeze is not a distant possibility. It has already begun.',
+      'Sources: Brookings Institution (Oct. 10, 2024), OpenAI and OpenResearch, and NBER Working Paper 31161.'
     ]
   };
 
