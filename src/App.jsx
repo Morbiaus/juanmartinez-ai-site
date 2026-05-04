@@ -104,7 +104,7 @@ export default function JuanProfessionalLandingPage() {
     {
       title: 'The White-Collar Squeeze Has Already Begun',
       text: 'AI is not only automating tasks. It is eroding the career ladders, entry points, and institutional norms that once made white-collar work feel durable.',
-      href: '#article-white-collar',
+      href: '#article-the-white-collar-squeeze-has-already-begun',
       status: 'Currently featured'
     }
   ];
@@ -112,6 +112,9 @@ export default function JuanProfessionalLandingPage() {
   const featuredArticle = {
     title: 'The White-Collar Squeeze Has Already Begun',
     subtitle: 'AI is not only automating tasks. It is eroding the career ladders, entry points, and institutional norms that once made white-collar work feel durable.',
+    articleAnchorOrUrl: '#article-the-white-collar-squeeze-has-already-begun',
+    callToActionText: 'Read more on this topic here:',
+    fullReadMoreUrl: 'https://juanmartinez-ai-site.vercel.app/#article-the-white-collar-squeeze-has-already-begun',
     originalVisiblePostingDate: 'May 4, 2026',
     homepageFeaturedDate: 'May 4, 2026',
     archiveNote: 'When a new featured article replaces this one, this article should move into the featured archive with its original posting date preserved.',
@@ -128,15 +131,41 @@ export default function JuanProfessionalLandingPage() {
       }
     ],
     body: [
-      'For years, the public story around automation was simple. Machines would come for repetitive factory labor first, while white-collar work would remain relatively protected because judgment, synthesis, and communication were supposed to be harder to automate. That assumption is breaking down in plain sight.',
+      'For years, the public story around automation was simple.',
+      'Machines would come for repetitive factory labor first. White-collar work, by contrast, would remain relatively protected because judgment, synthesis, and communication were supposed to be harder to automate.',
+      'That assumption is breaking down in plain sight.',
       'The most important shift in the AI economy is not just that machines can now generate language, code, analysis, and presentation-quality output. It is that they are beginning to erode the very layers of work that once served as the training ground for professional life.',
-      'We keep debating whether AI will replace jobs as if the only danger worth noticing is a clean, dramatic act of substitution. In reality, the first shock may be quieter and more destabilizing: fewer junior seats, thinner teams, compressed promotion ladders, more algorithmic oversight, and rising expectations that one high-leverage worker can now do the work that once required several.',
-      'Brookings found in late 2024 that more than 30% of workers could see at least 50% of their occupation’s tasks disrupted by generative AI, with exposure concentrated in cognitive and nonroutine work, especially in middle- and higher-paid professions. OpenAI’s labor-market analysis likewise estimated that roughly 80% of the U.S. workforce could have at least 10% of their tasks affected, while about 19% could see at least half their tasks affected.',
-      'One of the most useful empirical studies here comes from the National Bureau of Economic Research. In a real-world deployment of a generative AI assistant in customer support, researchers found a 14% average productivity gain, with much larger gains for novice and lower-skilled workers. Better tools can raise performance and shorten learning curves, but they can also make organizations less dependent on large junior cohorts and more tempted to restructure around smaller groups of highly trusted operators sitting on top of automated systems.',
-      'That is why the deeper issue is not just displacement. It is pathway compression. Historically, junior professionals built judgment through drafting, organizing, summarizing, coordinating, and reviewing. If AI absorbs too much of that layer before organizations deliberately redesign how people are trained, the damage will not stop at today’s headcount. It will affect tomorrow’s pipeline of experienced talent.',
-      'The future of work is not just about replacement. It is about access, legitimacy, and distribution. Who still gets a first shot at professional life? Who captures the productivity gains? Who gets judged by opaque systems in hiring, promotion, or termination? Those are not side questions. They are the core of the transition.',
-      'If we do not deliberately shape this moment, the likely near-term outcome is narrower opportunity, harsher competition for fewer white-collar launchpads, and deeper inequality between those who command AI systems and those displaced by them. The white-collar squeeze is not a distant possibility. It has already begun.',
-      'Sources: Brookings Institution (Oct. 10, 2024), OpenAI and OpenResearch, and NBER Working Paper 31161.'
+      'This is why the future of work conversation is still too shallow.',
+      'We keep debating whether AI will "replace jobs" as if the only danger worth noticing is a clean, dramatic act of substitution. In reality, the first shock may be quieter and more destabilizing: fewer junior seats, thinner teams, compressed promotion ladders, more algorithmic oversight, and rising expectations that one high-leverage worker can now do the work that once required several.',
+      'That is not science fiction. It is a structural warning.',
+      'Brookings found in late 2024 that more than 30% of workers could see at least 50% of their occupation’s tasks disrupted by generative AI, with particular exposure concentrated in cognitive and nonroutine work, especially in middle- and higher-paid professions. OpenAI’s earlier labor-market analysis likewise estimated that roughly 80% of the U.S. workforce could have at least 10% of their tasks affected, while about 19% could see at least half their tasks affected.',
+      'That should end the lazy fiction that white-collar work sits safely outside the blast radius.',
+      'The question is not whether AI can help knowledge workers. It clearly can. The deeper question is what happens to a society when the productivity gains from AI arrive faster than its institutions can absorb them.',
+      'One of the most useful empirical studies here comes from the National Bureau of Economic Research. In a real-world deployment of a generative AI assistant in customer support, researchers found a 14% average productivity gain, with much larger gains for novice and lower-skilled workers. That sounds encouraging, and in one sense it is. Better tools can raise performance, spread best practices, and shorten learning curves.',
+      'But that is also exactly why this moment is dangerous.',
+      'If AI lets fewer people produce more output, organizations do not simply become more efficient. They often become less dependent on large junior cohorts, less willing to train slowly, and more tempted to restructure around smaller groups of highly trusted operators sitting on top of automated systems. In other words, AI does not need to eliminate every white-collar role to hollow out the career ladder beneath it.',
+      'That is the part society is still preparing for badly.',
+      'We are spending enormous amounts of time arguing about frontier-model risk, artificial general intelligence timelines, and abstract superintelligence scenarios. Some of that is legitimate. But the nearer crisis is more practical and more political.',
+      'What happens when entry-level analysts, coordinators, recruiters, paralegals, marketers, support staff, and other early-career knowledge workers discover that the market no longer needs as many of them?',
+      'What happens when firms still hire, but only for a narrower set of elite workers who already know how to direct AI systems, audit outputs, and assume responsibility for mistakes?',
+      'What happens when the surviving jobs become more productive, but also more surveilled, more metrics-driven, and more psychologically brittle?',
+      'This is where the conversation must mature.',
+      'The future of work is not just about replacement. It is about access, legitimacy, and distribution.',
+      'Who still gets a first shot at professional life?',
+      'Who captures the productivity gains?',
+      'Who gets judged by opaque systems in hiring, promotion, or termination?',
+      'Who is asked to adapt, and on what timetable?',
+      'Pew Research data suggests the public already senses the legitimacy problem. Americans expect AI to have a major impact on work, but strongly resist the idea of machine-led hiring and firing decisions. That instinct is healthy. People understand, even before the policy class fully does, that a society cannot casually hand over economic gatekeeping to systems that are cheap to deploy, difficult to audit, and easy to hide behind.',
+      'So what would serious preparation look like?',
+      'First, education has to shift away from the fantasy that static credentialing alone is enough. The durable value in an AI-saturated economy will concentrate around judgment, synthesis, trust, taste, accountability, and domain-specific decision-making under uncertainty.',
+      'Second, we need new apprenticeship pathways for junior knowledge workers. If AI compresses traditional learning curves, institutions must create intentional bridges into professional competence instead of assuming old ladders will somehow survive on their own.',
+      'Third, policymakers should focus far more explicitly on transparency in AI-mediated hiring, evaluation, and workplace surveillance. A labor market governed by opaque models will not feel legitimate, even if it is efficient on paper.',
+      'Fourth, leaders need to stop measuring success only through productivity. If output rises while access to stable professional development collapses, society will experience that as decline, not progress.',
+      'And finally, employers should stop pretending they are merely buying tools. They are redesigning labor structures. That means they are making political choices whether they admit it or not.',
+      'The convenient story is that AI will remove drudgery and free human beings for higher-order work. Sometimes it will. But unless we deliberately shape this transition, the likelier near-term outcome is narrower opportunity, harsher competition for fewer white-collar launchpads, and deeper inequality between those who command AI systems and those displaced by them.',
+      'The white-collar squeeze is not a distant possibility.',
+      'It has already begun.',
+      'What matters now is whether we prepare for the world that is actually arriving, not the one that is easiest to talk about.'
     ]
   };
 
@@ -326,7 +355,7 @@ export default function JuanProfessionalLandingPage() {
           </div>
         </section>
 
-        <section id="article-white-collar" className="mx-auto max-w-4xl px-6 py-20">
+        <section id={featuredArticle.articleAnchorOrUrl.replace(/^#/, "")} className="mx-auto max-w-4xl px-6 py-20">
           <div className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-8 shadow-[0_14px_36px_rgba(0,0,0,0.26),0_0_22px_rgba(99,170,255,0.06)] backdrop-blur-xl md:p-12">
             <div className="text-sm uppercase tracking-[0.2em] text-stone-400">Featured Article</div>
             <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">{featuredArticle.title}</h2>
@@ -335,6 +364,15 @@ export default function JuanProfessionalLandingPage() {
               <div>Originally published: {featuredArticle.originalVisiblePostingDate}</div>
               <div>Featured on homepage: {featuredArticle.homepageFeaturedDate}</div>
               <div>{featuredArticle.archiveNote}</div>
+            </div>
+            <div className="mt-6 rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-5 text-sm text-stone-300">
+              <div className="font-medium text-white">{featuredArticle.callToActionText}</div>
+              <a
+                href={featuredArticle.fullReadMoreUrl}
+                className="mt-2 inline-block break-all text-[var(--oc-cyan)] hover:text-white"
+              >
+                {featuredArticle.fullReadMoreUrl}
+              </a>
             </div>
             <div className="mt-10 space-y-6 text-base leading-8 text-stone-200">
               {featuredArticle.body.map((paragraph, index) => (
