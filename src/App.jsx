@@ -102,27 +102,38 @@ export default function JuanProfessionalLandingPage() {
       status: 'Coming next'
     },
     {
+      title: 'The AI Productivity Shock May Arrive Before Society Can Absorb It',
+      text: 'AI may increase output faster than institutions can redesign opportunity, training, and professional mobility around it.',
+      href: '#article-the-ai-productivity-shock-may-arrive-before-society-can-absorb-it',
+      status: 'Currently featured'
+    },
+    {
       title: 'The White-Collar Squeeze Has Already Begun',
       text: 'AI is not only automating tasks. It is eroding the career ladders, entry points, and institutional norms that once made white-collar work feel durable.',
       href: '#article-the-white-collar-squeeze-has-already-begun',
-      status: 'Currently featured'
+      status: 'Previously featured'
     }
   ];
 
   const featuredArticle = {
-    title: 'The White-Collar Squeeze Has Already Begun',
-    subtitle: 'AI is not only automating tasks. It is eroding the career ladders, entry points, and institutional norms that once made white-collar work feel durable.',
-    articleAnchorOrUrl: '#article-the-white-collar-squeeze-has-already-begun',
+    title: 'The AI Productivity Shock May Arrive Before Society Can Absorb It',
+    subtitle: 'AI may increase output faster than institutions can redesign opportunity, training, and professional mobility around it.',
+    articleAnchorOrUrl: '#article-the-ai-productivity-shock-may-arrive-before-society-can-absorb-it',
     callToActionText: 'Read more on this topic here:',
-    fullReadMoreUrl: 'https://juanmartinez-ai-site.vercel.app/#article-the-white-collar-squeeze-has-already-begun',
-    originalVisiblePostingDate: 'May 4, 2026',
-    homepageFeaturedDate: 'May 4, 2026',
+    fullReadMoreUrl: 'https://juanmartinez-ai-site.vercel.app/#article-the-ai-productivity-shock-may-arrive-before-society-can-absorb-it',
+    originalVisiblePostingDate: 'May 11, 2026',
+    homepageFeaturedDate: 'May 11, 2026',
     archiveNote: 'When a new featured article replaces this one, this article should move into the featured archive with its original posting date preserved.',
     archive: [
       {
+        title: 'The AI Productivity Shock May Arrive Before Society Can Absorb It',
+        originalVisiblePostingDate: 'May 11, 2026',
+        status: 'Current featured article'
+      },
+      {
         title: 'The White-Collar Squeeze Has Already Begun',
         originalVisiblePostingDate: 'May 4, 2026',
-        status: 'Current featured article'
+        status: 'Previously featured article'
       },
       {
         title: 'The Quiet Erosion of White-Collar Work',
@@ -131,42 +142,46 @@ export default function JuanProfessionalLandingPage() {
       }
     ],
     body: [
-      'For years, the public story around automation was simple.',
-      'Machines would come for repetitive factory labor first. White-collar work, by contrast, would remain relatively protected because judgment, synthesis, and communication were supposed to be harder to automate.',
-      'That assumption is breaking down in plain sight.',
-      'The most important shift in the AI economy is not just that machines can now generate language, code, analysis, and presentation-quality output. It is that they are beginning to erode the very layers of work that once served as the training ground for professional life.',
-      'This is why the future of work conversation is still too shallow.',
-      'We keep debating whether AI will "replace jobs" as if the only danger worth noticing is a clean, dramatic act of substitution. In reality, the first shock may be quieter and more destabilizing: fewer junior seats, thinner teams, compressed promotion ladders, more algorithmic oversight, and rising expectations that one high-leverage worker can now do the work that once required several.',
-      'That is not science fiction. It is a structural warning.',
-      'Brookings found in late 2024 that more than 30% of workers could see at least 50% of their occupation’s tasks disrupted by generative AI, with particular exposure concentrated in cognitive and nonroutine work, especially in middle- and higher-paid professions. OpenAI’s earlier labor-market analysis likewise estimated that roughly 80% of the U.S. workforce could have at least 10% of their tasks affected, while about 19% could see at least half their tasks affected.',
-      'That should end the lazy fiction that white-collar work sits safely outside the blast radius.',
-      'The question is not whether AI can help knowledge workers. It clearly can. The deeper question is what happens to a society when the productivity gains from AI arrive faster than its institutions can absorb them.',
-      'One of the most useful empirical studies here comes from the National Bureau of Economic Research. In a real-world deployment of a generative AI assistant in customer support, researchers found a 14% average productivity gain, with much larger gains for novice and lower-skilled workers. That sounds encouraging, and in one sense it is. Better tools can raise performance, spread best practices, and shorten learning curves.',
-      'But that is also exactly why this moment is dangerous.',
-      'If AI lets fewer people produce more output, organizations do not simply become more efficient. They often become less dependent on large junior cohorts, less willing to train slowly, and more tempted to restructure around smaller groups of highly trusted operators sitting on top of automated systems. In other words, AI does not need to eliminate every white-collar role to hollow out the career ladder beneath it.',
-      'That is the part society is still preparing for badly.',
-      'We are spending enormous amounts of time arguing about frontier-model risk, artificial general intelligence timelines, and abstract superintelligence scenarios. Some of that is legitimate. But the nearer crisis is more practical and more political.',
-      'What happens when entry-level analysts, coordinators, recruiters, paralegals, marketers, support staff, and other early-career knowledge workers discover that the market no longer needs as many of them?',
-      'What happens when firms still hire, but only for a narrower set of elite workers who already know how to direct AI systems, audit outputs, and assume responsibility for mistakes?',
-      'What happens when the surviving jobs become more productive, but also more surveilled, more metrics-driven, and more psychologically brittle?',
-      'This is where the conversation must mature.',
-      'The future of work is not just about replacement. It is about access, legitimacy, and distribution.',
-      'Who still gets a first shot at professional life?',
-      'Who captures the productivity gains?',
-      'Who gets judged by opaque systems in hiring, promotion, or termination?',
-      'Who is asked to adapt, and on what timetable?',
-      'Pew Research data suggests the public already senses the legitimacy problem. Americans expect AI to have a major impact on work, but strongly resist the idea of machine-led hiring and firing decisions. That instinct is healthy. People understand, even before the policy class fully does, that a society cannot casually hand over economic gatekeeping to systems that are cheap to deploy, difficult to audit, and easy to hide behind.',
-      'So what would serious preparation look like?',
-      'First, education has to shift away from the fantasy that static credentialing alone is enough. The durable value in an AI-saturated economy will concentrate around judgment, synthesis, trust, taste, accountability, and domain-specific decision-making under uncertainty.',
-      'Second, we need new apprenticeship pathways for junior knowledge workers. If AI compresses traditional learning curves, institutions must create intentional bridges into professional competence instead of assuming old ladders will somehow survive on their own.',
-      'Third, policymakers should focus far more explicitly on transparency in AI-mediated hiring, evaluation, and workplace surveillance. A labor market governed by opaque models will not feel legitimate, even if it is efficient on paper.',
-      'Fourth, leaders need to stop measuring success only through productivity. If output rises while access to stable professional development collapses, society will experience that as decline, not progress.',
-      'And finally, employers should stop pretending they are merely buying tools. They are redesigning labor structures. That means they are making political choices whether they admit it or not.',
-      'The convenient story is that AI will remove drudgery and free human beings for higher-order work. Sometimes it will. But unless we deliberately shape this transition, the likelier near-term outcome is narrower opportunity, harsher competition for fewer white-collar launchpads, and deeper inequality between those who command AI systems and those displaced by them.',
-      'The white-collar squeeze is not a distant possibility.',
-      'It has already begun.',
-      'What matters now is whether we prepare for the world that is actually arriving, not the one that is easiest to talk about.'
-    ]
+      "The most important question about AI and white-collar work may not be whether productivity improves.",
+      "It probably will.",
+      "The harder question is whether society can absorb those productivity gains without breaking the pathways that used to make professional mobility possible.",
+      "That distinction matters.",
+      "A company can adopt AI, reduce cycle time, produce more analysis, draft more content, answer more customers, review more documents, and support more decisions with fewer people. From the firm’s perspective, that can look like progress. Output rises. Costs fall. The spreadsheet improves.",
+      "But the social question is different.",
+      "What happens when the efficiency gain comes from needing fewer entry-level analysts, coordinators, associates, researchers, support staff, marketers, recruiters, paralegals, and junior operators?",
+      "What happens when the organization still needs senior judgment, but no longer needs as many junior people doing the work through which judgment was historically developed?",
+      "That is where the AI labor conversation is still too thin.",
+      "We keep treating productivity as if it automatically becomes shared prosperity. It does not. Productivity gains have to be absorbed through institutions: hiring models, training systems, education, credentialing, management practice, wage structures, and public policy.",
+      "If those institutions lag, the result can be deeply unstable.",
+      "More output, but fewer entry points.",
+      "More efficiency, but less mobility.",
+      "More leverage for already-skilled workers, but a narrower path for everyone trying to become one.",
+      "This is why the near-term AI labor shock may not look like a clean wave of job replacement. It may look more like a mismatch between corporate efficiency and social absorption.",
+      "Firms will move quickly because the incentives are immediate. If AI lets one experienced person do the work of three less experienced people, many organizations will not pause to ask what happens to the two people who no longer get hired, trained, corrected, and gradually trusted.",
+      "Markets are good at rewarding efficiency. They are much less reliable at preserving developmental pathways.",
+      "That is a problem because white-collar work has always depended on more than formal education. It depended on an ecosystem of imperfect but useful learning: first drafts, repetitive analysis, client support, documentation, coordination, review cycles, and the slow accumulation of professional judgment.",
+      "Some of that work was tedious. Some of it was inefficient. But it taught people how organizations actually function.",
+      "If AI compresses that layer too aggressively, we may get a labor market that is more productive on paper and less capable of producing the next generation of trusted professionals.",
+      "That should concern leaders, educators, policymakers, and workers at the same time.",
+      "For leaders, the question is not just: how much cost can we take out?",
+      "It is also: what capability are we failing to build if we remove too much of the learning layer?",
+      "For educators, the question is not just: how do we teach people to use AI?",
+      "It is: how do we prepare people for a labor market where the old first-rung jobs may be thinner, faster, and more selective?",
+      "For policymakers, the question is not just: how many jobs will disappear?",
+      "It is: how do we preserve broad access to competence, mobility, and economic relevance when firms can scale output with fewer people?",
+      "And for workers, the question is not simply whether AI can help them do more.",
+      "It is whether they can become the kind of person organizations trust to direct, evaluate, and take responsibility for AI-accelerated work.",
+      "That trust layer may become one of the most important divides in the next economy.",
+      "The people who can combine domain knowledge, judgment, accountability, and AI fluency may become dramatically more productive. But the people outside that trusted layer may find the path inward harder than before.",
+      "That is the danger.",
+      "Not just displacement.",
+      "A narrower bridge into durable work.",
+      "The optimistic version of the future is that AI expands human capability while institutions redesign education, apprenticeship, and work around the new tools. That future is possible.",
+      "But it is not automatic.",
+      "If we treat productivity as the only metric that matters, we may celebrate efficiency while quietly eroding the systems that allowed people to enter, learn, advance, and belong.",
+      "The AI productivity shock is coming.",
+      "The real test is whether our institutions can absorb it fast enough to keep opportunity from narrowing while output expands."
+]
   };
 
   return (
