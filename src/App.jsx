@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 export default function JuanProfessionalLandingPage() {
   const audiencePaths = [
     {
@@ -198,6 +200,31 @@ export default function JuanProfessionalLandingPage() {
       '- Bank of England, Financial Conduct Authority (FCA), and His Majesty’s Treasury (HM Treasury), “Joint statement on Frontier AI models and cyber resilience,” May 2026: https://www.bankofengland.co.uk/news/2026/may/boe-fca-and-hm-treasury-joint-statement-on-frontier-ai-models-and-cyber-resilience'
     ]
   };
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+
+      if (!hash) return;
+
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+
+      if (!target) return;
+
+      window.requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      });
+    };
+
+    const timeoutId = window.setTimeout(scrollToHash, 0);
+
+    window.addEventListener('hashchange', scrollToHash);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+      window.removeEventListener('hashchange', scrollToHash);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen text-[var(--oc-text)]">
