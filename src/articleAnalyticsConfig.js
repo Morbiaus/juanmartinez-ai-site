@@ -1,0 +1,35 @@
+export const contentAnalyticsDashboardPath = '/admin/content-analytics';
+
+export const articleAnalyticsConfig = [
+  {
+    title: 'Stop Starting with AI. Start with the Workflow.',
+    slug: 'stop-starting-with-ai-start-with-the-workflow',
+    published_date: '2026-07-20',
+    category: 'Enterprise AI',
+    campaign: 'workflow_before_ai',
+    author: 'Juan A. Martinez Diaz, MBA',
+    estimated_read_time: '3 min'
+  },
+  {
+    title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
+    slug: 'ai-fluency-premium',
+    published_date: '2026-06-22',
+    category: 'AI, Work, and Human Advantage',
+    campaign: 'ai_fluency_premium',
+    author: 'Juan A. Martinez Diaz, MBA',
+    estimated_read_time: '6 min'
+  },
+  {
+    title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
+    slug: 'ai-human-judgment-education',
+    published_date: '2026-05-29',
+    category: 'Human-Centered AI',
+    campaign: 'human_judgment_education',
+    author: 'Juan A. Martinez Diaz, MBA',
+    estimated_read_time: '5 min'
+  }
+];
+
+export const articleAnalyticsBySlug = Object.fromEntries(
+  articleAnalyticsConfig.map((article) => [article.slug, article])
+);

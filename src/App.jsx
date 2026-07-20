@@ -1,14 +1,27 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { track } from '@vercel/analytics';
 import { Analytics } from '@vercel/analytics/react';
+import { articleAnalyticsBySlug, contentAnalyticsDashboardPath } from './articleAnalyticsConfig';
 
-const workflowArticleSlug = 'stop-starting-with-ai-start-with-the-workflow';
-const workflowCampaign = 'workflow_before_ai';
+const getSlugFromArticle = (article) => (
+  article?.slug || article?.articleAnchorOrUrl?.replace(/^#|\//, '') || ''
+);
 
-const trackWorkflowEventOnce = (eventName, properties) => {
+const trackArticleEventOnce = (eventName, metadata, extraProperties = {}) => {
   if (typeof window === 'undefined') return;
 
-  const key = `workflow:${eventName}:${properties.article_slug}:${properties.campaign}`;
+  const properties = {
+    article_slug: metadata.slug,
+    article_title: metadata.title,
+    published_date: metadata.published_date,
+    category: metadata.category,
+    campaign: metadata.campaign,
+    author: metadata.author,
+    estimated_read_time: metadata.estimated_read_time,
+    ...extraProperties
+  };
+
+  const key = `article:${eventName}:${metadata.slug}:${metadata.campaign}`;
 
   try {
     if (window.sessionStorage.getItem(key)) return;
@@ -21,11 +34,146 @@ const trackWorkflowEventOnce = (eventName, properties) => {
 };
 
 const getCampaign = () => {
-  if (typeof window === 'undefined') return workflowCampaign;
+  if (typeof window === 'undefined') return null;
 
   const campaign = new URLSearchParams(window.location.search).get('utm_campaign');
-  return campaign || workflowCampaign;
+  return campaign;
 };
+
+const estimateReadTime = (article) => {
+  const textBlocks = [
+    ...(article.body || []),
+    ...(article.closingBody || [])
+  ].flat();
+  const wordCount = textBlocks.join(' ').trim().split(/\s+/).filter(Boolean).length;
+
+  return `${Math.max(1, Math.ceil(wordCount / 225))} min`;
+};
+
+function ContentAnalyticsDashboard() {
+  const [token, setToken] = useState('');
+  const [status, setStatus] = useState('Enter the admin token to load metrics.');
+  const [analytics, setAnalytics] = useState(null);
+
+  const loadAnalytics = async (event) => {
+    event.preventDefault();
+    setStatus('Loading metrics...');
+    setAnalytics(null);
+
+    try {
+      const response = await fetch('/api/content-analytics?since=30d', {
+        headers: {
+          authorization: `Bearer ${token}`
+        }
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        setStatus(data.error || `Dashboard API returned ${response.status}.`);
+        return;
+      }
+
+      setAnalytics(data);
+      setStatus(`Metrics loaded. Generated ${new Date(data.generatedAt).toLocaleString()}.`);
+    } catch (error) {
+      setStatus(error.message);
+    }
+  };
+
+  const totals = analytics?.totals;
+
+  return (
+    <div className="min-h-screen text-[var(--oc-text)]">
+      <main className="mx-auto max-w-6xl px-6 py-12">
+        <section className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-8 shadow-[0_14px_36px_rgba(0,0,0,0.26),0_0_22px_rgba(99,170,255,0.06)] backdrop-blur-xl md:p-12">
+          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Internal</p>
+          <h1 className="mt-3 text-4xl font-semibold leading-tight md:text-5xl">Content Analytics</h1>
+          <form onSubmit={loadAnalytics} className="mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
+            <input
+              type="password"
+              value={token}
+              onChange={(event) => setToken(event.target.value)}
+              placeholder="Admin token"
+              className="min-h-12 flex-1 rounded-2xl border border-stone-700 bg-stone-950 px-4 text-sm text-white outline-none transition focus:border-[color:var(--oc-cyan)]"
+            />
+            <button type="submit" className="min-h-12 rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 text-sm font-medium text-[#06101f]">
+              Load
+            </button>
+          </form>
+          <p className="mt-4 text-sm leading-7 text-stone-400">{status}</p>
+
+          {totals && (
+            <>
+              <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                {[
+                  ['Total Article Views', totals.articleViews],
+                  ['LinkedIn Campaign Visitors', totals.linkedInCampaignVisitors],
+                  ['Average Read Depth', `${totals.averageReadDepth}%`],
+                  ['Article Completion Rate', `${totals.completionRate}%`],
+                  ['Contact Clicks', totals.contactClicks],
+                  ['LinkedIn Profile Clicks', totals.linkedInProfileClicks],
+                  ['Returning Visitors', totals.returningVisitors ?? 'Not supported'],
+                  ['Reporting Window', analytics.since]
+                ].map(([label, value]) => (
+                  <div key={label} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-5">
+                    <div className="text-sm text-stone-400">{label}</div>
+                    <div className="mt-2 text-2xl font-semibold text-white">{value}</div>
+                  </div>
+                ))}
+              </div>
+
+              <section className="mt-10">
+                <h2 className="text-2xl font-semibold">Top Performing Articles</h2>
+                <div className="mt-4 overflow-x-auto">
+                  <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+                    <thead className="text-stone-400">
+                      <tr>
+                        {['Article', 'Views', 'Visitors', 'Completion', 'Contact', 'LinkedIn'].map((heading) => (
+                          <th key={heading} className="border-b border-[color:var(--oc-line)] px-3 py-3 font-medium">{heading}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {analytics.topPerformingArticles.map((article) => (
+                        <tr key={article.slug} className="border-b border-[color:var(--oc-line)] text-stone-200">
+                          <td className="px-3 py-4">
+                            <div className="font-medium text-white">{article.title}</div>
+                            <div className="mt-1 text-xs text-stone-500">{article.category} / {article.campaign}</div>
+                          </td>
+                          <td className="px-3 py-4">{article.pageviews}</td>
+                          <td className="px-3 py-4">{article.visitors}</td>
+                          <td className="px-3 py-4">{article.completionRate}%</td>
+                          <td className="px-3 py-4">{article.contactClicks}</td>
+                          <td className="px-3 py-4">{article.linkedInProfileClicks}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section className="mt-10">
+                <h2 className="text-2xl font-semibold">Campaign Comparison</h2>
+                <div className="mt-4 grid gap-4 md:grid-cols-3">
+                  {analytics.campaignComparison.map((campaign) => (
+                    <div key={campaign.slug} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-5">
+                      <div className="text-sm text-stone-400">{campaign.campaign}</div>
+                      <div className="mt-2 font-medium text-white">{campaign.title}</div>
+                      <div className="mt-3 text-sm text-stone-300">
+                        Visitors: {campaign.unavailable ? 'Requires Web Analytics Plus/Enterprise UTM access' : campaign.visitors}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </>
+          )}
+        </section>
+      </main>
+      <Analytics />
+    </div>
+  );
+}
 
 export default function JuanProfessionalLandingPage() {
   const audiencePaths = [
@@ -164,6 +312,7 @@ export default function JuanProfessionalLandingPage() {
 
   const workflowArticle = {
     title: 'Stop Starting with AI. Start with the Workflow.',
+    slug: 'stop-starting-with-ai-start-with-the-workflow',
     category: 'Enterprise AI',
     author: 'Juan A. Martinez Diaz, MBA',
     tags: ['Enterprise AI', 'AI Operations', 'Agentic AI', 'Workflow Design', 'AI Governance', 'Digital Transformation'],
@@ -334,6 +483,7 @@ export default function JuanProfessionalLandingPage() {
 
   const humanJudgmentArticle = {
     title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
+    slug: 'ai-human-judgment-education',
     category: 'Human-Centered AI',
     author: 'Juan A. Martinez Diaz',
     tags: ['AI in Education', 'Critical Thinking', 'Digital Wisdom', 'Human Agency', 'AI Ethics', 'Future of Learning'],
@@ -444,6 +594,7 @@ export default function JuanProfessionalLandingPage() {
 
   const aiFluencyPremiumArticle = {
     title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
+    slug: 'ai-fluency-premium',
     category: 'AI, Work, and Human Advantage',
     author: 'Juan A. Martinez Diaz',
     tags: ['Artificial Intelligence', 'Future of Work', 'AI Fluency', 'Workforce Strategy', 'Human Judgment', 'Career Resilience'],
@@ -539,18 +690,56 @@ export default function JuanProfessionalLandingPage() {
     '/ai-human-judgment-education': humanJudgmentArticle
   };
   const currentPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') || '/' : '/';
+  const isContentAnalyticsDashboard = currentPath === contentAnalyticsDashboardPath;
   const currentStandaloneArticle = articleRoutes[currentPath] || null;
   const isArticlePage = Boolean(currentStandaloneArticle);
-  const isWorkflowArticlePage = currentPath === `/${workflowArticleSlug}`;
+
+  const getArticleAnalyticsMetadata = (article) => {
+    const slug = getSlugFromArticle(article);
+    const configuredMetadata = articleAnalyticsBySlug[slug] || {};
+    const campaign = getCampaign() || configuredMetadata.campaign || slug;
+
+    return {
+      title: article.title,
+      slug,
+      published_date: article.publishedDateIso || configuredMetadata.published_date || article.originalVisiblePostingDate,
+      category: article.category || configuredMetadata.category || 'Article',
+      campaign,
+      author: article.author || configuredMetadata.author || 'Juan A. Martinez Diaz, MBA',
+      estimated_read_time: configuredMetadata.estimated_read_time || estimateReadTime(article)
+    };
+  };
+
+  const currentArticleAnalyticsMetadata = currentStandaloneArticle
+    ? getArticleAnalyticsMetadata(currentStandaloneArticle)
+    : null;
 
   const trackContactIntent = (destination) => {
-    if (!isWorkflowArticlePage) return;
+    if (!currentArticleAnalyticsMetadata) return;
 
     track('article_contact_intent', {
-      article_slug: workflowArticleSlug,
-      campaign: getCampaign(),
+      article_slug: currentArticleAnalyticsMetadata.slug,
+      article_title: currentArticleAnalyticsMetadata.title,
+      published_date: currentArticleAnalyticsMetadata.published_date,
+      category: currentArticleAnalyticsMetadata.category,
+      campaign: currentArticleAnalyticsMetadata.campaign,
+      author: currentArticleAnalyticsMetadata.author,
+      estimated_read_time: currentArticleAnalyticsMetadata.estimated_read_time,
       destination
     });
+
+    if (destination === 'linkedin_profile') {
+      track('linkedin_profile_click', {
+        article_slug: currentArticleAnalyticsMetadata.slug,
+        article_title: currentArticleAnalyticsMetadata.title,
+        published_date: currentArticleAnalyticsMetadata.published_date,
+        category: currentArticleAnalyticsMetadata.category,
+        campaign: currentArticleAnalyticsMetadata.campaign,
+        author: currentArticleAnalyticsMetadata.author,
+        estimated_read_time: currentArticleAnalyticsMetadata.estimated_read_time,
+        destination: 'linkedin'
+      });
+    }
   };
 
   const renderArticleSection = (article, standalone = false) => (
@@ -780,28 +969,38 @@ export default function JuanProfessionalLandingPage() {
   ]);
 
   useEffect(() => {
-    if (!isWorkflowArticlePage) return undefined;
+    if (!currentArticleAnalyticsMetadata) return undefined;
 
-    const campaign = getCampaign();
-
-    trackWorkflowEventOnce('article_viewed', {
-      article_slug: workflowArticleSlug,
-      campaign
-    });
+    trackArticleEventOnce('article_viewed', currentArticleAnalyticsMetadata);
 
     const trackReadDepth = () => {
       const documentElement = document.documentElement;
       const scrollableHeight = documentElement.scrollHeight - window.innerHeight;
       const scrollDepth = scrollableHeight <= 0 ? 1 : (window.scrollY / scrollableHeight);
+      const scrollPercentage = Math.min(100, Math.round(scrollDepth * 100));
 
-      if (scrollDepth < 0.75) return;
+      if (scrollPercentage >= 75) {
+        trackArticleEventOnce('article_read_75_percent', currentArticleAnalyticsMetadata, {
+          read_percentage: 75
+        });
+      }
 
-      trackWorkflowEventOnce('article_read_75_percent', {
-        article_slug: workflowArticleSlug,
-        campaign
-      });
+      if (scrollPercentage >= 95) {
+        trackArticleEventOnce('article_completed', currentArticleAnalyticsMetadata, {
+          completion_percentage: scrollPercentage
+        });
+      }
 
-      window.removeEventListener('scroll', trackReadDepth);
+      const completionKey = `article:article_completed:${currentArticleAnalyticsMetadata.slug}:${currentArticleAnalyticsMetadata.campaign}`;
+      try {
+        if (window.sessionStorage.getItem(completionKey)) {
+          window.removeEventListener('scroll', trackReadDepth);
+        }
+      } catch {
+        if (scrollPercentage >= 95) {
+          window.removeEventListener('scroll', trackReadDepth);
+        }
+      }
     };
 
     trackReadDepth();
@@ -811,8 +1010,12 @@ export default function JuanProfessionalLandingPage() {
       window.removeEventListener('scroll', trackReadDepth);
     };
   }, [
-    isWorkflowArticlePage
+    currentArticleAnalyticsMetadata
   ]);
+
+  if (isContentAnalyticsDashboard) {
+    return <ContentAnalyticsDashboard />;
+  }
 
   return (
     <div className="min-h-screen text-[var(--oc-text)]">
@@ -827,7 +1030,7 @@ export default function JuanProfessionalLandingPage() {
             <a href="#impact" className="hover:text-[var(--oc-cyan)]">Impact</a>
             <a href="#flagship" className="hover:text-[var(--oc-cyan)]">Flagship Perspective</a>
             <a href="#point-of-view" className="hover:text-[var(--oc-cyan)]">Point of View</a>
-            <a href="#contact" onClick={() => trackContactIntent('contact')} className="hover:text-[var(--oc-cyan)]">Contact</a>
+            <a href="#contact" onClick={() => trackContactIntent('contact_section')} className="hover:text-[var(--oc-cyan)]">Contact</a>
           </nav>
         </div>
       </header>
@@ -1027,9 +1230,9 @@ export default function JuanProfessionalLandingPage() {
               This site is less about self-promotion and more about signal. If the problems you are working through involve enterprise artificial intelligence adoption, technology risk, governance, control quality, or operational resilience, there is a good chance there is something useful to discuss.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-stone-200">
-              <a href="mailto:sgmmartinez@gmail.com" onClick={() => trackContactIntent('email')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
-              <a href="tel:9105514562" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Phone: 910-551-4562</a>
-              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" onClick={() => trackContactIntent('linkedin')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
+              <a href="mailto:sgmmartinez@gmail.com" onClick={() => trackContactIntent('email_click')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
+              <a href="tel:9105514562" onClick={() => trackContactIntent('phone_click')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Phone: 910-551-4562</a>
+              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" onClick={() => trackContactIntent('linkedin_profile')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
             </div>
             <p className="mt-6 max-w-3xl text-xs leading-6 text-stone-500">
               This site uses privacy-conscious analytics to understand page visits, traffic sources, campaign performance, and general engagement. It does not use advertising trackers, remarketing pixels, or LinkedIn Insight Tag.
