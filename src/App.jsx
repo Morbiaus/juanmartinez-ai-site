@@ -1,4 +1,31 @@
 import { useEffect } from 'react';
+import { track } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics/react';
+
+const workflowArticleSlug = 'stop-starting-with-ai-start-with-the-workflow';
+const workflowCampaign = 'workflow_before_ai';
+
+const trackWorkflowEventOnce = (eventName, properties) => {
+  if (typeof window === 'undefined') return;
+
+  const key = `workflow:${eventName}:${properties.article_slug}:${properties.campaign}`;
+
+  try {
+    if (window.sessionStorage.getItem(key)) return;
+    window.sessionStorage.setItem(key, 'true');
+  } catch {
+    // Analytics should still work if browser storage is unavailable.
+  }
+
+  track(eventName, properties);
+};
+
+const getCampaign = () => {
+  if (typeof window === 'undefined') return workflowCampaign;
+
+  const campaign = new URLSearchParams(window.location.search).get('utm_campaign');
+  return campaign || workflowCampaign;
+};
 
 export default function JuanProfessionalLandingPage() {
   const audiencePaths = [
@@ -104,15 +131,27 @@ export default function JuanProfessionalLandingPage() {
       status: 'Coming next'
     },
     {
+      title: 'Stop Starting with AI. Start with the Workflow.',
+      text: 'Enterprise AI initiatives often begin with technology. This article explains why understanding the workflow should come first and how that changes the way organizations evaluate AI adoption.',
+      href: '/stop-starting-with-ai-start-with-the-workflow',
+      status: 'Currently featured'
+    },
+    {
       title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
       text: 'A practical guide to the emerging advantage for workers who can use artificial intelligence with judgment, verification, and domain context.',
       href: '/ai-fluency-premium',
-      status: 'Currently featured'
+      status: 'Featured archive'
     },
     {
       title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
       text: 'A research-backed argument for teaching students to use AI as a disciplined partner in thought — not as a substitute for judgment, curiosity, or human agency.',
       href: '/ai-human-judgment-education',
+      status: 'Featured archive'
+    },
+    {
+      title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
+      text: 'Footprints, fog, and the evidence trail. A practical series on what changes when AI agents enter workflows that used to be rules-based.',
+      href: '#article-from-rpa-to-agentic-ai-the-new-control-problem-part-1',
       status: 'Featured archive'
     },
     {
@@ -123,16 +162,116 @@ export default function JuanProfessionalLandingPage() {
     }
   ];
 
-  const featuredArticle = {
-    title: 'Agentic Artificial Intelligence Is Not Robotic Process Automation With Better Vocabulary',
-    subtitle: 'Regulated institutions are moving from deterministic automation to probabilistic agency. The control question is no longer just whether the bot followed the script, but whether the firm can govern systems that choose their own path through regulated work.',
-    articleAnchorOrUrl: '#article-agentic-artificial-intelligence-is-not-robotic-process-automation-with-better-vocabulary',
-    callToActionText: 'Read more on this topic here:',
-    fullReadMoreUrl: 'https://www.juanmartinez.ai/#article-agentic-artificial-intelligence-is-not-robotic-process-automation-with-better-vocabulary',
-    originalVisiblePostingDate: 'May 18, 2026',
-    homepageFeaturedDate: 'May 18, 2026',
-    archiveNote: 'Preserved in the featured archive with its original posting date.',
+  const workflowArticle = {
+    title: 'Stop Starting with AI. Start with the Workflow.',
+    category: 'Enterprise AI',
+    author: 'Juan A. Martinez Diaz, MBA',
+    tags: ['Enterprise AI', 'AI Operations', 'Agentic AI', 'Workflow Design', 'AI Governance', 'Digital Transformation'],
+    metaTitle: 'Stop Starting with AI. Start with the Workflow | Juan Martinez',
+    metaDescription: 'Enterprise AI initiatives often begin with technology. This article explains why understanding the workflow should come first and how that changes the way organizations evaluate AI adoption.',
+    socialDescription: 'Enterprise AI initiatives often begin with technology. This article explains why understanding the workflow should come first and how that changes the way organizations evaluate AI adoption.',
+    articleAnchorOrUrl: '/stop-starting-with-ai-start-with-the-workflow',
+    fullReadMoreUrl: 'https://www.juanmartinez.ai/stop-starting-with-ai-start-with-the-workflow',
+    originalVisiblePostingDate: 'July 20, 2026',
+    publishedDateIso: '2026-07-20',
+    homepageFeaturedDate: 'July 20, 2026',
+    archiveNote: 'Current featured article.',
+    hideCallToAction: true,
+    body: [
+      'A question has been bothering me lately.',
+      'When organizations launch an AI initiative, why is the first discussion almost always about the technology?',
+      'The conversation usually begins with models, copilots, agents, orchestration frameworks, or cloud platforms. Those are important decisions, but they aren\'t the first ones that should be made.',
+      'The first place to look is the work itself.',
+      'Every enterprise workflow is a sequence of people making decisions, systems exchanging information, policies constraining actions, and evidence being produced along the way. Some steps are repetitive. Some require judgment. Some exist because regulation demands them. Others exist because the organization has simply always done things that way.',
+      'Treating every workflow as an AI opportunity skips the most important part of the analysis.',
+      'Before introducing a single model, I think we should be able to answer questions like these:',
+      [
+        'Where are the decisions?',
+        'Which decisions are based on evidence?',
+        'Which require experience or judgment?',
+        'Which systems provide the information needed to perform the work?',
+        'Where are approvals required?',
+        'How would we know whether an AI-assisted version actually performed better?'
+      ],
+      'Those questions have very little to do with artificial intelligence.',
+      'They have everything to do with understanding the work.',
+      'Imagine two versions of the same process.',
+      'The first is the workflow your organization performs today.',
+      'The second performs the same work using AI where it adds value while keeping humans responsible where accountability, policy, or judgment require it.',
+      'Now run both versions against the same scenario.',
+      'Measure the time.',
+      'Measure the quality.',
+      'Measure the evidence.',
+      'Measure the number of human interventions.',
+      'Measure the outcome.',
+      'Only then should we decide whether the workflow deserves to become more agentic.',
+      'That approach changes the role of AI completely.',
+      'Instead of asking AI to replace work, we\'re asking it to prove where it belongs.',
+      'I suspect that will become one of the defining differences between successful enterprise AI programs and expensive experiments.',
+      'The organizations that make the most progress won\'t necessarily have access to the largest models.',
+      'They\'ll understand their own workflows well enough to know where automation creates value, where humans remain essential, and how to demonstrate the difference with evidence instead of optimism.',
+      'Over the coming weeks, I\'ll begin sharing the framework I\'ve been developing to analyze, simulate, and evaluate enterprise workflows before recommending AI adoption.',
+      'For me, that\'s becoming a far more interesting problem than AI itself.'
+    ],
     archive: [
+      {
+        title: 'Stop Starting with AI. Start with the Workflow.',
+        originalVisiblePostingDate: 'July 20, 2026',
+        status: 'Current featured article'
+      },
+      {
+        title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
+        originalVisiblePostingDate: 'June 29, 2026',
+        status: 'Previously featured article'
+      },
+      {
+        title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
+        originalVisiblePostingDate: 'June 22, 2026',
+        status: 'Previously featured article'
+      },
+      {
+        title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
+        originalVisiblePostingDate: 'May 29, 2026',
+        status: 'Previously featured article'
+      },
+      {
+        title: 'Agentic Artificial Intelligence Is Not Robotic Process Automation With Better Vocabulary',
+        originalVisiblePostingDate: 'May 18, 2026',
+        status: 'Previously featured article'
+      },
+      {
+        title: 'The Quiet Erosion of White-Collar Work',
+        originalVisiblePostingDate: 'April 14, 2026',
+        status: 'Previously featured article'
+      }
+    ]
+  };
+
+  const rpaArticle = {
+    title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
+    subtitle: 'Footprints, Fog, and the Evidence Trail',
+    articleAnchorOrUrl: '#article-from-rpa-to-agentic-ai-the-new-control-problem-part-1',
+    callToActionText: 'Read more on this topic here:',
+    fullReadMoreUrl: 'https://www.juanmartinez.ai/#article-from-rpa-to-agentic-ai-the-new-control-problem-part-1',
+    originalVisiblePostingDate: 'June 29, 2026',
+    homepageFeaturedDate: 'June 29, 2026',
+    archiveNote: 'When a new featured article replaces this one, this article should move into the featured archive with its original posting date preserved.',
+    archive: [
+      {
+        title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
+        originalVisiblePostingDate: 'June 29, 2026',
+        status: 'Current featured article'
+      },
+      {
+        title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
+        originalVisiblePostingDate: 'June 22, 2026',
+        status: 'Previously featured article'
+      },
+      {
+        title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
+        originalVisiblePostingDate: 'May 29, 2026',
+        status: 'Previously featured article'
+      },
       {
         title: 'Agentic Artificial Intelligence Is Not Robotic Process Automation With Better Vocabulary',
         originalVisiblePostingDate: 'May 18, 2026',
@@ -145,79 +284,51 @@ export default function JuanProfessionalLandingPage() {
       }
     ],
     body: [
-      'Regulated institutions are about to make a familiar mistake.',
-      'They will look at agentic artificial intelligence (AI) and try to govern it like a more sophisticated version of robotic process automation (RPA).',
-      'That is the wrong mental model.',
-      'RPA automated steps. Agentic AI pursues goals.',
-      'RPA was usually deterministic. It followed prescribed rules, moved through fixed screens, populated known fields, and failed in ways control teams could often reproduce. The operational risk question was usually: did the bot execute the approved script, inside the approved entitlement, against the approved application, with the approved exception path?',
-      'Agentic AI changes the question.',
-      'The new question is not only whether the tool followed the script. The new question is whether the institution can govern a system that can interpret context, select tools, call application programming interfaces (APIs), retrieve data, draft reasoning, coordinate with other agents, and adapt its path toward an objective.',
-      'That is not the same control problem.',
-      'It is a shift from deterministic process risk to probabilistic agency risk.',
-      'This distinction matters because regulated firms are not starting from a blank page. Banks, insurers, asset managers, and financial market infrastructures already have control frameworks for model risk, operational resilience, third-party risk, cyber, records management, privacy, change management, access administration, and business continuity. Many also have mature RPA programs. Those frameworks are valuable.',
-      'The challenge is bringing that same discipline into AI governance, technology risk, information security risk, and risk and control self-assessment (RCSA) without pretending the old automation taxonomy is sufficient.',
-      'But they were not built for systems that may decide, in real time, which route to take through a business process.',
-      'The National Institute of Standards and Technology (NIST) stated the issue plainly in January 2026: “AI agent systems are capable of planning and taking autonomous actions that impact real-world systems or environments.” That single sentence should make every regulated institution pause. Once an AI system can plan and act, governance can no longer sit only at model approval or process design. It has to move into runtime.',
-      'The Bank of England’s February 2026 summary of AI roundtables with regulated firms pointed in the same direction. Participants warned that “firms’ traditional model risk management approach to validation wouldn’t be sustainable in its current form as generative AI and agentic systems proliferated.” They also challenged the conventional comfort phrase “human-in-the-loop,” noting that agentic AI forces risk management to put greater emphasis on “testing, monitoring and setting guardrails around the outcomes of broader AI systems.”',
-      'That is the heart of the matter.',
-      'Agentic AI is not merely a model. It is a model connected to memory, tools, permissions, data, workflows, and institutional consequences.',
-      'The risk is not just that the model gets an answer wrong. The risk is that the system takes a plausible chain of actions that no individual control owner fully anticipated.',
-      'A deterministic bot breaks when the screen changes.',
-      'An agent may route around the break.',
-      'That sounds useful until the workaround becomes the risk event.',
-      'Consider the difference in a compliance environment.',
-      'An RPA bot assigned to gather know-your-customer (KYC) documents might open a known system, extract a known field, attach a file, and update a case status. If it fails, the queue backs up. The failure is visible.',
-      'An agentic workflow could interpret a customer profile, search internal and external data, summarize adverse media, draft a risk rationale, recommend enhanced due diligence, escalate the case, and prepare a regulatory filing package. That can be powerful. But the control surface is much larger. Which sources did it treat as authoritative? Which adverse signals did it overweight? Which policy interpretation did it apply? Which tool calls were made under whose entitlement? Which intermediate reasoning was retained? Which exception was suppressed because the agent judged it immaterial?',
-      'Traditional automation governance asks whether the process was followed.',
-      'Agentic governance must ask whether the system remained inside the institution’s risk appetite while choosing the process.',
-      'In a risk and control self-assessment environment, the issue is not whether an AI agent can summarize a control narrative. The issue is whether it can evaluate the completeness of the control statement, identify weak remediation language, flag gaps in regulatory traceability, preserve evidence, and still remain inside a governed operating boundary. That requires more than prompt design. It requires access discipline, auditability, escalation logic, and clear human approval before consequential action.',
-      'That is a harder standard.',
-      'It also introduces a new kind of accountability gap. Regulated institutions are comfortable assigning accountability to process owners, model owners, technology owners, risk owners, and vendor owners. Agentic AI cuts across all of them. A single outcome may involve a foundation model from one provider, a retrieval layer from another, internal policy documents, external data feeds, identity infrastructure, workflow tools, human approval checkpoints, and logging pipelines.',
-      'When something goes wrong, “the AI did it” will not be an acceptable answer.',
-      'Regulators will not care that the system was impressive. They will care whether the firm can explain what happened, why it happened, who approved the authority, what controls constrained the behavior, what evidence was retained, and how the institution prevented recurrence.',
-      'The 2026 NIST work on agent identity and authorization is important for precisely this reason. NIST’s National Cybersecurity Center of Excellence emphasized that realizing the benefits of AI agents requires understanding the risks from giving agents access to “diverse data sets, tools, and applications,” and applying identification and authorization controls. That is not a theoretical technicality. It is the difference between treating an agent as a chat interface and treating it as a non-human actor inside the control environment.',
-      'The control question begins with identity. What identity does the agent use? Who owns that identity? What authority is delegated to it? Which systems can it reach? What logs prove what it did? How quickly can access be revoked? Treating an agent like a bot account or generic automation service understates the risk.',
-      'Every agent needs an identity.',
-      'Every identity needs scoped authority.',
-      'Every authority needs monitoring.',
-      'Every action needs evidence.',
-      'Every evidence trail needs to survive scrutiny.',
-      'The more discretion the system has, the more its identity, permissions, and evidence trail become core governance artifacts.',
-      'This is where many institutions will be tempted to hide behind the old RPA playbook. They will build approval gates, document use cases, test prompts, create acceptable-use rules, and add a human reviewer at the end. That will help, but it will not be enough.',
-      'A human reviewer at the end of an agentic workflow is not the same thing as control over the workflow.',
-      'If the human sees only the polished answer, the human is not really in the loop. They are standing at the exit, inspecting a package after the route has already been chosen.',
-      'The better model is layered control.',
-      'First, constrain the agent’s operating domain. Do not give broad tool access simply because the architecture allows it. The right question is not “what can the agent do?” The right question is “what is the smallest authority this agent needs to complete this specific regulated task?”',
-      'Second, separate reasoning from execution. A system that can recommend an action does not automatically need permission to execute it. High-impact decisions should require explicit handoff, not decorative oversight.',
-      'Third, log the chain, not just the outcome. Regulated firms need evidence of prompts, retrieved sources, tool calls, policy references, intermediate decisions, exceptions, approvals, overrides, and final actions. If the record is not reconstructable, the control is not mature.',
-      'Fourth, monitor behavior at runtime. Pre-production validation remains necessary, but agentic systems can fail through drift, tool misuse, environmental change, adversarial inputs, unclear objectives, and emergent interactions with other systems. Controls have to observe behavior in motion.',
-      'Fifth, test the guardrails like an attacker and like a bad process designer. Prompt injection is one risk. So is specification gaming. So is over-compliance. So is quiet policy laundering, where a system converts ambiguous internal guidance into confident operational instruction.',
-      'Sixth, preserve human accountability where it actually matters. Human oversight should be placed at decision points that change customer outcomes, risk classifications, regulatory submissions, financial exposure, access rights, or operational resilience. A generic approval button at the end is theatre.',
-      'Finally, boards and senior management need a better vocabulary. “Automation,” “AI assistant,” “copilot,” and “agent” should not be used interchangeably. The labels matter because they imply different risk acceptance decisions. A copilot suggests advice. An agent suggests delegated action. Delegated action inside a regulated institution is never just a technology deployment. It is a control design decision.',
-      'The Bank of England, Financial Conduct Authority (FCA), and His Majesty’s Treasury (HM Treasury) made a related point in May 2026 when they warned that frontier AI represents a “step-change in capability” with significant implications for cyber security and operational resilience. That warning should not be confined to malicious external use. The same step-change also changes internal automation risk. Speed, scale, autonomy, and low-cost action are not only productivity features. They are risk multipliers.',
-      'The institutions that get this right will not be the ones that ban agentic AI or smother it under committees.',
-      'They will be the ones that stop pretending it is RPA with a better interface.',
-      'They will build agent inventories, identity models, authority maps, runtime monitors, kill switches, evidence trails, adversarial tests, and escalation standards before agents become invisible infrastructure.',
-      'They will distinguish between assistive intelligence and delegated agency.',
-      'They will understand that the control environment must now govern not only what a system knows, but what it is allowed to do.',
-      'That is the real implementation challenge.',
-      'Agentic AI will not wait politely for regulated institutions to modernize their control taxonomies.',
-      'It will enter through productivity pilots, compliance experiments, developer tools, operations backlogs, vendor platforms, and executive pressure for efficiency.',
-      'The firms that treat it as another automation wave will move quickly and accumulate hidden risk.',
-      'The firms that treat it as a new class of probabilistic actor will move more deliberately, but they will have a better chance of surviving their own success.',
-      'RPA taught institutions to control the script.',
-      'Agentic AI will test whether they can control delegated judgment.',
-      'That is a different game.',
-      'And the serious institutions should start acting like it.',
-      'Practitioner note: this is not only a conceptual governance issue. In risk and control environments, agentic AI has to be designed around bounded authority, traceable execution, access control, human approval, and evidence preservation. The practical opportunity is not to let AI make final risk decisions on its own. It is to build secure, human-supervised agentic systems that can support risk-control review, RCSA artifact assessment, issue-management evidence review, and decision support in regulated contexts without bypassing accountability.',
-      'Author Bio',
-      'Juan A. Martinez Diaz, MBA, ITIL, is a senior risk, technology, AI, and governance leader focused on regulated environments. His work centers on technology risk, operational resilience, AI governance, risk-control modernization, and the responsible use of agentic AI in control-heavy business contexts.',
-      'Sources',
-      '- National Institute of Standards and Technology (NIST), “Center for AI Standards and Innovation (CAISI) Issues Request for Information About Securing AI Agent Systems,” January 2026: https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems',
-      '- NIST, “Announcing the AI Agent Standards Initiative,” February 2026: https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure',
-      '- NIST National Cybersecurity Center of Excellence (NCCoE), “Accelerating the Adoption of Software and Artificial Intelligence Agent Identity and Authorization,” February 2026: https://csrc.nist.gov/pubs/other/2026/02/05/accelerating-the-adoption-of-software-and-ai-agent/ipd',
-      '- Bank of England, “Summary of AI roundtables,” February 2026: https://www.bankofengland.co.uk/minutes/2026/february/summary-of-ai-roundtables-feb-2026',
-      '- Bank of England, Financial Conduct Authority (FCA), and His Majesty’s Treasury (HM Treasury), “Joint statement on Frontier AI models and cyber resilience,” May 2026: https://www.bankofengland.co.uk/news/2026/may/boe-fca-and-hm-treasury-joint-statement-on-frontier-ai-models-and-cyber-resilience'
+      'Many new people found my work after my May 25 LinkedIn post, “My last day at Wells Fargo is May 26, 2026.” I am grateful for that.',
+      'For those newly connected here, much of my work sits where technology, risk, controls, and operational reality meet. This series is focused on one question I believe banks and large institutions need to examine carefully:',
+      'What happens when AI agents are placed on top of workflows that used to be rules-based?',
+      'Robotic Process Automation was never perfect.',
+      'Bots broke. Screens changed. Fields moved. Credentials expired. Files arrived in the wrong format. A required value was missing and the process stopped cold.',
+      'But there was something useful about that kind of failure.',
+      'It usually left footprints.',
+      'A rule fired. A script failed. An exception queue caught the issue. A human could usually trace what happened, where it happened, and why the bot stopped.',
+      'That traceability mattered.',
+      'In banking, a workflow is rarely just a workflow. It may touch customer data, access rights, payments, complaints, fraud alerts, cyber events, regulatory commitments, vendor systems, remediation activity, records retention, or audit evidence.',
+      'RPA operated inside a mostly deterministic control model. The process was defined. The rules were explicit. The failure points were often visible. The control environment could be designed around known inputs, known paths, known exceptions, and known approvals.',
+      'AI agents change the shape of that risk.',
+      'They do not simply execute a rule. They may infer intent, retrieve information, summarize evidence, choose a tool, rank options, assign confidence, route an exception, or decide whether work is safe to move forward.',
+      'That can create real value.',
+      'It can also create fog.',
+      'RPA usually left footprints. AI agents can leave fog unless we design the evidence trail on purpose.',
+      'A clean AI output can hide a messy decision path.',
+      'The workflow may move forward, but the accountability may blur. What source did the agent rely on? Was that source approved? What tool did the agent call? Was that tool permitted for this use case? What confidence threshold applied? Was there conflicting evidence? Did the agent recognize the exception? Did it escalate when required? What evidence remained after the decision?',
+      'These are not academic questions. They are control-design questions.',
+      'RPA needed rules, access controls, change management, exception queues, monitoring, and fallback procedures.',
+      'AI agents need those same disciplines, plus visible decision paths, bounded tool use, confidence thresholds, prompt and model controls, source validation, human approval points, drift monitoring, and evidence that survives review after the excitement fades.',
+      'Completion is not the same as control.',
+      'A fast answer is not the same as an auditable answer.',
+      'A polished output is not the same as a defensible decision.',
+      'For banks and regulated institutions, the control boundary has to be explicit. Some agents should summarize. Some should retrieve. Some should recommend. Some should route. Very few should act without approval in workflows that touch customers, payments, entitlements, regulatory obligations, cyber response, fraud, remediation, or audit evidence.',
+      'That is the move from automation to controlled autonomy.',
+      'The goal is not to slow AI adoption. The goal is to make AI adoption durable enough to withstand operational pressure, audit review, supervisory scrutiny, and customer impact.',
+      'RPA taught us to govern scripts.',
+      'Agentic AI will force us to govern judgment-like behavior inside production workflows.',
+      'That is the new control problem.'
+    ],
+    frameworkTitle: 'A Practical Control Lens: FOOTPRINT',
+    framework: [
+      { letter: 'F', title: 'Function', text: 'Define what the agent is actually doing: summarizing, retrieving, routing, recommending, deciding, or acting.' },
+      { letter: 'O', title: 'Operating Boundary', text: 'Define approved systems, tools, data sources, transaction types, and prohibited actions.' },
+      { letter: 'O', title: 'Ownership', text: 'Name the business owner, control owner, model owner, and approval authority.' },
+      { letter: 'T', title: 'Thresholds', text: 'Set confidence, source-conflict, customer-impact, regulatory, and exception-escalation thresholds.' },
+      { letter: 'P', title: 'Proof Trail', text: 'Retain the prompt, model/version, sources used, tool calls, confidence score, exception path, reviewer decision, and final disposition.' },
+      { letter: 'R', title: 'Review Point', text: 'Place human approval before customer impact, entitlement change, payment action, remediation closure, or regulatory disposition.' },
+      { letter: 'I', title: 'Inspection', text: 'Monitor drift, hallucination patterns, override rates, tool-call anomalies, downstream corrections, and exception leakage.' },
+      { letter: 'N', title: 'Normal Fallback', text: 'Define fallback to manual processing, deterministic rules, RPA fallback, or business-owner escalation.' },
+      { letter: 'T', title: 'Testability', text: 'Use scenario testing, sampling, red-team prompts, control testing, audit review, and periodic governance challenge.' }
+    ],
+    closingBody: [
+      'The evidence trail has to be engineered before the workflow goes live. Once fog enters production, reconstructing accountability becomes much harder.'
     ]
   };
 
@@ -421,13 +532,26 @@ export default function JuanProfessionalLandingPage() {
     ]
   };
 
-  const featuredArticles = [aiFluencyPremiumArticle, humanJudgmentArticle, featuredArticle];
+  const featuredArticles = [workflowArticle, aiFluencyPremiumArticle, humanJudgmentArticle, rpaArticle];
   const articleRoutes = {
+    '/stop-starting-with-ai-start-with-the-workflow': workflowArticle,
     '/ai-fluency-premium': aiFluencyPremiumArticle,
     '/ai-human-judgment-education': humanJudgmentArticle
   };
-  const currentStandaloneArticle = typeof window !== 'undefined' ? articleRoutes[window.location.pathname] : null;
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') || '/' : '/';
+  const currentStandaloneArticle = articleRoutes[currentPath] || null;
   const isArticlePage = Boolean(currentStandaloneArticle);
+  const isWorkflowArticlePage = currentPath === `/${workflowArticleSlug}`;
+
+  const trackContactIntent = (destination) => {
+    if (!isWorkflowArticlePage) return;
+
+    track('article_contact_intent', {
+      article_slug: workflowArticleSlug,
+      campaign: getCampaign(),
+      destination
+    });
+  };
 
   const renderArticleSection = (article, standalone = false) => (
     <section
@@ -443,7 +567,7 @@ export default function JuanProfessionalLandingPage() {
         ) : (
           <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">{article.title}</h2>
         )}
-        <p className="mt-4 text-lg leading-8 text-stone-300">{article.subtitle}</p>
+        {article.subtitle && <p className="mt-4 text-lg leading-8 text-stone-300">{article.subtitle}</p>}
         {article.tags && (
           <div className="mt-5 flex flex-wrap gap-2">
             {article.tags.map((tag) => (
@@ -459,17 +583,54 @@ export default function JuanProfessionalLandingPage() {
           <div>Featured on homepage: {article.homepageFeaturedDate}</div>
           <div>{article.archiveNote}</div>
         </div>
+        {!article.hideCallToAction && (
         <div className="mt-6 rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-5 text-sm text-stone-300">
           <div className="font-medium text-white">{article.callToActionText}</div>
           <a href={article.fullReadMoreUrl} className="mt-2 inline-block break-all text-[var(--oc-cyan)] hover:text-white">
             {article.fullReadMoreUrl}
           </a>
         </div>
+        )}
         <div className="mt-10 space-y-6 text-base leading-8 text-stone-200">
-          {article.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+          {article.body.map((block, index) => (
+            Array.isArray(block) ? (
+              <ul key={index} className="list-disc space-y-3 pl-6">
+                {block.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p key={index}>{block}</p>
+            )
           ))}
         </div>
+        {article.framework && (
+          <div className="mt-12 rounded-[2rem] border border-[color:var(--oc-line-strong)] bg-[rgba(8,16,31,0.82)] p-6 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(67,231,255,0.06)]">
+            <h3 className="text-2xl font-semibold text-white">{article.frameworkTitle}</h3>
+            <div className="mt-6 grid gap-4">
+              {article.framework.map((item, index) => (
+                <div key={`${item.letter}-${item.title}-${index}`} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.72)] p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[color:var(--oc-line-strong)] bg-[rgba(67,231,255,0.12)] text-lg font-semibold text-[var(--oc-cyan)]">
+                      {item.letter}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-white">{item.title}</h4>
+                      <p className="mt-2 leading-7 text-stone-300">{item.text}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        {article.closingBody && (
+          <div className="mt-10 space-y-6 text-base leading-8 text-stone-200">
+            {article.closingBody.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        )}
         {article.callout && (
           <aside className="mt-10 rounded-[2rem] border border-[color:var(--oc-line-strong)] bg-[rgba(8,16,31,0.88)] p-6 shadow-[0_12px_30px_rgba(0,0,0,0.24),0_0_20px_rgba(67,231,255,0.08)]">
             <div className="text-sm uppercase tracking-[0.2em] text-stone-400">Sidebar / Callout</div>
@@ -517,9 +678,9 @@ export default function JuanProfessionalLandingPage() {
   useEffect(() => {
     const articlePath = currentStandaloneArticle?.articleAnchorOrUrl;
     const articleMeta = currentStandaloneArticle ? {
-      title: `${currentStandaloneArticle.title} | Juan Martinez`,
-      description: currentStandaloneArticle.subtitle,
-      socialDescription: currentStandaloneArticle.socialDescription || currentStandaloneArticle.subtitle,
+      title: currentStandaloneArticle.metaTitle || `${currentStandaloneArticle.title} | Juan Martinez`,
+      description: currentStandaloneArticle.metaDescription || currentStandaloneArticle.subtitle,
+      socialDescription: currentStandaloneArticle.socialDescription || currentStandaloneArticle.metaDescription || currentStandaloneArticle.subtitle,
       url: currentStandaloneArticle.fullReadMoreUrl
     } : null;
     const homeMeta = {
@@ -535,7 +696,8 @@ export default function JuanProfessionalLandingPage() {
     };
 
     const updateMeta = () => {
-      const isArticlePath = Boolean(articlePath && window.location.pathname === articlePath);
+      const normalizedPath = window.location.pathname.replace(/\/$/, '') || '/';
+      const isArticlePath = Boolean(articlePath && normalizedPath === articlePath);
       const meta = isArticlePath ? articleMeta : homeMeta;
 
       document.title = meta.title;
@@ -563,8 +725,8 @@ export default function JuanProfessionalLandingPage() {
           description: articleMeta.description,
           author: { '@type': 'Person', name: currentStandaloneArticle.author },
           publisher: { '@type': 'Person', name: currentStandaloneArticle.author },
-          datePublished: currentStandaloneArticle.originalVisiblePostingDate === 'June 22, 2026' ? '2026-06-22' : '2026-05-29',
-          dateModified: currentStandaloneArticle.originalVisiblePostingDate === 'June 22, 2026' ? '2026-06-22' : '2026-05-29',
+          datePublished: currentStandaloneArticle.publishedDateIso || (currentStandaloneArticle.originalVisiblePostingDate === 'June 22, 2026' ? '2026-06-22' : '2026-05-29'),
+          dateModified: currentStandaloneArticle.publishedDateIso || (currentStandaloneArticle.originalVisiblePostingDate === 'June 22, 2026' ? '2026-06-22' : '2026-05-29'),
           mainEntityOfPage: articleMeta.url,
           image: 'https://www.juanmartinez.ai/og-image.svg',
           articleSection: currentStandaloneArticle.category,
@@ -575,7 +737,8 @@ export default function JuanProfessionalLandingPage() {
     };
 
     const scrollToArticlePath = () => {
-      if (!articlePath || window.location.pathname !== articlePath) return false;
+      const normalizedPath = window.location.pathname.replace(/\/$/, '') || '/';
+      if (!articlePath || normalizedPath !== articlePath) return false;
       const target = document.getElementById(articlePath.replace(/^#|\//, ''));
       if (!target) return false;
       window.requestAnimationFrame(() => {
@@ -616,6 +779,41 @@ export default function JuanProfessionalLandingPage() {
     currentStandaloneArticle
   ]);
 
+  useEffect(() => {
+    if (!isWorkflowArticlePage) return undefined;
+
+    const campaign = getCampaign();
+
+    trackWorkflowEventOnce('article_viewed', {
+      article_slug: workflowArticleSlug,
+      campaign
+    });
+
+    const trackReadDepth = () => {
+      const documentElement = document.documentElement;
+      const scrollableHeight = documentElement.scrollHeight - window.innerHeight;
+      const scrollDepth = scrollableHeight <= 0 ? 1 : (window.scrollY / scrollableHeight);
+
+      if (scrollDepth < 0.75) return;
+
+      trackWorkflowEventOnce('article_read_75_percent', {
+        article_slug: workflowArticleSlug,
+        campaign
+      });
+
+      window.removeEventListener('scroll', trackReadDepth);
+    };
+
+    trackReadDepth();
+    window.addEventListener('scroll', trackReadDepth, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', trackReadDepth);
+    };
+  }, [
+    isWorkflowArticlePage
+  ]);
+
   return (
     <div className="min-h-screen text-[var(--oc-text)]">
       <header className="sticky top-0 z-50 border-b border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.82)] backdrop-blur-xl">
@@ -629,7 +827,7 @@ export default function JuanProfessionalLandingPage() {
             <a href="#impact" className="hover:text-[var(--oc-cyan)]">Impact</a>
             <a href="#flagship" className="hover:text-[var(--oc-cyan)]">Flagship Perspective</a>
             <a href="#point-of-view" className="hover:text-[var(--oc-cyan)]">Point of View</a>
-            <a href="#contact" className="hover:text-[var(--oc-cyan)]">Contact</a>
+            <a href="#contact" onClick={() => trackContactIntent('contact')} className="hover:text-[var(--oc-cyan)]">Contact</a>
           </nav>
         </div>
       </header>
@@ -829,13 +1027,17 @@ export default function JuanProfessionalLandingPage() {
               This site is less about self-promotion and more about signal. If the problems you are working through involve enterprise artificial intelligence adoption, technology risk, governance, control quality, or operational resilience, there is a good chance there is something useful to discuss.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-stone-200">
-              <a href="mailto:sgmmartinez@gmail.com" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
+              <a href="mailto:sgmmartinez@gmail.com" onClick={() => trackContactIntent('email')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
               <a href="tel:9105514562" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Phone: 910-551-4562</a>
-              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
+              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" onClick={() => trackContactIntent('linkedin')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
             </div>
+            <p className="mt-6 max-w-3xl text-xs leading-6 text-stone-500">
+              This site uses privacy-conscious analytics to understand page visits, traffic sources, campaign performance, and general engagement. It does not use advertising trackers, remarketing pixels, or LinkedIn Insight Tag.
+            </p>
           </div>
         </section>
       </main>
+      <Analytics />
     </div>
   );
 }

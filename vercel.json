@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/stop-starting-with-ai-start-with-the-workflow",
+      "destination": "/stop-starting-with-ai-start-with-the-workflow/index.html"
+    },
+    {
       "source": "/ai-human-judgment-education",
       "destination": "/ai-human-judgment-education/index.html"
     }

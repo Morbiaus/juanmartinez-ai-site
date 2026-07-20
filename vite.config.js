@@ -14,6 +14,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         humanJudgmentArticle: resolve(__dirname, 'ai-human-judgment-education/index.html'),
         aiFluencyPremium: resolve(__dirname, 'ai-fluency-premium/index.html'),
+        workflowArticle: resolve(__dirname, 'stop-starting-with-ai-start-with-the-workflow/index.html'),
       },
     },
   },
