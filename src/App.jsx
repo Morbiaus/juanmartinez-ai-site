@@ -21,8 +21,8 @@ export default function JuanProfessionalLandingPage() {
 
   const impactItems = [
     {
-      metric: '15+ years',
-      label: 'helping large, complex organizations translate artificial intelligence, technology, risk, and operational complexity into executive action'
+      metric: 'Age-neutral leadership',
+      label: 'enterprise AI governance and technology-risk leadership across regulated financial services and the U.S. Army'
     },
     {
       metric: '160-person',
@@ -199,7 +199,7 @@ export default function JuanProfessionalLandingPage() {
       'And the serious institutions should start acting like it.',
       'Practitioner note: this is not only a conceptual governance issue. In risk and control environments, agentic AI has to be designed around bounded authority, traceable execution, access control, human approval, and evidence preservation. The practical opportunity is not to let AI make final risk decisions on its own. It is to build secure, human-supervised agentic systems that can support risk-control review, RCSA artifact assessment, issue-management evidence review, and decision support in regulated contexts without bypassing accountability.',
       'Author Bio',
-      'Juan A. Martinez Diaz, MBA, ITIL, is a senior risk, technology, AI, and governance leader focused on regulated environments. His work centers on technology risk, operational resilience, AI governance, risk-control modernization, and the responsible use of agentic AI in control-heavy business contexts.',
+      'Juan A. Martinez Diaz, MBA, is a senior risk, technology, AI, and governance leader focused on regulated environments. His work centers on technology risk, operational resilience, AI governance, risk-control modernization, and the responsible use of agentic AI in control-heavy business contexts.',
       'Sources',
       '- National Institute of Standards and Technology (NIST), “Center for AI Standards and Innovation (CAISI) Issues Request for Information About Securing AI Agent Systems,” January 2026: https://www.nist.gov/news-events/news/2026/01/caisi-issues-request-information-about-securing-ai-agent-systems',
       '- NIST, “Announcing the AI Agent Standards Initiative,” February 2026: https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure',
@@ -239,7 +239,7 @@ export default function JuanProfessionalLandingPage() {
       <header className="sticky top-0 z-50 border-b border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.82)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <div>
-            <div className="text-xl font-semibold tracking-wide text-[var(--oc-text)]">Juan A. Martinez Diaz</div>
+            <div className="text-xl font-semibold tracking-wide text-[var(--oc-text)]">Juan A. Martinez Diaz, MBA</div>
             <div className="text-sm text-[var(--oc-muted)]">AI governance, technology risk, operational resilience, and executive leadership</div>
           </div>
           <nav className="hidden gap-6 text-sm text-[var(--oc-muted)] md:flex">
@@ -263,7 +263,7 @@ export default function JuanProfessionalLandingPage() {
                 AI, Technology Risk, and Governance Leadership for Regulated Environments
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--oc-muted)] md:text-lg">
-                Juan Martinez helps leaders translate artificial intelligence, technology risk, governance complexity, and operational pressure into decisions they can actually use.
+                Juan A. Martinez Diaz, MBA helps leaders translate artificial intelligence, technology risk, governance complexity, and operational pressure into decisions they can actually use.
               </p>
               <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--oc-muted)] md:text-lg">
                 He brings a practical executive perspective shaped by real operating environments where control quality, resilience, and disciplined execution matter. The focus is not technology theater. It is helping organizations adopt change in ways that are useful, governable, and credible under pressure.
@@ -276,7 +276,7 @@ export default function JuanProfessionalLandingPage() {
                   Read the flagship perspective
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411"
+                  href="https://www.linkedin.com/in/juan-a-martinez-diaz-mba-itil-50943411"
                   className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-[var(--oc-text)] transition hover:border-[color:var(--oc-line-strong)]"
                 >
                   Connect on LinkedIn
@@ -326,7 +326,7 @@ export default function JuanProfessionalLandingPage() {
               </div>
               <div className="space-y-5 text-base leading-8 text-stone-300">
                 <p>
-                  Juan's background spans banking, military leadership, technology operations, and enterprise risk. That mix matters because it shapes a view of organizations that is grounded in what actually happens when pressure, incentives, and weak assumptions collide.
+                  Juan is an enterprise AI governance and technology-risk leader with senior leadership experience across regulated financial services and the U.S. Army. That mix matters because it shapes a view of organizations that is grounded in what actually happens when pressure, incentives, and weak assumptions collide.
                 </p>
                 <p>
                   This perspective is most useful in environments where the stakes are real, the facts are messy, and leaders need clarity without drama. Strong controls matter, but control language is useless if it cannot survive contact with real operations.
@@ -397,7 +397,7 @@ export default function JuanProfessionalLandingPage() {
                 ))}
               </div>
               <div className="mt-8 max-w-3xl text-base leading-8 text-stone-300">
-                Juan Martinez works at the intersection of artificial intelligence, technology risk, governance, resilience, and operating reality. His focus is practical: helping leaders translate emerging technology into decisions they can use, connect AI opportunity to governance reality, and keep transformation useful, governable, and grounded in real work.
+                Juan A. Martinez Diaz, MBA works at the intersection of artificial intelligence, technology risk, governance, resilience, and operating reality. His focus is practical: helping leaders translate emerging technology into decisions they can use, connect AI opportunity to governance reality, and keep transformation useful, governable, and grounded in real work.
               </div>
             </div>
           </div>
@@ -478,9 +478,7 @@ export default function JuanProfessionalLandingPage() {
               This site is less about self-promotion and more about signal. If the problems you are working through involve enterprise artificial intelligence adoption, technology risk, governance, control quality, or operational resilience, there is a good chance there is something useful to discuss.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-stone-200">
-              <a href="mailto:sgmmartinez@gmail.com" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
-              <a href="tel:9105514562" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Phone: 910-551-4562</a>
-              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
+              <a href="https://www.linkedin.com/in/juan-a-martinez-diaz-mba-itil-50943411" className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
             </div>
           </div>
         </section>
