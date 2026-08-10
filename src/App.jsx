@@ -1,6 +1,232 @@
 import { useEffect } from 'react';
 
-export default function JuanProfessionalLandingPage() {
+const AI_BUILD_LAB_URL = 'https://ai-build-lab.morbiaus.chatgpt.site';
+
+const homeMetadata = {
+  title: 'Juan A. Martinez Diaz, MBA | AI, Technology Risk, and Governance Leadership',
+  description: 'Juan A. Martinez Diaz, MBA, is an enterprise AI governance and technology-risk leader with senior leadership experience across regulated financial services and the U.S. Army.',
+  canonical: 'https://www.juanmartinez.ai/'
+};
+
+const martinezMethodMetadata = {
+  title: 'The M.A.R.T.I.N.E.Z. Method | Practical AI Governance Framework | Juan Martinez',
+  description: 'The M.A.R.T.I.N.E.Z. Method is a practical framework created by Juan A. Martinez Diaz for using AI with judgment, structure, validation, human oversight, and accountability.',
+  canonical: 'https://juanmartinez.ai/martinez-method'
+};
+
+function setMetaContent(selector, content) {
+  const element = document.head.querySelector(selector);
+
+  if (element) {
+    element.setAttribute('content', content);
+  }
+}
+
+function setCanonical(href) {
+  let canonical = document.head.querySelector('link[rel="canonical"]');
+
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+
+  canonical.setAttribute('href', href);
+}
+
+function usePageMetadata(metadata) {
+  useEffect(() => {
+    document.title = metadata.title;
+    setMetaContent('meta[name="description"]', metadata.description);
+    setMetaContent('meta[property="og:title"]', metadata.title);
+    setMetaContent('meta[property="og:description"]', metadata.description);
+    setMetaContent('meta[property="og:url"]', metadata.canonical);
+    setMetaContent('meta[name="twitter:title"]', metadata.title);
+    setMetaContent('meta[name="twitter:description"]', metadata.description);
+    setCanonical(metadata.canonical);
+  }, [metadata]);
+}
+
+function SiteHeader({ currentPage = 'home' }) {
+  return (
+    <header className="sticky top-0 z-50 border-b border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.82)] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5">
+        <a href="/" className="min-w-0">
+          <div className="text-lg font-semibold tracking-wide text-[var(--oc-text)] md:text-xl">Juan A. Martinez Diaz, MBA</div>
+          <div className="text-sm text-[var(--oc-muted)]">AI governance, technology risk, operational resilience, and executive leadership</div>
+        </a>
+        <nav className="hidden gap-6 text-sm text-[var(--oc-muted)] md:flex">
+          {currentPage === 'method' ? (
+            <>
+              <a href="/" className="hover:text-[var(--oc-cyan)]">Home</a>
+              <a href="#method" className="hover:text-[var(--oc-cyan)]">Method</a>
+              <a href="#governance" className="hover:text-[var(--oc-cyan)]">Governance</a>
+              <a href="#build-lab" className="hover:text-[var(--oc-cyan)]">AI Build Lab</a>
+            </>
+          ) : (
+            <>
+              <a href="#about" className="hover:text-[var(--oc-cyan)]">About</a>
+              <a href="#impact" className="hover:text-[var(--oc-cyan)]">Impact</a>
+              <a href="#flagship" className="hover:text-[var(--oc-cyan)]">Flagship Perspective</a>
+              <a href="/martinez-method" className="hover:text-[var(--oc-cyan)]">M.A.R.T.I.N.E.Z. Method</a>
+              <a href="#point-of-view" className="hover:text-[var(--oc-cyan)]">Point of View</a>
+              <a href="#contact" className="hover:text-[var(--oc-cyan)]">Contact</a>
+            </>
+          )}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function MartinezMethodPage() {
+  usePageMetadata(martinezMethodMetadata);
+
+  const methodItems = [
+    {
+      letter: 'M',
+      title: 'Map the Problem',
+      text: 'Define the actual business problem, desired outcome, stakeholders, constraints, and risks before introducing AI.'
+    },
+    {
+      letter: 'A',
+      title: 'Ask Better Questions',
+      text: 'Structure prompts and inquiries around the decision or outcome required rather than simply asking AI to produce an answer.'
+    },
+    {
+      letter: 'R',
+      title: 'Refine the Context',
+      text: 'Provide the policies, data, assumptions, boundaries, examples, and business context necessary for the AI to perform useful work.'
+    },
+    {
+      letter: 'T',
+      title: 'Transform the Output',
+      text: 'Turn raw AI-generated material into something operationally useful—a decision brief, workflow, analysis, recommendation, control assessment, or other business artifact.'
+    },
+    {
+      letter: 'I',
+      title: 'Inspect the Result',
+      text: 'Evaluate accuracy, evidence, assumptions, bias, unsupported claims, omissions, and whether the output actually addresses the original problem.'
+    },
+    {
+      letter: 'N',
+      title: 'Narrow the Workflow',
+      text: 'Determine which portions of the work are appropriate for AI, which require automation controls, and which must remain subject to human judgment.'
+    },
+    {
+      letter: 'E',
+      title: 'Explain the Value',
+      text: 'Be able to articulate what AI improved, what risk it introduced, what evidence supports the result, and why the outcome should be trusted.'
+    },
+    {
+      letter: 'Z',
+      title: 'Zero-Trust the Output',
+      text: 'Never treat AI-generated output as correct merely because it appears complete or authoritative. Validate material facts, evidence, sources, and consequential decisions before relying on them.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen text-[var(--oc-text)]">
+      <SiteHeader currentPage="method" />
+
+      <main>
+        <section className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <div className="max-w-4xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--oc-cyan)]">Practical Artificial Intelligence Governance Framework</p>
+            <h1 className="mt-5 text-4xl font-semibold leading-tight md:text-6xl">The M.A.R.T.I.N.E.Z. Method</h1>
+            <p className="mt-6 max-w-3xl text-xl leading-9 text-[var(--oc-text)] md:text-2xl">
+              A Practical Framework for Using AI With Judgment, Structure, and Accountability
+            </p>
+            <div className="mt-10 max-w-3xl space-y-5 text-base leading-8 text-stone-300 md:text-lg">
+              <p>
+                Artificial intelligence can accelerate work, but acceleration without judgment can amplify poor assumptions, weak evidence, and bad decisions.
+              </p>
+              <p>
+                The M.A.R.T.I.N.E.Z. Method is a practical framework for working with AI deliberately. It provides a repeatable way to frame problems, improve context, evaluate outputs, refine workflows, and maintain human accountability throughout the process.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 max-w-3xl border-l-2 border-[color:var(--oc-line-strong)] pl-6">
+            <p className="text-2xl font-medium leading-9 text-white">"The name is personal. The purpose is practical."</p>
+          </div>
+        </section>
+
+        <section id="method" className="border-y border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.42)] backdrop-blur-sm">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <div className="max-w-3xl">
+              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Method</p>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Eight steps for disciplined AI work.</h2>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
+              {methodItems.map((item) => (
+                <article key={item.letter} className="rounded-[1.5rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.78)] p-6 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(67,231,255,0.06)] backdrop-blur-xl">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--oc-line-strong)] bg-[rgba(67,231,255,0.10)] text-2xl font-semibold text-[var(--oc-cyan)]">
+                      {item.letter}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium text-white">{item.title}</h3>
+                      <p className="mt-3 leading-7 text-stone-300">{item.text}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="governance" className="mx-auto max-w-6xl px-6 py-20">
+          <div className="grid gap-10 md:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">From AI Use to AI Governance</p>
+              <h2 className="mt-3 text-3xl font-semibold">A bridge from individual productivity to accountable systems.</h2>
+            </div>
+            <div className="space-y-5 text-base leading-8 text-stone-300 md:text-lg">
+              <p>
+                As AI progresses from individual productivity tools to automated and agentic workflows, the same principles become increasingly important.
+              </p>
+              <p>
+                The M.A.R.T.I.N.E.Z. Method provides a practical bridge between using AI and governing AI: establishing context, maintaining evidence, defining control boundaries, preserving human oversight, and validating outcomes before consequential action occurs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="build-lab" className="border-y border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.35)] backdrop-blur-sm">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <div className="max-w-3xl">
+              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Learn by Doing</p>
+              <h2 className="mt-3 text-3xl font-semibold">The AI Build Lab applies the method in practical missions.</h2>
+              <p className="mt-5 text-base leading-8 text-stone-300 md:text-lg">
+                The AI Build Lab applies these principles through practical, tool-neutral missions designed to help professionals build judgment around AI—not simply learn prompting techniques.
+              </p>
+              <a
+                href={AI_BUILD_LAB_URL}
+                className="mt-8 inline-flex rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f] shadow-[0_0_24px_rgba(67,231,255,0.18)] transition hover:-translate-y-0.5"
+              >
+                Enter the AI Build Lab
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <div className="rounded-[1.5rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-8 shadow-[0_14px_36px_rgba(0,0,0,0.26),0_0_22px_rgba(99,170,255,0.06)] backdrop-blur-xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Author</p>
+            <h2 className="mt-3 text-2xl font-semibold text-white">Juan A. Martinez Diaz, MBA</h2>
+            <p className="mt-3 leading-8 text-stone-300">Creator of the M.A.R.T.I.N.E.Z. Method</p>
+            <p className="mt-2 leading-8 text-stone-300">AI Governance • Enterprise Risk • Technology Risk • Agentic AI</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+function HomePage() {
+  usePageMetadata(homeMetadata);
+
   const audiencePaths = [
     {
       title: 'For Executive Recruiters',
@@ -236,21 +462,7 @@ export default function JuanProfessionalLandingPage() {
 
   return (
     <div className="min-h-screen text-[var(--oc-text)]">
-      <header className="sticky top-0 z-50 border-b border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.82)] backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <div>
-            <div className="text-xl font-semibold tracking-wide text-[var(--oc-text)]">Juan A. Martinez Diaz, MBA</div>
-            <div className="text-sm text-[var(--oc-muted)]">AI governance, technology risk, operational resilience, and executive leadership</div>
-          </div>
-          <nav className="hidden gap-6 text-sm text-[var(--oc-muted)] md:flex">
-            <a href="#about" className="hover:text-[var(--oc-cyan)]">About</a>
-            <a href="#impact" className="hover:text-[var(--oc-cyan)]">Impact</a>
-            <a href="#flagship" className="hover:text-[var(--oc-cyan)]">Flagship Perspective</a>
-            <a href="#point-of-view" className="hover:text-[var(--oc-cyan)]">Point of View</a>
-            <a href="#contact" className="hover:text-[var(--oc-cyan)]">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
@@ -485,4 +697,10 @@ export default function JuanProfessionalLandingPage() {
       </main>
     </div>
   );
+}
+
+export default function JuanProfessionalLandingPage() {
+  const isMartinezMethodPage = typeof window !== 'undefined' && window.location.pathname.replace(/\/$/, '') === '/martinez-method';
+
+  return isMartinezMethodPage ? <MartinezMethodPage /> : <HomePage />;
 }

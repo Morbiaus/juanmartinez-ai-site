@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/martinez-method",
+      "destination": "/martinez-method.html"
+    }
+  ]
+}
