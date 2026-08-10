@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/admin/content-analytics",
+      "destination": "/admin/content-analytics/index.html"
+    },
+    {
+      "source": "/stop-starting-with-ai-start-with-the-workflow",
+      "destination": "/stop-starting-with-ai-start-with-the-workflow/index.html"
+    },
+    {
+      "source": "/ai-human-judgment-education",
+      "destination": "/ai-human-judgment-education/index.html"
+    },
+    {
       "source": "/martinez-method",
       "destination": "/martinez-method.html"
     }
