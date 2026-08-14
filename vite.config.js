@@ -15,6 +15,7 @@ export default defineConfig({
         humanJudgmentArticle: resolve(__dirname, 'ai-human-judgment-education/index.html'),
         aiFluencyPremium: resolve(__dirname, 'ai-fluency-premium/index.html'),
         workflowArticle: resolve(__dirname, 'stop-starting-with-ai-start-with-the-workflow/index.html'),
+        rpaAgenticControlArticle: resolve(__dirname, 'from-rpa-to-agentic-ai-new-control-problem-part-1/index.html'),
         contentAnalyticsDashboard: resolve(__dirname, 'admin/content-analytics/index.html'),
         martinezMethod: resolve(__dirname, 'martinez-method.html'),
       },
