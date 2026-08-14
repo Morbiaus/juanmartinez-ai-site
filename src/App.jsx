@@ -340,6 +340,292 @@ function MartinezMethodPage() {
   );
 }
 
+function ExecutiveHomePage() {
+  const impactItems = [
+    {
+      metric: '160-person',
+      title: 'Technology organization led',
+      text: 'Enterprise operations, cybersecurity oversight, and operational readiness across the United States and Caribbean.'
+    },
+    {
+      metric: 'Second line',
+      title: 'Independent risk oversight',
+      text: 'Technology and information-security risk, operational resilience, controls, RCSA, issue remediation, and executive reporting.'
+    },
+    {
+      metric: 'Enterprise-scale',
+      title: 'Regulated-industry experience',
+      text: 'Practical leadership in environments where evidence quality, control design, and accountable decisions must withstand scrutiny.'
+    },
+    {
+      metric: 'Cross-functional',
+      title: 'Leadership alignment',
+      text: 'Work across cybersecurity, legal, privacy, compliance, technology, operations, and business leadership.'
+    }
+  ];
+
+  const selectedWork = [
+    {
+      eyebrow: 'Governed workflow simulation',
+      title: 'Project Sentinel',
+      text: 'A governance and workflow simulation environment for comparing human and agentic operating models before an organization automates or redesigns the work. Sentinel makes control boundaries, approvals, evidence lineage, escalation paths, monitoring, recovery, and accountable ownership visible.',
+      linkText: 'Discuss Project Sentinel',
+      href: 'mailto:sgmmartinez@gmail.com?subject=Project%20Sentinel%20Discussion'
+    },
+    {
+      eyebrow: 'Practical learning',
+      title: 'AI Build Lab',
+      text: 'A free, tool-neutral learning environment with guided missions that help professionals apply artificial intelligence to real work while challenging assumptions, testing evidence, and keeping ownership with people.',
+      linkText: 'Enter the AI Build Lab',
+      href: AI_BUILD_LAB_URL
+    },
+    {
+      eyebrow: 'Decision discipline',
+      title: 'The M.A.R.T.I.N.E.Z. Method',
+      text: 'A practical framework for using artificial intelligence with judgment, structure, verification, and accountability—from mapping the problem through zero-trusting the output.',
+      linkText: 'Explore the Method',
+      href: '/martinez-method'
+    }
+  ];
+
+  const insights = [
+    {
+      date: 'July 20, 2026',
+      title: 'Stop Starting with AI. Start with the Workflow.',
+      text: 'Why organizations should understand the decisions, evidence, approvals, and exceptions inside a workflow before choosing an AI solution.',
+      href: '/stop-starting-with-ai-start-with-the-workflow'
+    },
+    {
+      date: 'June 22, 2026',
+      title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
+      text: 'The emerging advantage for professionals who combine AI fluency with domain context, verification, and sound judgment.',
+      href: '/ai-fluency-premium'
+    },
+    {
+      date: 'May 29, 2026',
+      title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
+      text: 'A research-backed argument for using AI as a disciplined partner in thought rather than a substitute for human agency.',
+      href: '/ai-human-judgment-education'
+    }
+  ];
+
+  const operatingPrinciples = [
+    {
+      title: 'Start with the workflow',
+      text: 'Before selecting a model or agent, map the work: the purpose, actors, decisions, systems, policies, data, approvals, evidence, and exceptions. That reveals whether AI is addressing a real operating problem or simply being placed on top of a process the organization does not yet understand.'
+    },
+    {
+      title: 'Make authority explicit',
+      text: 'Retrieving, summarizing, drafting, routing, recommending, deciding, and acting are different levels of authority. A governed workflow names which actions are permitted, which remain prohibited, who approves consequential decisions, and what conditions require the system to stop or escalate.'
+    },
+    {
+      title: 'Engineer the evidence trail',
+      text: 'A clean answer can hide a weak decision path. Important workflows should retain the sources used, model or system version, tool actions, confidence or uncertainty, exception path, human review, override, and final disposition so the result can be reconstructed and challenged later.'
+    },
+    {
+      title: 'Design for intervention and recovery',
+      text: 'Human oversight is useful only when people can recognize a problem and still have authority to intervene. Strong operating models define monitoring, thresholds, revocation, fallback, recovery, and accountable ownership before automation reaches customers, regulated obligations, entitlements, payments, or operationally sensitive systems.'
+    }
+  ];
+
+  const recordContact = (destination) => track('homepage_contact_intent', { destination });
+
+  return (
+    <div className="min-h-screen text-[var(--oc-text)]">
+      <header className="sticky top-0 z-50 border-b border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.92)] backdrop-blur-xl">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between">
+          <a href="#top" className="min-w-0">
+            <div className="text-lg font-semibold tracking-wide text-white md:text-xl">Juan A. Martinez Diaz, MBA</div>
+            <div className="mt-1 text-sm text-[var(--oc-muted)]">Enterprise AI governance, technology risk, cybersecurity, and operational resilience</div>
+          </a>
+          <nav aria-label="Primary" className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-[var(--oc-muted)]">
+            <a href="#about" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">About</a>
+            <a href="#impact" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">Leadership Impact</a>
+            <a href="#selected-work" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">Selected Work</a>
+            <a href="#insights" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">Insights</a>
+            <a href="/martinez-method" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">M.A.R.T.I.N.E.Z. Method</a>
+            <a href="#contact" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="top">
+        <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[var(--oc-cyan)]">Regulated and high-consequence environments</p>
+              <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">
+                Enterprise AI Governance &amp; Technology Risk Executive
+              </h1>
+              <p className="mt-7 max-w-3xl text-lg leading-9 text-stone-300">
+                I help regulated organizations turn artificial intelligence, cybersecurity, technology risk, and operational complexity into governed decisions, resilient workflows, and accountable execution.
+              </p>
+              <div className="mt-9 flex flex-wrap gap-4">
+                <a href="#selected-work" className="rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f] shadow-[0_0_24px_rgba(67,231,255,0.18)] transition hover:-translate-y-0.5">View Selected Work</a>
+                <a href="#sentinel" className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-white transition hover:border-[color:var(--oc-line-strong)]">Explore Project Sentinel</a>
+                <a href={AI_BUILD_LAB_URL} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-white transition hover:border-[color:var(--oc-line-strong)]">Enter the AI Build Lab</a>
+              </div>
+            </div>
+            <aside className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.76)] p-7 shadow-[0_18px_50px_rgba(0,0,0,0.3),0_0_24px_rgba(67,231,255,0.08)]">
+              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Where I am most useful</p>
+              <h2 className="mt-3 text-2xl font-semibold text-white">Turning ambition into an operating model leaders can defend.</h2>
+              <ul className="mt-6 space-y-4 text-base leading-7 text-stone-300">
+                <li>• Governing AI inside real enterprise workflows</li>
+                <li>• Connecting technology risk to executive decisions</li>
+                <li>• Preserving evidence, control boundaries, and human authority</li>
+                <li>• Strengthening resilience in regulated or operationally sensitive environments</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section id="impact" className="border-y border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.42)]">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Leadership Impact</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-white md:text-4xl">Experience measured by responsibility, not adjectives.</h2>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              {impactItems.map((item) => (
+                <article key={item.title} className="rounded-[1.5rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.76)] p-6">
+                  <div className="text-2xl font-semibold text-[var(--oc-cyan)]">{item.metric}</div>
+                  <h3 className="mt-3 text-lg font-medium text-white">{item.title}</h3>
+                  <p className="mt-3 leading-7 text-stone-300">{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="mx-auto max-w-6xl px-6 py-20">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">About</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Leadership across AI, risk, technology, and operations.</h2>
+            </div>
+            <div className="space-y-5 text-base leading-8 text-stone-300 md:text-lg">
+              <p>
+                My work sits where enterprise AI governance, technology and information-security risk, operational resilience, cybersecurity, and accountable execution meet. I focus on what happens when AI enters a real workflow: who authorized it, what information shaped the result, which tools it could access, where human judgment remained, how exceptions were handled, and what evidence survived.
+              </p>
+              <p>
+                That perspective is grounded in regulated financial services. As a Vice President in Wells Fargo&apos;s second line of defense, I provided independent oversight of technology and information-security risk, operational resilience, controls, Risk and Control Self-Assessment, issue remediation, and executive risk reporting. The work required translating complex risk into decisions leaders could act on without losing the evidence behind them.
+              </p>
+              <p>
+                My leadership foundation also includes military technology leadership as a Sergeant Major and responsibility for a 160-person technology organization supporting operations across the United States and Caribbean. That experience shaped a practical view of resilience: plans, controls, and governance matter only when they still work under pressure.
+              </p>
+              <p>
+                I now apply those lessons to governed agentic systems, AI-enabled risk workflows, and cybersecurity and operational-technology learning scenarios. The objective is disciplined adoption—clear authority, bounded tools, reliable evidence, human intervention where consequences require it, and recovery when systems behave differently than expected.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="selected-work" className="border-y border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.35)]">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Selected Work</p>
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-white md:text-4xl">Practical systems for making judgment and accountability visible.</h2>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-stone-300">
+              These projects turn governance from policy language into something people can examine, challenge, test, and improve.
+            </p>
+            <p className="mt-4 max-w-4xl text-base leading-8 text-stone-300">
+              Together, they form a connected body of work. The M.A.R.T.I.N.E.Z. Method provides the decision discipline. The AI Build Lab lets professionals practice that discipline through bounded, tool-neutral missions. Project Sentinel extends the same thinking into workflow comparison and simulation, where teams can examine authority, evidence, exceptions, human intervention, and operational outcomes before recommending broader automation.
+            </p>
+            <div className="mt-10 grid gap-6 lg:grid-cols-3">
+              {selectedWork.map((item, index) => (
+                <article id={index === 0 ? 'sentinel' : undefined} key={item.title} className="flex flex-col rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.78)] p-7 shadow-[0_14px_36px_rgba(0,0,0,0.22)]">
+                  <p className="text-sm text-[var(--oc-cyan)]">{item.eyebrow}</p>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-4 flex-1 leading-8 text-stone-300">{item.text}</p>
+                  <a href={item.href} onClick={() => recordContact(item.title)} className="mt-7 inline-flex w-fit rounded-2xl border border-[color:var(--oc-line-strong)] px-4 py-3 text-sm font-medium text-white transition hover:border-[color:var(--oc-cyan)] hover:text-[var(--oc-cyan)]">{item.linkText}</a>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Operating Principles</p>
+          <h2 className="mt-3 max-w-4xl text-3xl font-semibold text-white md:text-4xl">Governance becomes real inside the decision path.</h2>
+          <p className="mt-5 max-w-4xl text-lg leading-8 text-stone-300">
+            Policies and committees matter, but they do not govern an AI-enabled workflow by themselves. Governance becomes operational through permissions, authoritative-source boundaries, named decision rights, approval gates, evidence capture, monitoring, escalation, and recovery. These principles guide how I evaluate emerging technology in environments where a polished output is not enough—the organization must also be able to explain why the work moved forward and who remained accountable.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {operatingPrinciples.map((item) => (
+              <article key={item.title} className="rounded-[1.5rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-7">
+                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-4 leading-8 text-stone-300">{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-10 max-w-4xl text-base leading-8 text-stone-300 md:text-lg">
+            For executive teams, this creates a more useful conversation. Instead of asking whether the organization has an AI policy, leaders can ask what problem the workflow solves, what authority moved to the system, which evidence supports the result, where people must intervene, how performance will be monitored, and what happens when the operating model no longer behaves as intended. Those questions turn governance into a practical management discipline.
+          </p>
+        </section>
+
+        <section id="insights" className="border-y border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.35)]">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Current Perspectives</p>
+          <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-white md:text-4xl">Ideas grounded in operating reality.</h2>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {insights.map((item) => (
+              <article key={item.title} className="flex flex-col rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.72)] p-7">
+                <p className="text-sm text-stone-400">{item.date}</p>
+                <h3 className="mt-3 text-xl font-medium text-white">{item.title}</h3>
+                <p className="mt-4 flex-1 leading-7 text-stone-300">{item.text}</p>
+                <a href={item.href} className="mt-6 text-sm font-medium text-[var(--oc-cyan)] hover:text-white">Read perspective →</a>
+              </article>
+            ))}
+          </div>
+          </div>
+        </section>
+
+        <section className="border-y border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.42)]">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Conversation Pathways</p>
+            <h2 className="mt-3 max-w-4xl text-3xl font-semibold text-white md:text-4xl">Different entry points, one operating concern: accountable execution.</h2>
+            <p className="mt-5 max-w-4xl text-base leading-8 text-stone-300 md:text-lg">Whether the immediate need is executive leadership, an AI-governance operating model, a technology-risk decision, or a practical learning environment, the starting point is the same: understand the work, make authority visible, preserve evidence, and keep consequential judgment with accountable people.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <article className="rounded-[1.5rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-6">
+              <h2 className="text-xl font-semibold text-white">For executive recruiters</h2>
+              <p className="mt-3 leading-7 text-stone-300">Explore an executive record that connects enterprise AI governance, technology risk, cybersecurity, resilience, and large-scale operational leadership.</p>
+            </article>
+            <article className="rounded-[1.5rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-6">
+              <h2 className="text-xl font-semibold text-white">For regulated-industry leaders</h2>
+              <p className="mt-3 leading-7 text-stone-300">Discuss how to move from AI ambition to workflows with explicit authority, evidence, controls, monitoring, and recovery.</p>
+            </article>
+            <article className="rounded-[1.5rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-6">
+              <h2 className="text-xl font-semibold text-white">For governance decision makers</h2>
+              <p className="mt-3 leading-7 text-stone-300">Use practical frameworks and simulation to examine decisions before automation makes weak assumptions harder to see.</p>
+            </article>
+          </div>
+          </div>
+        </section>
+
+        <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
+          <div className="rounded-[2rem] border border-[color:var(--oc-line-strong)] bg-[rgba(8,16,31,0.82)] p-8 shadow-[0_18px_50px_rgba(0,0,0,0.3),0_0_24px_rgba(67,231,255,0.08)] md:p-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Contact</p>
+            <h2 className="mt-3 max-w-4xl text-3xl font-semibold text-white md:text-4xl">Let&apos;s discuss the decision, workflow, or control problem behind the technology.</h2>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-stone-300">
+              I welcome conversations about executive leadership, advisory work, practical AI governance, technology risk, operational resilience, and Project Sentinel in regulated or high-consequence environments.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="mailto:sgmmartinez@gmail.com" onClick={() => recordContact('email')} className="rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f]">Email Juan</a>
+              <a href="mailto:sgmmartinez@gmail.com?subject=Project%20Sentinel%20Discussion" onClick={() => recordContact('sentinel')} className="rounded-2xl border border-[color:var(--oc-line)] px-5 py-3 text-sm font-medium text-white hover:border-[color:var(--oc-line-strong)]">Request a Sentinel Discussion</a>
+              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" onClick={() => recordContact('linkedin')} className="rounded-2xl border border-[color:var(--oc-line)] px-5 py-3 text-sm font-medium text-white hover:border-[color:var(--oc-line-strong)]">LinkedIn Profile</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.45)]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 text-sm leading-6 text-stone-500 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 Juan A. Martinez Diaz. All rights reserved.</p>
+          <p className="max-w-2xl md:text-right">Privacy-conscious analytics measure general engagement. No advertising trackers, remarketing pixels, or LinkedIn Insight Tag are used.</p>
+        </div>
+      </footer>
+      <Analytics />
+    </div>
+  );
+}
+
 export default function JuanProfessionalLandingPage() {
   const audiencePaths = [
     {
@@ -524,7 +810,7 @@ export default function JuanProfessionalLandingPage() {
       'I suspect that will become one of the defining differences between successful enterprise AI programs and expensive experiments.',
       'The organizations that make the most progress won\'t necessarily have access to the largest models.',
       'They\'ll understand their own workflows well enough to know where automation creates value, where humans remain essential, and how to demonstrate the difference with evidence instead of optimism.',
-      'Over the coming weeks, I\'ll begin sharing the framework I\'ve been developing to analyze, simulate, and evaluate enterprise workflows before recommending AI adoption.',
+      'That framework now informs Project Sentinel and the AI Build Lab, where workflows can be analyzed, simulated, and challenged before an organization recommends AI adoption.',
       'For me, that\'s becoming a far more interesting problem than AI itself.'
     ],
     archive: [
@@ -563,13 +849,22 @@ export default function JuanProfessionalLandingPage() {
 
   const rpaArticle = {
     title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
+    slug: 'from-rpa-to-agentic-ai-new-control-problem-part-1',
+    category: 'AI Governance and Controls',
+    author: 'Juan A. Martinez Diaz, MBA',
+    tags: ['Agentic AI', 'Robotic Process Automation', 'AI Governance', 'Evidence Lineage', 'Human Oversight'],
+    metaTitle: 'From RPA to Agentic AI: The New Control Problem | Juan Martinez',
+    metaDescription: 'What changes when AI agents enter workflows that used to be rules-based: footprints, fog, evidence lineage, control boundaries, and accountable human review.',
+    socialDescription: 'RPA usually left footprints. AI agents can create fog unless organizations engineer the evidence trail and control boundaries on purpose.',
     subtitle: 'Footprints, Fog, and the Evidence Trail',
-    articleAnchorOrUrl: '#article-from-rpa-to-agentic-ai-the-new-control-problem-part-1',
+    articleAnchorOrUrl: '/from-rpa-to-agentic-ai-new-control-problem-part-1',
     callToActionText: 'Read more on this topic here:',
-    fullReadMoreUrl: 'https://www.juanmartinez.ai/#article-from-rpa-to-agentic-ai-the-new-control-problem-part-1',
+    fullReadMoreUrl: 'https://www.juanmartinez.ai/from-rpa-to-agentic-ai-new-control-problem-part-1',
     originalVisiblePostingDate: 'June 29, 2026',
+    publishedDateIso: '2026-06-29',
     homepageFeaturedDate: 'June 29, 2026',
-    archiveNote: 'When a new featured article replaces this one, this article should move into the featured archive with its original posting date preserved.',
+    archiveNote: '',
+    hideCallToAction: true,
     archive: [
       {
         title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
@@ -770,7 +1065,7 @@ export default function JuanProfessionalLandingPage() {
     fullReadMoreUrl: 'https://www.juanmartinez.ai/ai-fluency-premium',
     originalVisiblePostingDate: 'June 22, 2026',
     homepageFeaturedDate: 'June 22, 2026',
-    archiveNote: 'Current featured article in the AI, Work, and Human Advantage series.',
+    archiveNote: '',
     callout: {
       title: 'A practical AI fluency checklist',
       intro: 'Being fluent with artificial intelligence is not the same thing as using a chatbot. A useful worker can:',
@@ -852,7 +1147,8 @@ export default function JuanProfessionalLandingPage() {
   const articleRoutes = {
     '/stop-starting-with-ai-start-with-the-workflow': workflowArticle,
     '/ai-fluency-premium': aiFluencyPremiumArticle,
-    '/ai-human-judgment-education': humanJudgmentArticle
+    '/ai-human-judgment-education': humanJudgmentArticle,
+    '/from-rpa-to-agentic-ai-new-control-problem-part-1': rpaArticle
   };
   const currentPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') || '/' : '/';
   const isContentAnalyticsDashboard = currentPath === contentAnalyticsDashboardPath;
@@ -935,10 +1231,9 @@ export default function JuanProfessionalLandingPage() {
         <div className="mt-6 space-y-3 text-sm text-stone-400">
           {article.author && <div>By {article.author}</div>}
           <div>Publish date: {article.originalVisiblePostingDate}</div>
-          <div>Featured on homepage: {article.homepageFeaturedDate}</div>
-          <div>{article.archiveNote}</div>
+          {article.archiveNote && <div>{article.archiveNote}</div>}
         </div>
-        {!article.hideCallToAction && (
+        {!standalone && !article.hideCallToAction && (
         <div className="mt-6 rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-5 text-sm text-stone-300">
           <div className="font-medium text-white">{article.callToActionText}</div>
           <a href={article.fullReadMoreUrl} className="mt-2 inline-block break-all text-[var(--oc-cyan)] hover:text-white">
@@ -1011,21 +1306,6 @@ export default function JuanProfessionalLandingPage() {
             </ul>
           </section>
         )}
-        {article.archive && (
-          <section className="mt-10 rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-6 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(99,170,255,0.06)] backdrop-blur-xl">
-            <h2 className="text-sm uppercase tracking-[0.2em] text-stone-400">Featured Archive</h2>
-            <p className="mt-3 text-sm leading-7 text-stone-300">Each featured article keeps its original visible publish date when rotated off the homepage.</p>
-            <div className="mt-5 space-y-3">
-              {article.archive.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.72)] p-5">
-                  <div className="text-sm text-stone-400">{item.originalVisiblePostingDate}</div>
-                  <h3 className="mt-2 text-base font-medium text-white">{item.title}</h3>
-                  <div className="mt-2 text-sm leading-7 text-stone-300">{item.status}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
       </article>
     </section>
   );
@@ -1039,9 +1319,9 @@ export default function JuanProfessionalLandingPage() {
       url: currentStandaloneArticle.fullReadMoreUrl
     } : null;
     const homeMeta = {
-      title: 'Juan A. Martinez Diaz | AI, Technology Risk, and Governance Leadership',
-      description: 'Juan A. Martinez Diaz is a senior technology, AI, risk, and governance leader focused on enterprise AI adoption, operational resilience, and executive decision support in regulated environments.',
-      socialDescription: 'Executive partnership across AI adoption, technology risk, governance, and operational resilience for complex and regulated environments.',
+      title: 'Juan A. Martinez Diaz | Enterprise AI Governance & Technology Risk Executive',
+      description: 'Enterprise AI governance, technology risk, cybersecurity, operational resilience, and accountable execution for regulated and high-consequence environments.',
+      socialDescription: 'Juan A. Martinez Diaz helps regulated organizations turn AI, cybersecurity, technology risk, and operational complexity into governed decisions and resilient workflows.',
       url: 'https://www.juanmartinez.ai/'
     };
     const methodMeta = {
@@ -1195,6 +1475,10 @@ export default function JuanProfessionalLandingPage() {
     return <MartinezMethodPage />;
   }
 
+  if (!isArticlePage) {
+    return <ExecutiveHomePage />;
+  }
+
   return (
     <div className="min-h-screen text-[var(--oc-text)]">
       <header className="sticky top-0 z-50 border-b border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.82)] backdrop-blur-xl">
@@ -1269,7 +1553,7 @@ export default function JuanProfessionalLandingPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Selected Impact</p>
               <h2 className="mt-3 text-3xl font-semibold">Credibility comes from proof, not posture.</h2>
               <p className="mt-4 text-base leading-8 text-stone-300">
-                The site should make clear that this is executive-grade work in serious environments. Here are a few indicators of scope, complexity, and operating context.
+                These indicators show the scope, complexity, and operating context behind the work.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -1288,7 +1572,7 @@ export default function JuanProfessionalLandingPage() {
             <div className="grid gap-10 md:grid-cols-2">
               <div>
                 <p className="text-sm uppercase tracking-[0.2em] text-stone-400">About</p>
-                <h2 className="mt-3 text-3xl font-semibold">Earned perspective, not borrowed language.</h2>
+                <h2 className="mt-3 text-3xl font-semibold">Leadership grounded in operating reality.</h2>
               </div>
               <div className="space-y-5 text-base leading-8 text-stone-300">
                 <p>
@@ -1372,7 +1656,7 @@ export default function JuanProfessionalLandingPage() {
         <section id="point-of-view" className="border-y border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.35)] backdrop-blur-sm">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Point of View</p>
-            <h2 className="mt-3 max-w-3xl text-3xl font-semibold">Original thinking is how people remember you.</h2>
+            <h2 className="mt-3 max-w-3xl text-3xl font-semibold">Perspectives on AI, risk, and accountable execution.</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {povItems.map((item) => (
                 <a key={item.title} href={item.href} className="block rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.72)] p-7 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(99,170,255,0.06)] transition hover:-translate-y-1 hover:border-[color:var(--oc-line-strong)] hover:shadow-[0_14px_36px_rgba(0,0,0,0.24),0_0_20px_rgba(67,231,255,0.1)] backdrop-blur-xl">
@@ -1393,7 +1677,7 @@ export default function JuanProfessionalLandingPage() {
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Coming Next</p>
             <h2 className="mt-3 text-3xl font-semibold">Why Control Environments Fail Under Pressure</h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-stone-300">
-              A practical look at the gap between elegant control language and what actually happens inside stressed operating environments. This will be the next authority page added to the site.
+              A practical look at the gap between elegant control language and what actually happens inside stressed operating environments.
             </p>
           </div>
         </section>
@@ -1406,11 +1690,10 @@ export default function JuanProfessionalLandingPage() {
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Contact</p>
             <h2 className="mt-3 text-3xl font-semibold">If your organization needs calm, clear thinking in a noisy environment, we should talk.</h2>
             <p className="mt-4 max-w-3xl text-base leading-8 text-stone-300">
-              This site is less about self-promotion and more about signal. If the problems you are working through involve enterprise artificial intelligence adoption, technology risk, governance, control quality, or operational resilience, there is a good chance there is something useful to discuss.
+              If your work involves enterprise artificial intelligence adoption, technology risk, governance, control quality, or operational resilience, there is likely something useful to discuss.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-stone-200">
               <a href="mailto:sgmmartinez@gmail.com" onClick={() => trackContactIntent('email_click')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
-              <a href="tel:9105514562" onClick={() => trackContactIntent('phone_click')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Phone: 910-551-4562</a>
               <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" onClick={() => trackContactIntent('linkedin_profile')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
             </div>
             <p className="mt-6 max-w-3xl text-xs leading-6 text-stone-500">

@@ -9,6 +9,14 @@
       "destination": "/stop-starting-with-ai-start-with-the-workflow/index.html"
     },
     {
+      "source": "/ai-fluency-premium",
+      "destination": "/ai-fluency-premium/index.html"
+    },
+    {
+      "source": "/from-rpa-to-agentic-ai-new-control-problem-part-1",
+      "destination": "/from-rpa-to-agentic-ai-new-control-problem-part-1/index.html"
+    },
+    {
       "source": "/ai-human-judgment-education",
       "destination": "/ai-human-judgment-education/index.html"
     },
