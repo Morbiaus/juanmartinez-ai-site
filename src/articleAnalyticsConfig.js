@@ -27,6 +27,15 @@ export const articleAnalyticsConfig = [
     campaign: 'human_judgment_education',
     author: 'Juan A. Martinez Diaz, MBA',
     estimated_read_time: '5 min'
+  },
+  {
+    title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
+    slug: 'from-rpa-to-agentic-ai-new-control-problem-part-1',
+    published_date: '2026-06-29',
+    category: 'AI Governance and Controls',
+    campaign: 'rpa_to_agentic_control_problem',
+    author: 'Juan A. Martinez Diaz, MBA',
+    estimated_read_time: '6 min'
   }
 ];
 
