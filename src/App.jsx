@@ -867,6 +867,8 @@ export default function JuanProfessionalLandingPage() {
     articleAnchorOrUrl: '/thought-partner',
     callToActionText: 'Try the related AI Build Lab mission here:',
     fullReadMoreUrl: thoughtPartnerMissionUrl,
+    canonicalUrl: 'https://www.juanmartinez.ai/thought-partner',
+    showStandaloneCallToAction: true,
     originalVisiblePostingDate: 'August 19, 2026',
     publishedDateIso: '2026-08-19',
     homepageFeaturedDate: 'August 19, 2026',
@@ -1388,7 +1390,7 @@ export default function JuanProfessionalLandingPage() {
           <div>Publish date: {article.originalVisiblePostingDate}</div>
           {article.archiveNote && <div>{article.archiveNote}</div>}
         </div>
-        {!standalone && !article.hideCallToAction && (
+        {(!standalone || article.showStandaloneCallToAction) && !article.hideCallToAction && (
         <div className="mt-6 rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.72)] p-5 text-sm text-stone-300">
           <div className="font-medium text-white">{article.callToActionText}</div>
           <a href={article.fullReadMoreUrl} className="mt-2 inline-block break-all text-[var(--oc-cyan)] hover:text-white">
@@ -1493,7 +1495,7 @@ export default function JuanProfessionalLandingPage() {
       title: currentStandaloneArticle.metaTitle || `${currentStandaloneArticle.title} | Juan Martinez`,
       description: currentStandaloneArticle.metaDescription || currentStandaloneArticle.subtitle,
       socialDescription: currentStandaloneArticle.socialDescription || currentStandaloneArticle.metaDescription || currentStandaloneArticle.subtitle,
-      url: currentStandaloneArticle.fullReadMoreUrl
+      url: currentStandaloneArticle.canonicalUrl || currentStandaloneArticle.fullReadMoreUrl
     } : null;
     const homeMeta = {
       title: 'Juan A. Martinez Diaz | Enterprise AI Governance & Technology Risk Executive',
