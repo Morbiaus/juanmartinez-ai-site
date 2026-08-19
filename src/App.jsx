@@ -748,6 +748,12 @@ export default function JuanProfessionalLandingPage() {
       status: 'Featured archive'
     },
     {
+      title: 'A Thought Partner Should Make You Think Better, Not Think for You',
+      text: 'An AI Build Lab feature on designing artificial intelligence to challenge assumptions, expose uncertainty, and improve human judgment without replacing it.',
+      href: '/thought-partner',
+      status: 'New AI Build Lab feature'
+    },
+    {
       title: 'From RPA to Agentic AI: The New Control Problem — Part 1',
       text: 'Footprints, fog, and the evidence trail. A practical series on what changes when AI agents enter workflows that used to be rules-based.',
       href: '#article-from-rpa-to-agentic-ai-the-new-control-problem-part-1',
@@ -843,6 +849,154 @@ export default function JuanProfessionalLandingPage() {
         title: 'The Quiet Erosion of White-Collar Work',
         originalVisiblePostingDate: 'April 14, 2026',
         status: 'Previously featured article'
+      }
+    ]
+  };
+
+  const thoughtPartnerMissionUrl = `${AI_BUILD_LAB_URL}/?mission=thought-partner#project-studio`;
+
+  const thoughtPartnerArticle = {
+    title: 'A Thought Partner Should Make You Think Better, Not Think for You',
+    slug: 'thought-partner',
+    category: 'AI Build Lab',
+    author: 'Juan A. Martinez Diaz',
+    tags: ['Artificial Intelligence', 'Human Judgment', 'AI Build Lab', 'Decision Support', 'Thought Partner'],
+    metaTitle: 'A Thought Partner Should Make You Think Better, Not Think for You | Juan Martinez',
+    metaDescription: 'A feature on using artificial intelligence as a Thought Partner that improves human reasoning without replacing human judgment.',
+    socialDescription: 'A Thought Partner does not think for you. A Thought Partner thinks with you.',
+    articleAnchorOrUrl: '/thought-partner',
+    callToActionText: 'Try the related AI Build Lab mission here:',
+    fullReadMoreUrl: thoughtPartnerMissionUrl,
+    originalVisiblePostingDate: 'August 19, 2026',
+    publishedDateIso: '2026-08-19',
+    homepageFeaturedDate: 'August 19, 2026',
+    archiveNote: 'AI Build Lab feature linked to Mission 13.',
+    body: [],
+    sections: [
+      {
+        heading: 'An idea that started at home',
+        blocks: [
+          "Some of the ideas that stay with me don't begin in a conference room, classroom, research paper, or technology lab. They begin around the house.",
+          'When my daughter, Telisse Rodriguez, and her family visit, Telisse and I invariably find ourselves working through something together. It might be a family decision, an investment, something happening at work, or an idea one of us hasn\'t completely figured out yet.',
+          'There is rarely an agenda. One of us puts something on the table and the other starts asking questions. We follow one direction, find a weakness, try another, challenge an assumption, and occasionally disagree. Sometimes one of us changes the other\'s mind. Sometimes neither of us does.',
+          'And sometimes the best result is realizing that we were asking the wrong question.',
+          'I realized recently that there is a simple name for what we have been doing. We are thought partners.',
+          'That realization led me to a larger question: Could artificial intelligence become a useful thought partner without becoming a substitute for human thought?',
+          'I think it can, but it requires us to ask something different of the technology.'
+        ]
+      },
+      {
+        heading: 'Completing work and improving judgment are different things',
+        blocks: [
+          'Artificial intelligence is already useful as an assistant. We can ask it to summarize a document, draft an email, analyze information, research a subject, organize a project, or write code. Those capabilities can save considerable time.',
+          'But completing work and improving judgment are different functions.',
+          'Suppose I bring an investment idea to an AI and ask it to help develop my thesis. It may produce an impressive analysis. But what happens if my original thesis is wrong?',
+          "If the system accepts my premise and becomes increasingly effective at helping me defend it, my thinking hasn't necessarily improved. I may simply have created a more convincing argument for something I already wanted to believe.",
+          'A Thought Partner needs a different objective: help me determine whether my idea deserves to survive scrutiny.'
+        ]
+      },
+      {
+        heading: "Agreement isn't the objective",
+        blocks: [
+          'People become attached to their ideas. We notice evidence that supports what we already believe, and sometimes we continue defending a decision after the facts that originally supported it have changed.',
+          'AI can reinforce that tendency if being “helpful” means following whatever direction the user establishes.',
+          'A useful Thought Partner needs permission to create some constructive friction. It should be able to tell me that my conclusion depends on an unsupported assumption, that there is a stronger argument against my position than the one I\'ve considered, or that I may be solving the wrong problem.',
+          "That isn't obstruction. If the challenge improves the reasoning behind the eventual decision, it has done useful work."
+        ]
+      },
+      {
+        heading: 'Keep the evidence trail visible',
+        blocks: [
+          'A serious Thought Partner should distinguish among what we know, what the evidence reasonably supports, what we infer, what we assume, and what remains unknown.',
+          'Consider a business decision. Revenue may have increased for three consecutive quarters. That can be verified. Management may believe a new product caused the growth. That conclusion requires evidence. Assuming the growth will continue introduces another level of uncertainty, and we may have no reliable information about how customers would react if a competitor changed prices.',
+          "Put all of those statements into one confident paragraph and they can sound equally certain. They aren't.",
+          "The Thought Partner should keep that evidence trail visible so confidence doesn't quietly outrun what we actually know."
+        ]
+      },
+      {
+        heading: 'A working Thought Partner Protocol',
+        blocks: [
+          'I think these ideas can be organized into a repeatable method:',
+          'UNDERSTAND → FRAME → CHALLENGE → EXPAND → TEST → SYNTHESIZE → DECIDE',
+          'Understand the objective, constraints, existing beliefs, and what success actually means before recommending anything. An excellent answer to the wrong problem is still the wrong answer.',
+          'Frame the decision clearly. “Should I invest in this company?” may actually mean, “Is this opportunity better than the other uses available for this capital?” Changing the frame can change the analysis.',
+          'Challenge the assumptions carrying the argument. Determine what must be true for the plan to work, which assumptions have evidence behind them, and where the reasoning is vulnerable.',
+          "Expand the option set. The original idea shouldn't automatically define the boundaries of the decision. Waiting, doing nothing, running a smaller experiment, or approaching the problem differently may deserve consideration.",
+          'Test the strongest alternatives against evidence, constraints, downside, consequences, and the strongest credible opposing argument.',
+          'Synthesize what survives. Make clear what is supported, what remains uncertain, what risks matter, and what information could materially change the analysis.',
+          'Decide by making a recommendation when the evidence supports one, while keeping ownership where it belongs.',
+          'Artificial intelligence can participate in judgment without owning judgment.'
+        ]
+      },
+      {
+        heading: 'Sometimes the correct answer is “we don\'t know yet”',
+        blocks: [
+          'We tend to expect an answer every time we ask AI a question. Reality doesn\'t always provide enough evidence for one.',
+          'A useful Thought Partner should be comfortable saying, “I don\'t know,” and then identifying what information would reduce the uncertainty. That isn\'t failure. It is discipline.',
+          "The objective isn't to maximize the number of answers produced. It is to improve the quality of the decisions those answers inform."
+        ]
+      },
+      {
+        heading: 'What if it remembers how you make decisions?',
+        blocks: [
+          'This is where the idea becomes more interesting to me.',
+          'Most discussions of AI memory focus on personal facts, preferences, projects, names, schedules, and writing styles. Those things can be useful, but imagine a Thought Partner that could also help you examine your decision history.',
+          'What assumptions have repeatedly influenced your decisions? Where have you underestimated risk? Which principles consistently matter to you? What evidence has caused you to change your mind? Which previous decisions produced an outcome different from what you expected?',
+          'A future conversation might begin differently because of that context: “You\'ve faced something similar before. Last time, you placed considerable weight on growth potential but underestimated concentration risk. Should we examine concentration explicitly before making this decision?”',
+          'Used carefully, that could help someone learn from previous decisions instead of repeatedly starting from zero.',
+          "It also creates risk. The user should control what is remembered, sensitive information shouldn't be retained indiscriminately, and a previous behavior shouldn't become a permanent judgment about the person. History can inform the next question without dictating the next answer."
+        ]
+      },
+      {
+        heading: 'Different problems need different kinds of thinking',
+        blocks: [
+          "I don't think a Thought Partner needs a collection of fictional expert personalities. I would rather give it a small number of useful cognitive modes.",
+          "Socratic Mode asks questions before recommending when the problem or assumptions need clarification. Red Team Mode deliberately searches for weaknesses, opposing evidence, and failure paths. Exploration Mode expands possibilities when the problem isn't yet well defined. Decision Mode compares credible alternatives against explicit criteria and recommends a course when the evidence warrants it.",
+          "These aren't characters. They are different ways of examining a problem."
+        ]
+      },
+      {
+        heading: 'The Challenge Me Contract',
+        blocks: [
+          'I would also establish a standing agreement with the system:',
+          'Do not agree with me simply because I proposed the idea. Identify the assumptions supporting my conclusion and present the strongest credible opposing argument. Distinguish facts, evidence-supported conclusions, inference, assumptions, speculation, and unknowns. Tell me when the evidence is insufficient and what could change the recommendation.',
+          "Don't manufacture certainty. Make a recommendation when the evidence supports one, but leave final judgment and accountability with me.",
+          'That agreement changes what “helpful” means. The system isn\'t being asked merely to satisfy my immediate request. It is being asked to help protect the integrity of the reasoning that precedes the decision.'
+        ]
+      },
+      {
+        heading: 'The method should survive the model',
+        blocks: [
+          "I don't want this concept permanently tied to ChatGPT, Claude, Gemini, or any other Large Language Model (LLM). Models will change. Providers will change. Capabilities will change.",
+          'The useful part should survive those changes.',
+          'How does the system understand a problem? When does it challenge the user? How does it treat uncertainty? How does it distinguish evidence from assumption? What may it remember? When should it research instead of infer? Where do its decision rights end?',
+          'Those are architectural choices.',
+          'The model is the engine. The intellectual architecture is the product.'
+        ]
+      },
+      {
+        heading: 'The boundary matters',
+        blocks: [
+          "There is one outcome I specifically don't want.",
+          "A Thought Partner shouldn't become a machine people use to avoid thinking, nor should “the AI told me to do it” become an excuse for transferring responsibility.",
+          "The purpose is to strengthen human judgment, not replace it. Ideally, repeated interaction with a good Thought Partner should eventually improve the questions we ask even when the technology isn't present.",
+          'That may ultimately be a better measure of success than how impressive its answers sound.'
+        ]
+      },
+      {
+        heading: 'Now we test it',
+        blocks: [
+          'This idea began with Telisse and me bouncing thoughts across a room. There was no theory behind it at the time, just two people willing to enter a problem together and challenge each other\'s thinking.',
+          'That human principle is what I want to preserve as we test whether some of the method can be translated into AI.',
+          "In AI Build Lab Mission 13 — Meet Your AI Thought Partner, we'll bring the system a real decision and see whether it can understand, frame, challenge, expand, test, and support a decision without taking ownership of it.",
+          "We'll also deliberately give it a weak proposition.",
+          'If it simply agrees with us, it fails.',
+          "That matters because the objective isn't to create another AI that produces polished answers on demand. The objective is to see whether we can design one that improves the reasoning that comes before the answer.",
+          'The experiment is simple enough to try and demanding enough to expose whether the idea actually works.',
+          'This started with my daughter. Now I want to see what happens when we put the principle to work.',
+          "Perhaps one of AI's more useful contributions won't be giving us more answers. It may be helping us examine how we arrived at them.",
+          'Inspired by my daughter and thought partner, Telisse Rodriguez.'
+        ]
       }
     ]
   };
@@ -1143,9 +1297,10 @@ export default function JuanProfessionalLandingPage() {
     ]
   };
 
-  const featuredArticles = [workflowArticle, aiFluencyPremiumArticle, humanJudgmentArticle, rpaArticle];
+  const featuredArticles = [workflowArticle, thoughtPartnerArticle, aiFluencyPremiumArticle, humanJudgmentArticle, rpaArticle];
   const articleRoutes = {
     '/stop-starting-with-ai-start-with-the-workflow': workflowArticle,
+    '/thought-partner': thoughtPartnerArticle,
     '/ai-fluency-premium': aiFluencyPremiumArticle,
     '/ai-human-judgment-education': humanJudgmentArticle,
     '/from-rpa-to-agentic-ai-new-control-problem-part-1': rpaArticle
@@ -1254,6 +1409,28 @@ export default function JuanProfessionalLandingPage() {
             )
           ))}
         </div>
+        {article.sections && (
+          <div className="mt-10 space-y-10 text-base leading-8 text-stone-200">
+            {article.sections.map((section) => (
+              <section key={section.heading}>
+                <h2 className="text-2xl font-semibold leading-tight text-white md:text-3xl">{section.heading}</h2>
+                <div className="mt-5 space-y-6">
+                  {section.blocks.map((block, index) => (
+                    Array.isArray(block) ? (
+                      <ul key={index} className="list-disc space-y-3 pl-6">
+                        {block.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p key={index}>{block}</p>
+                    )
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        )}
         {article.framework && (
           <div className="mt-12 rounded-[2rem] border border-[color:var(--oc-line-strong)] bg-[rgba(8,16,31,0.82)] p-6 shadow-[0_12px_30px_rgba(0,0,0,0.22),0_0_18px_rgba(67,231,255,0.06)]">
             <h3 className="text-2xl font-semibold text-white">{article.frameworkTitle}</h3>
