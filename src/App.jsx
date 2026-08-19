@@ -760,6 +760,12 @@ export default function JuanProfessionalLandingPage() {
       status: 'Featured archive'
     },
     {
+      title: 'From RPA to Agentic AI: The New Control Problem — Part 2: Capability Is Not Permission',
+      text: 'A practical control argument for separating what an AI agent can do from what it has authority to do.',
+      href: '/from-rpa-to-agentic-ai-new-control-problem-part-2-capability-is-not-permission',
+      status: 'Featured archive'
+    },
+    {
       title: 'Agentic Artificial Intelligence Is Not Robotic Process Automation With Better Vocabulary',
       text: 'Regulated institutions are moving from deterministic automation to probabilistic agency. The control question is no longer just whether the bot followed the script, but whether the firm can govern systems that choose their own path through regulated work.',
       href: '#article-agentic-artificial-intelligence-is-not-robotic-process-automation-with-better-vocabulary',
@@ -1097,6 +1103,103 @@ export default function JuanProfessionalLandingPage() {
     ]
   };
 
+  const rpaPart2Article = {
+    title: 'From RPA to Agentic AI: The New Control Problem — Part 2: Capability Is Not Permission',
+    slug: 'from-rpa-to-agentic-ai-new-control-problem-part-2-capability-is-not-permission',
+    category: 'AI Governance and Controls',
+    author: 'Juan A. Martinez Diaz',
+    tags: ['AI Governance', 'Operational Risk', 'Agentic AI', 'Control Design', 'Human Oversight'],
+    metaTitle: 'From RPA to Agentic AI: The New Control Problem — Part 2: Capability Is Not Permission | Juan Martinez',
+    metaDescription: 'Capability is not permission. A practical control argument for separating what an AI agent can do from what it has authority to do.',
+    socialDescription: 'An AI agent can produce the right answer and still take the wrong path to get there.',
+    subtitle: 'Capability Is Not Permission',
+    articleAnchorOrUrl: '/from-rpa-to-agentic-ai-new-control-problem-part-2-capability-is-not-permission',
+    callToActionText: 'Read Part 1 here:',
+    fullReadMoreUrl: 'https://www.juanmartinez.ai/from-rpa-to-agentic-ai-new-control-problem-part-1',
+    canonicalUrl: 'https://www.juanmartinez.ai/from-rpa-to-agentic-ai-new-control-problem-part-2-capability-is-not-permission',
+    showStandaloneCallToAction: true,
+    originalVisiblePostingDate: 'August 19, 2026',
+    publishedDateIso: '2026-08-19',
+    homepageFeaturedDate: 'August 19, 2026',
+    archiveNote: 'Part 2 of the From RPA to Agentic AI series.',
+    body: [
+      'In Part 1, I wrote about what happens to the evidence trail when artificial intelligence agents enter workflows that were once largely rules-based. Robotic Process Automation (RPA) tended to fail visibly. When a rule failed or required information was missing, the process stopped, and someone could usually determine why.',
+      'AI agents are different. They can interpret what they encounter and find another way forward. That flexibility is useful, but it creates a control problem we did not have to confront in quite the same way with RPA.',
+      'An agent can produce the right answer and still take the wrong path to get there.'
+    ],
+    sections: [
+      {
+        heading: 'Capability Does Not Create Authority',
+        blocks: [
+          'Consider an employee requesting elevated access to a production system. The employee qualifies and the manager approves the request, so the agent grants the access. Everything appears fine until someone discovers that a required system-owner approval was missing.',
+          'The transaction was completed, and the employee may even have had a legitimate business need. But the agent’s technical ability to execute the change had been mistaken for authority to make the decision.',
+          'A great deal of the AI conversation has centered on what these systems can do. We have watched them move from generating text to analyzing information, using tools, and performing increasingly complex work. Now they are beginning to act inside operational workflows.',
+          'An agent may be authorized to gather information and recommend a decision without having authority to execute it. That separation looks straightforward in a policy. It becomes much less obvious when the technology can perform the entire process from beginning to end.',
+          'If the agent can review the access request, determine that the employee qualifies, prepare the entitlement change, and technically execute it, where exactly do we tell it to stop?',
+          'That boundary has to be designed.'
+        ]
+      },
+      {
+        heading: 'Give the Agent a Boundary',
+        blocks: [
+          'I think we should begin thinking about agents in terms of authority rather than capability. What may the agent see? What may it recommend? What may it actually do?',
+          'Those three questions create a useful control boundary.',
+          'An agent reviewing an access request may need permission to read the policy and examine the supporting evidence. It may also be useful for the agent to recommend approval or escalation. Neither permission necessarily gives it authority to change someone’s access.',
+          'That final step belongs to whoever the organization has decided can make that decision. The technology may be capable of crossing the boundary, but the control should prevent it from doing so.'
+        ]
+      },
+      {
+        heading: 'Sometimes the Correct Answer Is Stop',
+        blocks: [
+          'Automation has traditionally rewarded completion. We measure transactions processed, time saved, and work completed. Those measures make sense when the process follows predictable rules.',
+          'Agentic systems introduce another measure that deserves equal attention: whether the agent knew when not to continue.',
+          'Suppose required evidence is missing or two approved sources disagree. The agent may be capable of making an inference and continuing the workflow. I want it to recognize the exception, preserve what it found, and send the decision to the person who owns it.',
+          'A controlled refusal is not a failed transaction. Sometimes it is evidence that the control worked.'
+        ]
+      },
+      {
+        heading: 'The Human Approval Problem',
+        blocks: [
+          'There is another weakness hiding inside many discussions about AI governance: the phrase “human in the loop.”',
+          'Putting a person at the end of a workflow does not automatically create meaningful oversight. If an agent reviews the case, resolves inconsistencies, selects the evidence, and presents the reviewer with “Recommended: Approve,” the human may technically own the final click. But the agent has already shaped almost everything the reviewer sees.',
+          'That can turn human approval into ceremony.',
+          'The reviewer needs enough evidence to challenge the recommendation, not simply accept it. Missing or conflicting information should be visible. The record should also show when the agent reached the edge of its authority.',
+          'The evidence has to travel with the decision.'
+        ]
+      },
+      {
+        heading: 'Show Me What Happened',
+        blocks: [
+          'I do not need an AI system to produce pages describing everything it supposedly thought about while completing a task. I need something more useful.',
+          'I need the record.',
+          'What evidence did the agent use? What action did it take or recommend? Who ultimately authorized the decision?',
+          'With those facts, we can begin reconstructing what happened. Without them, even a correct outcome can become difficult to defend later.',
+          'Anyone who has worked around Risk, Audit, or Compliance knows where this eventually leads. Months after the transaction is complete, someone asks a very simple question:',
+          'Show me what happened.',
+          'The organization should be able to answer.'
+        ]
+      },
+      {
+        heading: 'We May Be Measuring the Wrong Things',
+        blocks: [
+          'Speed and productivity will continue to matter. Organizations are investing heavily in AI and will understandably want to know whether those investments improve performance.',
+          'But speed alone tells us very little about control. I also want to know whether the agent recognized exceptions, remained within its authority, and left enough evidence to reconstruct an important decision.',
+          'Those measurements tell us something productivity statistics cannot. They tell us whether the system remained under control while doing the work.'
+        ]
+      },
+      {
+        heading: 'Capability Is Not Permission',
+        blocks: [
+          'AI agents will continue becoming more capable. They will use more tools, reach more systems, and perform more of the work that currently requires human intervention. That makes the boundary around their authority increasingly important.',
+          'Organizations will have to decide where assistance ends and authority begins. That boundary should exist before the agent enters production, not after an incident forces someone to define it.',
+          'Eventually, an agent will encounter something its designers did not anticipate. It may understand the situation, know what action would resolve it, and possess the technical ability to execute that action.',
+          'Whether it can do it will not be the problem.',
+          'Whether it should have been allowed to do it will be.'
+        ]
+      }
+    ]
+  };
+
   const humanJudgmentArticle = {
     title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
     slug: 'ai-human-judgment-education',
@@ -1299,10 +1402,11 @@ export default function JuanProfessionalLandingPage() {
     ]
   };
 
-  const featuredArticles = [workflowArticle, thoughtPartnerArticle, aiFluencyPremiumArticle, humanJudgmentArticle, rpaArticle];
+  const featuredArticles = [workflowArticle, thoughtPartnerArticle, rpaPart2Article, aiFluencyPremiumArticle, humanJudgmentArticle, rpaArticle];
   const articleRoutes = {
     '/stop-starting-with-ai-start-with-the-workflow': workflowArticle,
     '/thought-partner': thoughtPartnerArticle,
+    '/from-rpa-to-agentic-ai-new-control-problem-part-2-capability-is-not-permission': rpaPart2Article,
     '/ai-fluency-premium': aiFluencyPremiumArticle,
     '/ai-human-judgment-education': humanJudgmentArticle,
     '/from-rpa-to-agentic-ai-new-control-problem-part-1': rpaArticle

@@ -20,6 +20,15 @@ export const articleAnalyticsConfig = [
     estimated_read_time: '8 min'
   },
   {
+    title: 'From RPA to Agentic AI: The New Control Problem — Part 2: Capability Is Not Permission',
+    slug: 'from-rpa-to-agentic-ai-new-control-problem-part-2-capability-is-not-permission',
+    published_date: '2026-08-19',
+    category: 'AI Governance and Controls',
+    campaign: 'rpa_to_agentic_control_problem_part_2',
+    author: 'Juan A. Martinez Diaz',
+    estimated_read_time: '5 min'
+  },
+  {
     title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
     slug: 'ai-fluency-premium',
     published_date: '2026-06-22',
