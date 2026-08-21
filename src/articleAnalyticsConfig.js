@@ -11,11 +11,11 @@ export const articleAnalyticsConfig = [
     estimated_read_time: '3 min'
   },
   {
-    title: 'A Thought Partner Should Make You Think Better, Not Think for You',
+    title: 'A Thought Partner Should Make Your Thinking Harder to Fool',
     slug: 'thought-partner',
     published_date: '2026-08-19',
     category: 'AI Build Lab',
-    campaign: 'thought_partner_mission_13',
+    campaign: 'thought_partner_mission_14',
     author: 'Juan A. Martinez Diaz',
     estimated_read_time: '8 min'
   },
