@@ -748,8 +748,8 @@ export default function JuanProfessionalLandingPage() {
       status: 'Featured archive'
     },
     {
-      title: 'A Thought Partner Should Make You Think Better, Not Think for You',
-      text: 'An AI Build Lab feature on designing artificial intelligence to challenge assumptions, expose uncertainty, and improve human judgment without replacing it.',
+      title: 'A Thought Partner Should Make Your Thinking Harder to Fool',
+      text: 'An AI Build Lab feature on designing a customizable Thought Partner that challenges assumptions, exposes rationalizations, and improves human judgment without replacing it.',
       href: '/thought-partner',
       status: 'New AI Build Lab feature'
     },
@@ -859,26 +859,26 @@ export default function JuanProfessionalLandingPage() {
     ]
   };
 
-  const thoughtPartnerMissionUrl = `${AI_BUILD_LAB_URL}/?mission=thought-partner#project-studio`;
+  const thoughtPartnerMissionUrl = `${AI_BUILD_LAB_URL}/?mission=build-thought-partner#project-studio`;
 
   const thoughtPartnerArticle = {
-    title: 'A Thought Partner Should Make You Think Better, Not Think for You',
+    title: 'A Thought Partner Should Make Your Thinking Harder to Fool',
     slug: 'thought-partner',
     category: 'AI Build Lab',
     author: 'Juan A. Martinez Diaz',
     tags: ['Artificial Intelligence', 'Human Judgment', 'AI Build Lab', 'Decision Support', 'Thought Partner'],
-    metaTitle: 'A Thought Partner Should Make You Think Better, Not Think for You | Juan Martinez',
-    metaDescription: 'A feature on using artificial intelligence as a Thought Partner that improves human reasoning without replacing human judgment.',
-    socialDescription: 'A Thought Partner does not think for you. A Thought Partner thinks with you.',
+    metaTitle: 'A Thought Partner Should Make Your Thinking Harder to Fool | Juan Martinez',
+    metaDescription: 'A feature on building a customizable AI Thought Partner that challenges assumptions, examines evidence, and improves human reasoning without replacing human judgment.',
+    socialDescription: 'I do not want an AI that automatically disagrees with me. I want one that makes it harder for me to fool myself.',
     articleAnchorOrUrl: '/thought-partner',
-    callToActionText: 'Try the related AI Build Lab mission here:',
+    callToActionText: 'Build your own Thought Partner in AI Build Lab Mission 14:',
     fullReadMoreUrl: thoughtPartnerMissionUrl,
     canonicalUrl: 'https://www.juanmartinez.ai/thought-partner',
     showStandaloneCallToAction: true,
     originalVisiblePostingDate: 'August 19, 2026',
     publishedDateIso: '2026-08-19',
-    homepageFeaturedDate: 'August 19, 2026',
-    archiveNote: 'AI Build Lab feature linked to Mission 13.',
+    homepageFeaturedDate: 'August 21, 2026',
+    archiveNote: 'AI Build Lab feature updated for Mission 14.',
     body: [],
     sections: [
       {
@@ -992,17 +992,16 @@ export default function JuanProfessionalLandingPage() {
         ]
       },
       {
-        heading: 'Now we test it',
+        heading: 'Now build one that can survive pressure',
         blocks: [
           'This idea began with Telisse and me bouncing thoughts across a room. There was no theory behind it at the time, just two people willing to enter a problem together and challenge each other\'s thinking.',
-          'That human principle is what I want to preserve as we test whether some of the method can be translated into AI.',
-          "In AI Build Lab Mission 13 — Meet Your AI Thought Partner, we'll bring the system a real decision and see whether it can understand, frame, challenge, expand, test, and support a decision without taking ownership of it.",
-          "We'll also deliberately give it a weak proposition.",
-          'If it simply agrees with us, it fails.',
-          "That matters because the objective isn't to create another AI that produces polished answers on demand. The objective is to see whether we can design one that improves the reasoning that comes before the answer.",
-          'The experiment is simple enough to try and demanding enough to expose whether the idea actually works.',
-          'This started with my daughter. Now I want to see what happens when we put the principle to work.',
-          "Perhaps one of AI's more useful contributions won't be giving us more answers. It may be helping us examine how we arrived at them.",
+          'Mission 13 tested that human principle against a real decision. Mission 14 asks a more demanding question: Who should define how the Thought Partner challenges you?',
+          'My answer is that the user should. Challenge intensity, thinking mode, question cadence, evidence standard, memory boundary, and decision authority should be deliberate choices rather than invisible defaults.',
+          'The test is not whether the prompt sounds intelligent. The test is whether the resulting behavior survives pressure.',
+          'Give it a weak proposition and see whether it exposes the assumptions or helps rationalize them. Ask for a current fact it cannot verify and see whether it admits the limit or manufactures certainty. Ask it to make the final decision and see whether it returns authority to the human.',
+          'Record every failure, refine the operating agreement, and test it again. That is how a Thought Partner becomes more than a polished echo.',
+          'AI Build Lab Mission 14 provides the complete model-agnostic prompt, configuration choices, evidence rules, memory boundaries, and failure tests.',
+          "Perhaps one of AI's more useful contributions won't be giving us more answers. It may be making our own reasoning harder to fool.",
           'Inspired by my daughter and thought partner, Telisse Rodriguez.'
         ]
       }
