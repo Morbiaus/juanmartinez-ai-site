@@ -25,6 +25,10 @@
       "destination": "/thought-partner/index.html"
     },
     {
+      "source": "/career-recovery",
+      "destination": "/career-recovery/index.html"
+    },
+    {
       "source": "/ai-human-judgment-education",
       "destination": "/ai-human-judgment-education/index.html"
     },

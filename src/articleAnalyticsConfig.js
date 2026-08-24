@@ -2,6 +2,15 @@ export const contentAnalyticsDashboardPath = '/admin/content-analytics';
 
 export const articleAnalyticsConfig = [
   {
+    title: 'A LinkedIn Profile Cannot Fix the Job Market. It Can Keep You from Disappearing.',
+    slug: 'career-recovery',
+    published_date: '2026-08-24',
+    category: 'AI Build Lab',
+    campaign: 'career_recovery_mission_15',
+    author: 'Juan A. Martinez Diaz, MBA',
+    estimated_read_time: '9 min'
+  },
+  {
     title: 'Stop Starting with AI. Start with the Workflow.',
     slug: 'stop-starting-with-ai-start-with-the-workflow',
     published_date: '2026-07-20',

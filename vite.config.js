@@ -18,6 +18,7 @@ export default defineConfig({
         rpaAgenticControlArticle: resolve(__dirname, 'from-rpa-to-agentic-ai-new-control-problem-part-1/index.html'),
         rpaAgenticControlPart2Article: resolve(__dirname, 'from-rpa-to-agentic-ai-new-control-problem-part-2-capability-is-not-permission/index.html'),
         thoughtPartnerArticle: resolve(__dirname, 'thought-partner/index.html'),
+        careerRecoveryArticle: resolve(__dirname, 'career-recovery/index.html'),
         contentAnalyticsDashboard: resolve(__dirname, 'admin/content-analytics/index.html'),
         martinezMethod: resolve(__dirname, 'martinez-method.html'),
       },
