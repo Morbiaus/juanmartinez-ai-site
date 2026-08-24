@@ -436,7 +436,7 @@ function ExecutiveHomePage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between">
           <a href="#top" className="min-w-0">
             <div className="text-lg font-semibold tracking-wide text-white md:text-xl">Juan A. Martinez Diaz, MBA</div>
-            <div className="mt-1 text-sm text-[var(--oc-muted)]">Enterprise AI governance, technology risk, cybersecurity, and operational resilience</div>
+            <div className="mt-1 text-sm text-[var(--oc-muted)]">Technology leadership, risk, resilience, and applied AI</div>
           </a>
           <nav aria-label="Primary" className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-[var(--oc-muted)]">
             <a href="#about" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">About</a>
@@ -453,28 +453,34 @@ function ExecutiveHomePage() {
         <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--oc-cyan)]">Regulated and high-consequence environments</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-[var(--oc-cyan)]">Juan A. Martinez Diaz · Executive Portfolio</p>
               <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">
-                Enterprise AI Governance &amp; Technology Risk Executive
+                The test of technology is what happens after everyone says yes.
               </h1>
               <p className="mt-7 max-w-3xl text-lg leading-9 text-stone-300">
-                I help regulated organizations turn artificial intelligence, cybersecurity, technology risk, and operational complexity into governed decisions, resilient workflows, and accountable execution.
+                I have spent my career on that side of the decision—leading large-scale IT, protecting critical operations, challenging technology risk, and turning emerging capabilities into something an organization can actually depend on.
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
-                <a href="#selected-work" className="rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f] shadow-[0_0_24px_rgba(67,231,255,0.18)] transition hover:-translate-y-0.5">View Selected Work</a>
-                <a href="#sentinel" className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-white transition hover:border-[color:var(--oc-line-strong)]">Explore Project Sentinel</a>
-                <a href={AI_BUILD_LAB_URL} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-white transition hover:border-[color:var(--oc-line-strong)]">Enter the AI Build Lab</a>
+                <a href="#impact" className="rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f] shadow-[0_0_24px_rgba(67,231,255,0.18)] transition hover:-translate-y-0.5">See the Work</a>
+                <a href={AI_BUILD_LAB_URL} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-white transition hover:border-[color:var(--oc-line-strong)]">Explore the AI Build Lab</a>
               </div>
             </div>
             <aside className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.76)] p-7 shadow-[0_18px_50px_rgba(0,0,0,0.3),0_0_24px_rgba(67,231,255,0.08)]">
-              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Where I am most useful</p>
-              <h2 className="mt-3 text-2xl font-semibold text-white">Turning ambition into an operating model leaders can defend.</h2>
-              <ul className="mt-6 space-y-4 text-base leading-7 text-stone-300">
-                <li>• Governing AI inside real enterprise workflows</li>
-                <li>• Connecting technology risk to executive decisions</li>
-                <li>• Preserving evidence, control boundaries, and human authority</li>
-                <li>• Strengthening resilience in regulated or operationally sensitive environments</li>
-              </ul>
+              <div className="flex items-center gap-4">
+                <div aria-hidden="true" className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[color:var(--oc-line-strong)] bg-[linear-gradient(135deg,rgba(67,231,255,0.16),rgba(139,124,255,0.2))] text-sm font-semibold tracking-[0.14em] text-white">JMD</div>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.2em] text-stone-400">A note from Juan</p>
+                  <h2 className="mt-1 text-xl font-semibold text-white">Choose the conversation that brought you here.</h2>
+                </div>
+              </div>
+              <p className="mt-6 text-base leading-7 text-stone-300">
+                This portfolio connects an executive record with the work I am building now. Start with the part most useful to you.
+              </p>
+              <nav aria-label="Guided entry points" className="mt-6 grid gap-3">
+                <a href="#impact" className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.5)] px-4 py-3 text-sm text-white transition hover:border-[color:var(--oc-cyan)] hover:text-[var(--oc-cyan)]">Assessing executive leadership →</a>
+                <a href="#selected-work" className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.5)] px-4 py-3 text-sm text-white transition hover:border-[color:var(--oc-cyan)] hover:text-[var(--oc-cyan)]">Exploring governance and risk work →</a>
+                <a href={AI_BUILD_LAB_URL} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.5)] px-4 py-3 text-sm text-white transition hover:border-[color:var(--oc-cyan)] hover:text-[var(--oc-cyan)]">Building practical AI fluency →</a>
+              </nav>
             </aside>
           </div>
         </section>
@@ -1601,9 +1607,9 @@ export default function JuanProfessionalLandingPage() {
       url: currentStandaloneArticle.canonicalUrl || currentStandaloneArticle.fullReadMoreUrl
     } : null;
     const homeMeta = {
-      title: 'Juan A. Martinez Diaz | Enterprise AI Governance & Technology Risk Executive',
-      description: 'Enterprise AI governance, technology risk, cybersecurity, operational resilience, and accountable execution for regulated and high-consequence environments.',
-      socialDescription: 'Juan A. Martinez Diaz helps regulated organizations turn AI, cybersecurity, technology risk, and operational complexity into governed decisions and resilient workflows.',
+      title: 'Juan A. Martinez Diaz | Technology Leadership, Risk & Applied AI',
+      description: 'The executive portfolio of Juan A. Martinez Diaz: technology leadership, cybersecurity, operational resilience, enterprise risk, and practical AI governance.',
+      socialDescription: "The test of technology is what happens after everyone says yes. Explore Juan Martinez's executive record and current work.",
       url: 'https://www.juanmartinez.ai/'
     };
     const methodMeta = {
