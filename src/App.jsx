@@ -465,16 +465,39 @@ function ExecutiveHomePage() {
                 <a href={AI_BUILD_LAB_URL} className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-white transition hover:border-[color:var(--oc-line-strong)]">Explore the AI Build Lab</a>
               </div>
             </div>
-            <aside className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.76)] p-7 shadow-[0_18px_50px_rgba(0,0,0,0.3),0_0_24px_rgba(67,231,255,0.08)]">
-              <div className="flex items-center gap-4">
-                <div aria-hidden="true" className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[color:var(--oc-line-strong)] bg-[linear-gradient(135deg,rgba(67,231,255,0.16),rgba(139,124,255,0.2))] text-sm font-semibold tracking-[0.14em] text-white">JMD</div>
+            <aside className="rounded-[2rem] border border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.76)] p-5 shadow-[0_18px_50px_rgba(0,0,0,0.3),0_0_24px_rgba(67,231,255,0.08)] md:p-6">
+              <figure className="decision-xray-card overflow-hidden rounded-[1.5rem] border border-[color:var(--oc-line-strong)] bg-[#050d1c]">
+                <video
+                  className="decision-xray-video aspect-video w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="/decision-xray/decision-xray-poster.png"
+                  aria-label="Decision X-Ray animation showing data, model, human, control, and evidence layers behind an AI-enabled decision."
+                >
+                  <source src="/decision-xray/decision-xray-hero.webm" type="video/webm" />
+                  <source src="/decision-xray/decision-xray-hero.mp4" type="video/mp4" />
+                </video>
+                <img
+                  className="decision-xray-poster hidden aspect-video w-full object-cover"
+                  src="/decision-xray/decision-xray-poster.png"
+                  width="1920"
+                  height="1080"
+                  alt="Decision X-Ray visual showing the five layers behind a defensible AI-enabled decision: data, model, human, control, and evidence."
+                  loading="eager"
+                />
+              </figure>
+              <div className="mt-6 flex items-center gap-4">
+                <div aria-hidden="true" className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[color:var(--oc-line-strong)] bg-[linear-gradient(135deg,rgba(255,203,107,0.16),rgba(67,231,255,0.14))] text-sm font-semibold tracking-[0.14em] text-white">JMD</div>
                 <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-stone-400">A note from Juan</p>
-                  <h2 className="mt-1 text-xl font-semibold text-white">Choose the conversation that brought you here.</h2>
+                  <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Decision X-Ray</p>
+                  <h2 className="mt-1 text-xl font-semibold text-white">Show me the decision. I&apos;ll show you the risk.</h2>
                 </div>
               </div>
-              <p className="mt-6 text-base leading-7 text-stone-300">
-                This portfolio connects an executive record with the work I am building now. Start with the part most useful to you.
+              <p className="mt-5 text-base leading-7 text-stone-300">
+                The useful question is not whether an AI-enabled workflow produced an answer. It is whether the decision can be examined through its data, model, human judgment, controls, and evidence.
               </p>
               <nav aria-label="Guided entry points" className="mt-6 grid gap-3">
                 <a href="#impact" className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.5)] px-4 py-3 text-sm text-white transition hover:border-[color:var(--oc-cyan)] hover:text-[var(--oc-cyan)]">Assessing executive leadership →</a>
