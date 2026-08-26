@@ -753,8 +753,8 @@ export default function JuanProfessionalLandingPage() {
       status: 'Flagship perspective'
     },
     {
-      title: 'A LinkedIn Profile Cannot Fix the Job Market. It Can Keep You from Disappearing.',
-      text: 'An evidence-backed guide to using AI to rebuild professional positioning, find better-fit opportunities, and govern an authorized job-application agent without surrendering truth or judgment.',
+      title: 'Why Good Experience Becomes Invisible During a Job Search',
+      text: 'A practical system for rebuilding the record, finding roles that genuinely fit, and deciding exactly where an application agent must stop.',
       href: '/career-recovery',
       status: 'New AI Build Lab feature'
     },
@@ -1046,14 +1046,14 @@ export default function JuanProfessionalLandingPage() {
   const careerRecoveryMissionUrl = `${AI_BUILD_LAB_URL}/?mission=career-recovery-system#project-studio`;
 
   const careerRecoveryArticle = {
-    title: 'A LinkedIn Profile Cannot Fix the Job Market. It Can Keep You from Disappearing.',
+    title: 'Why Good Experience Becomes Invisible During a Job Search',
     slug: 'career-recovery',
     category: 'AI Build Lab',
     author: 'Juan A. Martinez Diaz, MBA',
     tags: ['LinkedIn', 'Career Recovery', 'Job Search', 'Artificial Intelligence', 'Human Oversight'],
-    metaTitle: 'A LinkedIn Profile Cannot Fix the Job Market | Juan Martinez',
-    metaDescription: 'An evidence-backed guide to using AI to rebuild a LinkedIn profile, identify strong job matches, and control an authorized application agent without inventing experience or surrendering human judgment.',
-    socialDescription: 'A stronger profile cannot repair a difficult labor market. It can prevent credible experience from becoming invisible to recruiters and AI-assisted matching.',
+    metaTitle: 'Why Good Experience Becomes Invisible During a Job Search | Juan Martinez',
+    metaDescription: 'A practical career-recovery system for documenting experience, identifying strong job matches, and controlling AI-assisted applications.',
+    socialDescription: 'A practical system for rebuilding the record, finding roles that genuinely fit, and deciding exactly where an application agent must stop.',
     articleAnchorOrUrl: '/career-recovery',
     callToActionText: 'Build your Career Recovery Packet in AI Build Lab Mission 15:',
     fullReadMoreUrl: careerRecoveryMissionUrl,
@@ -1061,108 +1061,91 @@ export default function JuanProfessionalLandingPage() {
     showStandaloneCallToAction: true,
     originalVisiblePostingDate: 'August 24, 2026',
     publishedDateIso: '2026-08-24',
-    homepageFeaturedDate: 'August 24, 2026',
+    homepageFeaturedDate: 'August 26, 2026',
     archiveNote: 'Current AI Build Lab feature for Mission 15.',
     body: [],
     sections: [
       {
-        heading: 'The job search can make good people question the wrong thing',
+        heading: 'A career can shrink on the page',
         blocks: [
-          'I have been thinking about friends and former colleagues who are looking for work. Many of them have spent decades solving difficult problems, leading people, absorbing pressure, and doing the quiet work that keeps organizations functioning.',
-          'Then the job ends, the applications begin, and that history is compressed into a headline, an About section, and a few experience entries written years apart.',
-          'After enough silence, even capable people can begin asking whether their experience still has value.',
-          'I think that is often the wrong question. The experience may be valuable. The immediate problem may be that neither a recruiter nor a matching system can understand it quickly enough.'
+          'When I started looking for my next role, I began reading my own LinkedIn profile differently. I knew what sat behind the titles: decisions made under pressure, troubled work brought back under control, people developed, and services that had to keep running. A recruiter opening the profile could see only what I had written there.',
+          'I have watched friends and former colleagues encounter the same problem. They remember the work in full. The market receives a headline, several job titles, and bullets written at different points in a long career.',
+          'The experience is still there. The record is incomplete.'
         ]
       },
       {
-        heading: 'The labor market deserves an honest description',
+        heading: 'A difficult market is part of the story',
         blocks: [
-          'A LinkedIn profile does not control hiring budgets, reorganizations, employer caution, age bias, location requirements, or the number of qualified people competing for a position. Anyone promising that a profile rewrite will solve those conditions is selling certainty that does not exist.',
-          'The July 2026 Bureau of Labor Statistics table provides useful context. People in management, business, and financial operations occupations experienced a mean unemployment duration of 30.2 weeks and a median duration of 14 weeks. For professional and related occupations, the mean was 20.4 weeks.',
-          'Those figures do not tell us why any individual remains unemployed, but they do establish something important: a long search is not necessarily evidence that the person lacks value.',
-          'That matters because career advice becomes cruel when it quietly turns a labor-market problem into a character judgment.'
+          "A LinkedIn profile cannot change an employer's budget, remove age bias, create a remote opening, or reduce the number of qualified applicants. Advice becomes hard to respect when it treats every long search as a branding failure.",
+          'The July 2026 Bureau of Labor Statistics table reported a mean unemployment duration of 30.2 weeks for management, business, and financial operations occupations; the median was 14 weeks. Professional and related occupations showed a mean duration of 20.4 weeks. Those figures cannot explain one person\'s search, but they do show that capable people can spend a long time looking for work.',
+          'Silence from the market may tell us something about the search. It does not settle the value of the person conducting it.'
         ]
       },
       {
-        heading: 'Your profile is being read by people and systems',
+        heading: 'The profile has two readers',
         blocks: [
-          'LinkedIn Recruiter gives talent professionals more than 40 filters, including job titles, skills, locations, industries, companies, and other profile information. LinkedIn also describes AI-assisted search that can interpret hiring intent and evaluate candidate profiles more holistically than a simple keyword query.',
-          'The practical implication is not that everyone should stuff a profile with fashionable terms. It is that relevant evidence needs to be present, coherent, and connected to the work the person wants to do next.',
-          'A recruiter cannot reliably infer that an internal project involved enterprise scale, regulatory consequences, a large team, or a difficult turnaround. A matching system cannot treat a skill as central if it appears nowhere in the profile. Important experience that remains implicit is easy to miss.',
-          'A LinkedIn profile is therefore doing two jobs at once. It must be searchable enough to be found and human enough to be believed.'
+          "LinkedIn Recruiter offers more than 40 filters, including titles, skills, locations, industries, and companies. LinkedIn also uses AI-assisted search to interpret a recruiter's intent and examine candidate profiles beyond a literal keyword match.",
+          'That makes the written record important. A recruiter should not have to guess that an internal initiative operated at enterprise scale, involved regulatory judgment, or placed a large team under one leader. A matching system cannot weigh evidence that never appears in the profile.',
+          'The profile needs enough structure to be found and enough substance to be credible when a person reads it.'
         ]
       },
       {
-        heading: 'Skills matter, but proof still carries the argument',
+        heading: 'Skills need evidence behind them',
         blocks: [
-          'LinkedIn\'s 2025 Future of Recruiting research reported that 93 percent of surveyed talent-acquisition professionals considered accurate skill assessment critical to improving quality of hire. LinkedIn also reported that organizations conducting the most skills-based searches were 12 percent more likely to make a quality hire.',
-          'That is a strong reason to identify the skills that consistently appear across the roles someone is pursuing. It is not permission to copy a job description into a profile.',
-          'The better approach is to connect skills to evidence. Technology risk becomes more credible when the profile explains the environment, decision, stakeholders, and consequence. Cybersecurity leadership becomes clearer when scope, users, geography, systems, or operational impact are visible. Transformation sounds different when the reader can see what changed and why it mattered.',
-          'Keywords may help someone enter the search results. Evidence gives the recruiter a reason to keep reading.'
+          "LinkedIn's 2025 recruiting research reported that 93 percent of surveyed talent-acquisition professionals considered accurate skill assessment critical to improving quality of hire. Organizations conducting the most skills-based searches were also 12 percent more likely to make a quality hire.",
+          'Adding a longer skills list will not carry the argument. Technology risk becomes credible when the reader can see the environment, the decision, the people involved, and what followed. Leadership becomes clearer when the profile shows scope, geography, users, systems, or operating pressure. A transformation claim needs an observable change behind it.',
+          'Keywords can help a profile appear in a search. The evidence determines whether it deserves a closer look.'
         ]
       },
       {
-        heading: 'Where AI can genuinely help',
+        heading: 'AI can help organize the record',
         blocks: [
-          'A capable Large Language Model can compare a résumé, LinkedIn profile, job descriptions, accomplishments, and writing samples much faster than most people can do manually. It can identify inconsistencies, recurring requirements, missing evidence, overused language, and experience that has been buried under responsibility statements.',
-          'It can also help someone answer three useful questions:',
-          [
-            'What work can I prove I have done?',
-            'Which related roles value that evidence?',
-            'How should I describe the evidence so a recruiter can understand it without exaggeration?'
-          ],
-          'That is a good use of AI. It organizes the record and helps the person become understandable.'
+          'A capable large language model can compare a résumé, LinkedIn profile, target job descriptions, accomplishment notes, and writing samples faster than most people could manage by hand. That comparison can expose inconsistencies, missing evidence, recurring requirements, and important work buried under internal language.',
+          'I want the technology used for a narrow purpose here: establish what the person can prove, identify roles that value that experience, and describe the work clearly without enlarging it.',
+          'The person should become easier to understand, not harder to recognize.'
         ]
       },
       {
-        heading: 'Where AI can quietly damage credibility',
+        heading: 'Credibility is often lost one word at a time',
         blocks: [
-          'The same technology can create a profile that sounds impressive and is less trustworthy than the original.',
-          'It may upgrade a responsibility into an accomplishment, turn an aspiration into a title, add scale the person never supplied, or produce an executive summary assembled from the same polished phrases appearing on thousands of other profiles.',
-          'The danger is not always an obvious lie. Often it is a small shift in certainty. Contributed becomes led. Supported becomes owned. Familiar becomes expert. Targeting a role becomes presented as already having held it.',
-          'A good career prompt must therefore begin with evidence collection, not rewriting. When support is missing, the AI should ask a question or mark the gap. Fluency is not evidence.'
+          'The dangerous changes are often small. Supported becomes led. Participated becomes owned. Familiarity becomes expertise. A role someone hopes to earn is written as though it already belongs in the person\'s history.',
+          'Fluent writing makes those changes easy to miss because the finished sentence sounds plausible. Mission 15 collects evidence before it rewrites. When support is missing, the model must ask a question, flag the gap, or leave the claim out.'
         ]
       },
       {
-        heading: 'The career-recovery sequence',
+        heading: 'The order of the work matters',
         blocks: [
-          'I built Mission 15 around a simple sequence: REBUILD → MATCH → APPLY.',
-          'Rebuild means creating a Career Evidence Record and using it to produce a truthful, target-aligned LinkedIn profile. The AI audits first, asks questions, identifies the three highest-impact changes, drafts the profile, and then tests every material claim against the supplied evidence.',
-          'Match means searching current sources and scoring each job against qualifications, skills, scope, industry, leadership evidence, compensation, location, work arrangement, and other real constraints. The objective is a smaller list of stronger opportunities, not a spreadsheet filled with attractive titles.',
-          'Apply means authorizing an agent to remove repetitive administration only after the person establishes the boundaries. This is where convenience must give way to control.'
+          'Mission 15 follows three stages: REBUILD → MATCH → APPLY.',
+          'Rebuilding comes first because a matching agent working from a weak profile will reproduce the weakness. Matching follows because an attractive title is not evidence of fit. Application assistance comes last, after the person has decided which actions are authorized and which decisions remain theirs.'
         ]
       },
       {
-        heading: 'Authority must be designed before the agent starts clicking',
+        heading: 'Access to a website is not application authority',
         blocks: [
-          'An application agent should not interpret access to a website as permission to do everything available there. The job seeker must define the target roles, minimum fit score, locations, work arrangement, compensation, travel, documents, approved answers, rate limits, and whether review is required before submission.',
-          'The default should be review before submit. Standing authority can be useful later, but only inside a narrow and explicit authorization record.',
-          'Some matters should always produce a pause unless the person has provided a specific reusable instruction: legal attestations, background questions, disability or demographic disclosures, identity verification, sponsorship, relocation, unfamiliar screening questions, and anything that could materially affect eligibility.',
-          'The agent should never take an assessment or impersonate the candidate in an interview. Removing administration is assistance. Replacing the person is misrepresentation.'
+          'Before an agent begins, the user must define the target roles, minimum fit score, locations, work arrangement, compensation, travel, approved documents, approved answers, rate limits, and review requirements. Human review before submission is the starting control. Broader standing authority should be earned through a narrow, tested process.',
+          'Legal attestations, background questions, disability or demographic disclosures, identity verification, sponsorship, relocation, unfamiliar screening questions, and anything that could affect eligibility require a pause unless the person has already issued a specific instruction.',
+          'The agent may remove repetitive administration. It may not take an assessment or impersonate the candidate in an interview.'
         ]
       },
       {
-        heading: 'Do not automate discouragement',
+        heading: 'More applications can produce less useful information',
         blocks: [
-          'The worst version of this idea would send hundreds of weak applications while the person sleeps. That approach creates noise for employers, poor records for the applicant, and another stream of rejection with very little learning behind it.',
-          'A more useful system is selective. It verifies that the posting is active, explains the match, identifies the gaps, tailors only the emphasis, records every action, and stops when the facts or permissions become unclear.',
-          'Speed matters. Judgment matters more.'
+          'Sending hundreds of weak applications while someone sleeps creates noise for employers and a poor record for the applicant. It also produces rejection without teaching the person much about the market or the strength of the match.',
+          'A selective system verifies that the posting remains active, explains the match, identifies material gaps, adjusts emphasis without changing facts, records each action, and stops when the facts or authority become unclear. Administrative speed is useful only while judgment remains intact.'
         ]
       },
       {
-        heading: 'Mission 15 is meant to be shared',
+        heading: 'What the Career Recovery Packet contains',
         blocks: [
-          'Mission 15 provides three complete, model-agnostic prompts: LinkedIn Profile Recovery, Selective Job Match Agent, and Authorized Application Agent. It also includes an evidence check, application authority record, job ledger, application ledger, and downloadable Career Recovery Packet.',
-          'It does not promise anyone a job. It gives a professional a more accurate story, a more disciplined way to select opportunities, and a controlled method for using AI without surrendering truth, privacy, or judgment.',
-          'If you know someone whose experience deserves to be understood, send them the mission.',
-          'Sometimes moving forward begins by making the evidence visible again.'
+          'Mission 15 provides three complete, model-agnostic prompts: LinkedIn Profile Recovery, Selective Job Match Agent, and Authorized Application Agent. The packet also contains a Career Evidence Record, evidence check, application-authority record, job ledger, and application ledger.',
+          'No prompt can promise a job. This packet is meant to help an experienced professional present a more accurate record, concentrate on positions that genuinely fit, and control how AI is used during the application process.',
+          'I built it because I have seen how quickly a long career can become difficult to read. Good work should not disappear because the record explaining it was never rebuilt.'
         ]
       }
     ],
     sources: [
       { label: 'U.S. Bureau of Labor Statistics, “Unemployed persons by occupation, industry, and duration of unemployment” — July 2026', href: 'https://www.bls.gov/web/empsit/cpseea37.htm' },
       { label: 'LinkedIn, “LinkedIn Recruiter Features”', href: 'https://business.linkedin.com/hire/recruiter/recruiter-features' },
-      { label: 'LinkedIn Help, “Skills filter in Recruiter and Recruiter Lite”', href: 'https://www.linkedin.com/help/recruiter/answer/a593591' },
       { label: 'LinkedIn, “Future of Recruiting 2025”', href: 'https://www.linkedin.com/business/talent/blog/talent-acquisition/future-of-recruiting-2025' },
       { label: 'LinkedIn, “Advanced AI-Assisted Search: The Right Tool to Find the Right Candidates — Faster”', href: 'https://www.linkedin.com/business/talent/blog/product-tips/advanced-ai-assisted-search-the-right-tool-to-find-the-right-candidates-faster' },
       { label: 'National Institute of Standards and Technology, “AI Risk Management Framework”', href: 'https://www.nist.gov/itl/ai-risk-management-framework' }
