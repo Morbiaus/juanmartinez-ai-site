@@ -1,18 +1,20 @@
 # Mission 15 LinkedIn Launch Copy
 
-Some of the most capable people I know are looking for work. Their experience did not disappear when the job ended, but much of it became difficult for the market to see.
+When I started looking for my next role, I saw how quickly a career can be reduced to a few lines on a screen.
 
-A recruiter usually encounters a headline, several job titles, and a few bullets. The person remembers the decisions, recoveries, people, and consequences behind those lines. Matching systems work from the same compressed record. When the evidence is missing or buried under internal language, decades of useful work can look thinner than they are.
+I knew what sat behind my own titles: decisions made under pressure, troubled work brought back under control, people developed, and services that had to keep running. A recruiter opening my profile could see only what I had taken the time to put there. A matching system had even less room for inference.
 
-I am living some of this myself, which is why easy career advice bothers me. A LinkedIn rewrite will not change a hiring freeze, remove age bias, create a remote opening, or reduce the number of qualified people competing for one position. It can, however, stop a weak record from making a difficult market worse.
+I have watched friends and former colleagues run into the same problem. They know the work they performed and what depended on it, but years of experience have been compressed into a headline, several job titles, and bullets written at different points in their careers.
 
-Mission 15 of the AI Build Lab is a Career Recovery System built around three steps: REBUILD, MATCH, and APPLY.
+A stronger LinkedIn profile cannot create an opening, remove age bias, or change an employer's hiring budget. It can make sure the record does not undersell the person before a conversation ever begins.
 
-REBUILD creates a Career Evidence Record and a truthful, target-aligned profile. MATCH searches active roles and scores them against the person’s evidence, constraints, compensation, location, and actual scope. APPLY introduces automation only after the person writes down what the agent may do, what requires review, and what must always stop for a human decision.
+That is why I built Mission 15 of the AI Build Lab.
 
-The packet includes three model-agnostic prompts: LinkedIn Profile Recovery, Selective Job Match Agent, and Authorized Application Agent. It also provides an evidence check, application-authority record, job ledger, and application ledger.
+The Career Recovery System starts by rebuilding the evidence. It helps the user document actual work, scope, decisions, and results before rewriting anything. It then compares that record with active positions and eliminates roles that do not meet the person's requirements. Application assistance comes last, after the person has decided what the agent may do and where it must stop.
 
-It does not promise anyone a job. It gives experienced professionals a better record, a more disciplined search, and tighter control over how AI is used on their behalf.
+The packet includes three model-agnostic prompts: LinkedIn Profile Recovery, Selective Job Match Agent, and Authorized Application Agent. It also includes the records needed to check claims, document application authority, and track what happened.
+
+No prompt can promise someone a job. This mission is meant to help experienced professionals present a more accurate record, concentrate on positions that genuinely fit, and retain control when AI is working on their behalf.
 
 Mission 15 and the full article are here:
 https://www.juanmartinez.ai/ai-build-lab#mission-15
