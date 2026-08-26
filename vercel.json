@@ -29,6 +29,10 @@
       "destination": "/career-recovery/index.html"
     },
     {
+      "source": "/ai-build-lab",
+      "destination": "/ai-build-lab/index.html"
+    },
+    {
       "source": "/ai-human-judgment-education",
       "destination": "/ai-human-judgment-education/index.html"
     },

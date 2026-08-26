@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A LinkedIn Profile Cannot Fix the Job Market | Juan Martinez</title>
+    <title>Why Good Experience Becomes Invisible During a Job Search | Juan Martinez</title>
     <meta
       name="description"
-      content="An evidence-backed guide to using AI to rebuild a LinkedIn profile, identify strong job matches, and control an authorized application agent without inventing experience or surrendering human judgment."
+      content="Mission 15 is a practical career-recovery system for making experience visible, finding better-fit roles, and setting strict limits on AI-assisted applications."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.juanmartinez.ai/career-recovery" />
@@ -14,10 +14,10 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Juan A. Martinez Diaz" />
-    <meta property="og:title" content="A LinkedIn Profile Cannot Fix the Job Market | Juan Martinez" />
+    <meta property="og:title" content="Why Good Experience Becomes Invisible During a Job Search" />
     <meta
       property="og:description"
-      content="A stronger profile cannot repair a difficult labor market. It can prevent credible experience from becoming invisible to recruiters and AI-assisted matching."
+      content="A career-recovery system built for people whose experience is stronger than the record the market can currently see."
     />
     <meta property="og:url" content="https://www.juanmartinez.ai/career-recovery" />
     <meta property="og:image" content="https://www.juanmartinez.ai/og-image.svg" />
@@ -25,39 +25,303 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="article:published_time" content="2026-08-24" />
+    <meta property="article:modified_time" content="2026-08-26" />
     <meta property="article:author" content="Juan A. Martinez Diaz" />
     <meta property="article:section" content="AI Build Lab" />
-    <meta property="article:tag" content="LinkedIn" />
     <meta property="article:tag" content="Career Recovery" />
     <meta property="article:tag" content="Job Search" />
+    <meta property="article:tag" content="LinkedIn" />
     <meta property="article:tag" content="Artificial Intelligence" />
     <meta property="article:tag" content="Human Oversight" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="A LinkedIn Profile Cannot Fix the Job Market | Juan Martinez" />
+    <meta name="twitter:title" content="Why Good Experience Becomes Invisible During a Job Search" />
     <meta
       name="twitter:description"
-      content="A stronger profile cannot repair a difficult labor market. It can prevent credible experience from becoming invisible to recruiters and AI-assisted matching."
+      content="A career-recovery system built for people whose experience is stronger than the record the market can currently see."
     />
     <meta name="twitter:image" content="https://www.juanmartinez.ai/og-image.svg" />
     <script id="article-schema" type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "A LinkedIn Profile Cannot Fix the Job Market. It Can Keep You from Disappearing.",
-        "description": "An evidence-backed guide to using AI to rebuild a LinkedIn profile, identify strong job matches, and control an authorized application agent without inventing experience or surrendering human judgment.",
+        "headline": "Why Good Experience Becomes Invisible During a Job Search",
+        "description": "Mission 15 is a practical career-recovery system for making experience visible, finding better-fit roles, and setting strict limits on AI-assisted applications.",
         "author": { "@type": "Person", "name": "Juan A. Martinez Diaz" },
         "publisher": { "@type": "Person", "name": "Juan A. Martinez Diaz" },
         "datePublished": "2026-08-24",
-        "dateModified": "2026-08-24",
+        "dateModified": "2026-08-26",
         "mainEntityOfPage": "https://www.juanmartinez.ai/career-recovery",
         "image": "https://www.juanmartinez.ai/og-image.svg",
         "articleSection": "AI Build Lab",
-        "keywords": "LinkedIn, Career Recovery, Job Search, Artificial Intelligence, Human Oversight"
+        "keywords": "career recovery, LinkedIn, job search, artificial intelligence, human oversight"
       }
     </script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07101e;
+        --panel: rgba(11, 24, 43, 0.82);
+        --panel-strong: rgba(8, 18, 34, 0.96);
+        --line: rgba(137, 181, 228, 0.18);
+        --line-strong: rgba(82, 224, 255, 0.48);
+        --text: #f4f7fb;
+        --muted: #b4c0cf;
+        --cyan: #52e0ff;
+        --blue: #76a9ff;
+        --max: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(circle at 12% 8%, rgba(60, 138, 255, 0.13), transparent 32rem),
+          radial-gradient(circle at 88% 14%, rgba(82, 224, 255, 0.08), transparent 30rem),
+          linear-gradient(180deg, #07101e 0%, #091426 46%, #07101e 100%);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.7;
+      }
+
+      a { color: var(--cyan); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      a:hover { color: #fff; }
+      .skip-link { position: absolute; left: -9999px; top: 0; }
+      .skip-link:focus { left: 1rem; top: 1rem; z-index: 100; padding: .75rem 1rem; background: #fff; color: #07101e; border-radius: .75rem; }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 16, 30, 0.88);
+        backdrop-filter: blur(16px);
+      }
+
+      .nav {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand { color: var(--text); text-decoration: none; font-weight: 720; letter-spacing: .015em; }
+      .brand small { display: block; margin-top: .1rem; color: var(--muted); font-size: .73rem; font-weight: 500; letter-spacing: .01em; }
+      nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 1rem; font-size: .9rem; }
+      nav a { color: var(--muted); text-decoration: none; }
+
+      main { overflow: hidden; }
+      .hero, .article-shell, .mission-card, .sources, footer > div { max-width: var(--max); margin: 0 auto; }
+      .hero { padding: 5.5rem 1.5rem 3.5rem; }
+      .eyebrow { margin: 0; color: var(--cyan); font-size: .78rem; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; }
+      h1 { max-width: 930px; margin: 1rem 0 0; font-size: clamp(2.5rem, 6vw, 5.4rem); line-height: 1.02; letter-spacing: -.045em; }
+      .dek { max-width: 800px; margin: 1.6rem 0 0; color: #d8e1ec; font-size: clamp(1.15rem, 2.2vw, 1.55rem); line-height: 1.55; }
+      .byline { margin-top: 1.8rem; color: var(--muted); font-size: .95rem; }
+      .byline strong { color: var(--text); }
+
+      .article-shell { padding: 1rem 1.5rem 4rem; display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 3rem; align-items: start; }
+      article { min-width: 0; }
+      article section { padding: 2rem 0; border-top: 1px solid var(--line); }
+      article section:first-child { border-top: 0; padding-top: 0; }
+      h2 { margin: 0 0 1rem; font-size: clamp(1.55rem, 3vw, 2.2rem); line-height: 1.24; letter-spacing: -.02em; }
+      p { margin: 0 0 1.15rem; color: #d3dce8; font-size: 1.06rem; }
+      p:last-child { margin-bottom: 0; }
+      .pullquote { margin: 2rem 0; padding: 1.3rem 1.5rem; border-left: 3px solid var(--cyan); background: rgba(82, 224, 255, 0.06); color: #fff; font-size: 1.25rem; line-height: 1.5; }
+      .sequence { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+      .sequence div { padding: 1.1rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--panel); }
+      .sequence strong { display: block; color: var(--cyan); letter-spacing: .08em; font-size: .79rem; }
+      .sequence span { display: block; margin-top: .5rem; color: #e5ebf3; }
+      ul { margin: .5rem 0 1.25rem; padding-left: 1.25rem; color: #d3dce8; }
+      li { margin: .5rem 0; }
+
+      aside { position: sticky; top: 7rem; border: 1px solid var(--line); border-radius: 1.25rem; background: var(--panel); padding: 1.25rem; }
+      aside h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .12em; color: var(--cyan); }
+      aside ol { margin: .75rem 0 0; padding-left: 1.25rem; }
+      aside li { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+      aside a { color: inherit; text-decoration: none; }
+
+      .mission-wrap { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(8, 18, 34, 0.56); }
+      .mission-card { padding: 4rem 1.5rem; }
+      .mission-card-inner { border: 1px solid var(--line-strong); border-radius: 1.75rem; background: var(--panel-strong); padding: clamp(1.5rem, 4vw, 3rem); box-shadow: 0 24px 80px rgba(0,0,0,.3); }
+      .mission-card h2 { max-width: 760px; font-size: clamp(2rem, 4vw, 3.3rem); }
+      .mission-card p { max-width: 780px; }
+      .actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.6rem; }
+      .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: .78rem 1.1rem; border: 1px solid var(--line-strong); border-radius: .9rem; text-decoration: none; font-weight: 720; }
+      .button-primary { background: linear-gradient(90deg, var(--cyan), var(--blue)); color: #06101f; }
+      .button-secondary { color: #fff; background: transparent; }
+
+      .sources { padding: 3rem 1.5rem 4rem; }
+      .sources h2 { font-size: 1.45rem; }
+      .source-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .85rem; }
+      .source-grid a { display: block; padding: 1rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(8,18,34,.58); color: #d6e1ed; text-decoration: none; }
+      .source-grid small { display: block; margin-top: .35rem; color: var(--muted); }
+
+      footer { border-top: 1px solid var(--line); background: rgba(6, 14, 27, .7); }
+      footer > div { padding: 1.6rem 1.5rem; display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .85rem; }
+
+      @media (max-width: 880px) {
+        .article-shell { grid-template-columns: 1fr; }
+        aside { position: static; order: -1; }
+        .sequence, .source-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 640px) {
+        .nav { align-items: flex-start; }
+        nav { gap: .65rem; font-size: .8rem; }
+        .hero { padding-top: 4rem; }
+        footer > div { flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <a class="skip-link" href="#article">Skip to article</a>
+    <header>
+      <div class="nav">
+        <a class="brand" href="/">Juan A. Martinez Diaz, MBA<small>AI governance, technology risk, resilience, and executive judgment</small></a>
+        <nav aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/ai-build-lab">AI Build Lab</a>
+          <a href="/martinez-method">M.A.R.T.I.N.E.Z. Method</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">AI Build Lab · Mission 15</p>
+        <h1 id="page-title">Why Good Experience Becomes Invisible During a Job Search</h1>
+        <p class="dek">A practical system for rebuilding the record, finding roles that genuinely fit, and deciding exactly where an application agent must stop.</p>
+        <p class="byline"><strong>Juan A. Martinez Diaz, MBA</strong> · Published August 24, 2026 · Updated August 26, 2026</p>
+      </section>
+
+      <div class="article-shell">
+        <article id="article">
+          <section id="compressed-record">
+            <h2>The market sees a compressed record</h2>
+            <p>I have watched capable people enter a job search carrying decades of useful experience and almost no practical way to make that history legible to the market. I am living some of it myself.</p>
+            <p>The person remembers the decisions, the damaged projects they helped recover, the people they developed, and the work that kept an organization functioning when conditions were poor. A recruiter usually encounters a headline, several job titles, and a handful of bullets. A matching system sees only what the profile gives it permission to see.</p>
+            <p>That compression creates a real problem. Valuable experience can remain present in the person and absent from the record used to evaluate them.</p>
+          </section>
+
+          <section id="not-a-verdict">
+            <h2>A long search is not a verdict on the person</h2>
+            <p>A profile cannot change a hiring freeze, reorganize an employer, remove age bias, create a remote opening, or reduce the number of qualified people competing for one position. Career advice becomes insulting when it treats those conditions as a confidence problem or a failure to use enough keywords.</p>
+            <p>The July 2026 Bureau of Labor Statistics table shows a mean unemployment duration of 30.2 weeks for management, business, and financial operations occupations; the median was 14 weeks. Professional and related occupations showed a mean duration of 20.4 weeks. Those figures do not explain any individual search, but they make one point difficult to dismiss: capable people can spend a long time looking for work.</p>
+            <p class="pullquote">Silence from the market is information about the search. It is not a reliable measurement of a person’s value.</p>
+          </section>
+
+          <section id="people-and-systems">
+            <h2>Recruiters and matching systems read different signals</h2>
+            <p>LinkedIn Recruiter offers more than 40 advanced filters, including titles, skills, locations, industries, and companies. LinkedIn also describes AI-assisted search that interprets hiring intent and evaluates profiles more broadly than a literal keyword query.</p>
+            <p>This does not justify filling a profile with borrowed language. It does mean that the evidence must be visible. A recruiter cannot be expected to infer that an internal initiative affected an enterprise, required regulatory judgment, involved a large team, or prevented a serious operational consequence. A system cannot weigh experience it cannot locate.</p>
+            <p>The profile has to work for both audiences. It must be structured well enough to be found and specific enough to survive human scrutiny once it is opened.</p>
+          </section>
+
+          <section id="proof">
+            <h2>Proof carries more weight than polished vocabulary</h2>
+            <p>LinkedIn’s 2025 recruiting research reported that 93 percent of surveyed talent-acquisition professionals considered accurate skill assessment critical to improving quality of hire. Organizations conducting the most skills-based searches were also 12 percent more likely to make a quality hire.</p>
+            <p>The strongest response is not a longer skills list. It is a better evidence record. Technology risk becomes credible when the reader can see the environment, the decision, the stakeholders, and the consequence. Leadership becomes clearer when scope, geography, users, systems, or operating pressure are visible. Transformation needs an observable change, not an impressive adjective.</p>
+            <p>Keywords may earn a place in the search results. Evidence determines whether the reader stays.</p>
+          </section>
+
+          <section id="ai-help">
+            <h2>AI is useful when it organizes the record</h2>
+            <p>A capable large language model can compare a résumé, LinkedIn profile, target job descriptions, accomplishment notes, and writing samples much faster than most people can do manually. It can find inconsistencies, missing evidence, recurring requirements, weak responsibility statements, and experience that has been buried under internal language.</p>
+            <p>That work is useful when it answers practical questions: What can this person prove? Which roles value that proof? How can the experience be described clearly without enlarging it?</p>
+            <p>The technology should make the person easier to understand. It should not manufacture a more marketable version of the person.</p>
+          </section>
+
+          <section id="credibility">
+            <h2>The small exaggerations are usually the dangerous ones</h2>
+            <p>Most credibility damage does not begin with a spectacular fabrication. It begins with a slight change in certainty. Supported becomes led. Participated becomes owned. Familiarity becomes expertise. A desired future role is written as though it were already part of the person’s history.</p>
+            <p>Fluent writing can hide those changes because the result sounds plausible. Mission 15 requires the model to collect evidence before rewriting and to mark unsupported claims instead of completing them. The rule is straightforward: when the record does not support a statement, the system asks a question or leaves the claim out.</p>
+          </section>
+
+          <section id="sequence">
+            <h2>Mission 15 follows the work in the order it should occur</h2>
+            <div class="sequence" aria-label="Mission 15 sequence">
+              <div><strong>REBUILD</strong><span>Create a Career Evidence Record and use it to produce a truthful, target-aligned profile.</span></div>
+              <div><strong>MATCH</strong><span>Score active roles against evidence, constraints, compensation, location, and actual scope.</span></div>
+              <div><strong>APPLY</strong><span>Authorize limited administrative help only after the boundaries have been written down.</span></div>
+            </div>
+            <p>Rebuilding comes first because an agent cannot match accurately from a weak record. Matching comes before application because volume is not a substitute for fit. Application automation comes last because access to a website is not authority to take every available action.</p>
+          </section>
+
+          <section id="authority">
+            <h2>An application agent needs written authority</h2>
+            <p>The user must define the target roles, minimum fit score, locations, work arrangement, compensation, travel, approved documents, approved answers, rate limits, and whether review is required before submission. The default should be human review until the process has earned narrower standing authority.</p>
+            <p>Some questions deserve a mandatory pause unless the person has issued a specific reusable instruction. Legal attestations, background questions, disability or demographic disclosures, identity verification, sponsorship, relocation, unfamiliar screening questions, and anything that may affect eligibility should not be guessed.</p>
+            <p>The agent must never take an assessment or impersonate the candidate in an interview. Removing repetitive administration is assistance. Replacing the person is misrepresentation.</p>
+          </section>
+
+          <section id="volume">
+            <h2>Application volume can automate discouragement</h2>
+            <p>A system that submits hundreds of weak applications while someone sleeps is not helping. It creates noise for employers, poor records for the applicant, and a larger stream of rejection with little learning behind it.</p>
+            <p>A selective system verifies that the posting is active, explains the match, identifies material gaps, tailors only the emphasis, records each action, and stops when facts or permissions become unclear. The purpose is not to move faster than judgment. It is to remove administration without losing judgment.</p>
+          </section>
+
+          <section id="packet">
+            <h2>What Mission 15 provides</h2>
+            <p>The Career Recovery Packet contains three complete, model-agnostic prompts: LinkedIn Profile Recovery, Selective Job Match Agent, and Authorized Application Agent. It also includes a Career Evidence Record, evidence check, application-authority record, job ledger, and application ledger.</p>
+            <p>It does not promise a job. It gives a professional a more accurate record, a disciplined way to choose opportunities, and a controlled method for using AI without handing over truth, privacy, or consequential judgment.</p>
+            <p>I built it for people whose experience is stronger than the record the market can currently see.</p>
+          </section>
+        </article>
+
+        <aside aria-label="Article contents">
+          <h2>In this article</h2>
+          <ol>
+            <li><a href="#compressed-record">The compressed record</a></li>
+            <li><a href="#not-a-verdict">A long search</a></li>
+            <li><a href="#people-and-systems">People and systems</a></li>
+            <li><a href="#proof">Proof</a></li>
+            <li><a href="#ai-help">Useful AI</a></li>
+            <li><a href="#credibility">Credibility</a></li>
+            <li><a href="#sequence">Rebuild, Match, Apply</a></li>
+            <li><a href="#authority">Written authority</a></li>
+            <li><a href="#volume">Selective applications</a></li>
+            <li><a href="#packet">The packet</a></li>
+          </ol>
+        </aside>
+      </div>
+
+      <section class="mission-wrap" aria-labelledby="mission-title">
+        <div class="mission-card">
+          <div class="mission-card-inner">
+            <p class="eyebrow">Build the system</p>
+            <h2 id="mission-title">Mission 15: Career Recovery System</h2>
+            <p>Open the visible mission catalog, review the guardrails, and launch the guided Career Recovery System in the AI Build Lab.</p>
+            <div class="actions">
+              <a class="button button-primary" href="/ai-build-lab#mission-15">View Mission 15 in the catalog</a>
+              <a class="button button-secondary" href="https://ai-build-lab.morbiaus.chatgpt.site/?mission=career-recovery-system#project-studio">Open the guided mission</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sources" aria-labelledby="sources-title">
+        <p class="eyebrow">Evidence</p>
+        <h2 id="sources-title">Sources used for the market and recruiting claims</h2>
+        <div class="source-grid">
+          <a href="https://www.bls.gov/web/empsit/cpseea37.htm">U.S. Bureau of Labor Statistics<small>Unemployed people by occupation, industry, and duration of unemployment — July 2026</small></a>
+          <a href="https://business.linkedin.com/hire/recruiter/recruiter-features">LinkedIn Recruiter<small>Recruiter features and 40+ advanced filters</small></a>
+          <a href="https://www.linkedin.com/business/talent/blog/talent-acquisition/future-of-recruiting-2025">LinkedIn Future of Recruiting 2025<small>Skills assessment and quality-of-hire findings</small></a>
+          <a href="https://www.linkedin.com/business/talent/blog/product-tips/advanced-ai-assisted-search-the-right-tool-to-find-the-right-candidates-faster">LinkedIn Advanced AI-Assisted Search<small>How hiring intent and candidate profiles are evaluated</small></a>
+          <a href="https://www.nist.gov/itl/ai-risk-management-framework">National Institute of Standards and Technology<small>AI Risk Management Framework</small></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <span>© 2026 Juan A. Martinez Diaz. All rights reserved.</span>
+        <span>Human judgment remains accountable for every consequential decision.</span>
+      </div>
+    </footer>
+    <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
