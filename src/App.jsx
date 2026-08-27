@@ -629,7 +629,7 @@ function ExecutiveHomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a href="mailto:sgmmartinez@gmail.com" onClick={() => recordContact('email')} className="rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f]">Email Juan</a>
               <a href="mailto:sgmmartinez@gmail.com?subject=Project%20Sentinel%20Discussion" onClick={() => recordContact('sentinel')} className="rounded-2xl border border-[color:var(--oc-line)] px-5 py-3 text-sm font-medium text-white hover:border-[color:var(--oc-line-strong)]">Request a Sentinel Discussion</a>
-              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" onClick={() => recordContact('linkedin')} className="rounded-2xl border border-[color:var(--oc-line)] px-5 py-3 text-sm font-medium text-white hover:border-[color:var(--oc-line-strong)]">LinkedIn Profile</a>
+              <a href="https://www.linkedin.com/in/juan-a-martinez-diaz-50943411" onClick={() => recordContact('linkedin')} className="rounded-2xl border border-[color:var(--oc-line)] px-5 py-3 text-sm font-medium text-white hover:border-[color:var(--oc-line-strong)]">LinkedIn Profile</a>
             </div>
           </div>
         </section>
@@ -1944,7 +1944,7 @@ export default function JuanProfessionalLandingPage() {
                   Read the flagship perspective
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411"
+                  href="https://www.linkedin.com/in/juan-a-martinez-diaz-50943411"
                   className="rounded-2xl border border-[color:var(--oc-line)] bg-[rgba(10,18,37,0.54)] px-5 py-3 text-sm font-medium text-[var(--oc-text)] transition hover:border-[color:var(--oc-line-strong)]"
                 >
                   Connect on LinkedIn
@@ -2112,7 +2112,7 @@ export default function JuanProfessionalLandingPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-stone-200">
               <a href="mailto:sgmmartinez@gmail.com" onClick={() => trackContactIntent('email_click')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">Email: sgmmartinez@gmail.com</a>
-              <a href="https://www.linkedin.com/in/juan-martinez-diaz-mba-itil-50943411" onClick={() => trackContactIntent('linkedin_profile')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
+              <a href="https://www.linkedin.com/in/juan-a-martinez-diaz-50943411" onClick={() => trackContactIntent('linkedin_profile')} className="rounded-2xl border border-stone-700 px-4 py-3 transition hover:border-stone-500">LinkedIn profile</a>
             </div>
             <p className="mt-6 max-w-3xl text-xs leading-6 text-stone-500">
               This site uses privacy-conscious analytics to understand page visits, traffic sources, campaign performance, and general engagement. It does not use advertising trackers, remarketing pixels, or LinkedIn Insight Tag.
