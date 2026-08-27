@@ -54,7 +54,7 @@ const AI_BUILD_LAB_URL = 'https://ai-build-lab.morbiaus.chatgpt.site';
 
 const martinezMethodMetadata = {
   title: 'The M.A.R.T.I.N.E.Z. Method | Practical AI Governance Framework | Juan Martinez',
-  description: 'The M.A.R.T.I.N.E.Z. Method is a practical framework created by Juan A. Martinez Diaz for using AI with judgment, structure, validation, human oversight, and accountability.',
+  description: 'The M.A.R.T.I.N.E.Z. Method v1.0 is a practical framework created by Juan A. Martinez Diaz for preserving evidence, exceptions, accountable human judgment, and meaningful human control in AI-enabled work.',
   canonical: 'https://juanmartinez.ai/martinez-method'
 };
 
@@ -187,43 +187,43 @@ function MartinezMethodPage() {
   const methodItems = [
     {
       letter: 'M',
-      title: 'Map the Problem',
-      text: 'Define the actual business problem, desired outcome, stakeholders, constraints, and risks before introducing AI.'
+      title: 'Map',
+      text: 'Define the outcome, evidence boundary, affected people, constraints, and decisions before introducing AI.'
     },
     {
       letter: 'A',
-      title: 'Ask Better Questions',
-      text: 'Structure prompts and inquiries around the decision or outcome required rather than simply asking AI to produce an answer.'
+      title: 'Analyze',
+      text: 'Examine the actors, systems, sources, policies, dependencies, exceptions, and current performance of the work.'
     },
     {
       letter: 'R',
-      title: 'Refine the Context',
-      text: 'Provide the policies, data, assumptions, boundaries, examples, and business context necessary for the AI to perform useful work.'
+      title: 'Reconstruct',
+      text: 'Design a better decision path and identify what belongs with people, deterministic automation, AI, or bounded agents.'
     },
     {
       letter: 'T',
-      title: 'Transform the Output',
-      text: 'Turn raw AI-generated material into something operationally useful—a decision brief, workflow, analysis, recommendation, control assessment, or other business artifact.'
+      title: 'Test',
+      text: 'Challenge the proposed workflow with realistic scenarios, conflicting evidence, edge cases, and failure conditions.'
     },
     {
       letter: 'I',
-      title: 'Inspect the Result',
-      text: 'Evaluate accuracy, evidence, assumptions, bias, unsupported claims, omissions, and whether the output actually addresses the original problem.'
+      title: 'Instrument',
+      text: 'Capture sources, model and prompt versions, tool actions, approvals, exceptions, overrides, and final disposition.'
     },
     {
       letter: 'N',
-      title: 'Narrow the Workflow',
-      text: 'Determine which portions of the work are appropriate for AI, which require automation controls, and which must remain subject to human judgment.'
+      title: 'Navigate',
+      text: 'Route uncertainty, conflicts, exceptions, and consequential decisions to named people with the authority to intervene.'
     },
     {
       letter: 'E',
-      title: 'Explain the Value',
-      text: 'Be able to articulate what AI improved, what risk it introduced, what evidence supports the result, and why the outcome should be trusted.'
+      title: 'Evaluate',
+      text: 'Assess quality, time, evidence, human intervention, risk, and operational outcome before deciding whether the workflow is usable.'
     },
     {
       letter: 'Z',
-      title: 'Zero-Trust the Output',
-      text: 'Never treat AI-generated output as correct merely because it appears complete or authoritative. Validate material facts, evidence, sources, and consequential decisions before relying on them.'
+      title: 'Zero Uncontrolled Autonomy',
+      text: 'Keep consequential action within explicit authority, monitoring, stop conditions, fallback, recovery, and accountable human control.'
     }
   ];
 
@@ -257,7 +257,7 @@ function MartinezMethodPage() {
                 Artificial intelligence can accelerate work, but acceleration without judgment can amplify poor assumptions, weak evidence, and bad decisions.
               </p>
               <p>
-                The M.A.R.T.I.N.E.Z. Method is a practical framework for working with AI deliberately. It provides a repeatable way to frame problems, improve context, evaluate outputs, refine workflows, and maintain human accountability throughout the process.
+                The M.A.R.T.I.N.E.Z. Method v1.0 is a repeatable discipline for examining work before assigning authority to AI. It keeps evidence, exceptions, intervention, recovery, and accountable human judgment inside the decision path.
               </p>
             </div>
           </div>
@@ -271,7 +271,7 @@ function MartinezMethodPage() {
           <div className="mx-auto max-w-6xl px-6 py-20">
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Method</p>
-              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Eight steps for disciplined AI work.</h2>
+              <h2 className="mt-3 text-3xl font-semibold md:text-4xl">Eight steps for disciplined, accountable AI work.</h2>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {methodItems.map((item) => (
@@ -302,7 +302,7 @@ function MartinezMethodPage() {
                 As AI progresses from individual productivity tools to automated and agentic workflows, the same principles become increasingly important.
               </p>
               <p>
-                The M.A.R.T.I.N.E.Z. Method provides a practical bridge between using AI and governing AI: establishing context, maintaining evidence, defining control boundaries, preserving human oversight, and validating outcomes before consequential action occurs.
+                The M.A.R.T.I.N.E.Z. Method moves from individual AI use into governed workflows by making evidence, exceptions, intervention, recovery, and accountable ownership part of the operating design.
               </p>
             </div>
           </div>
@@ -348,19 +348,19 @@ function ExecutiveHomePage() {
       text: 'Enterprise operations, cybersecurity oversight, and operational readiness across the United States and Caribbean.'
     },
     {
+      metric: '≈250,000',
+      title: 'Users supported',
+      text: 'Army enterprise technology environments spanning classified and unclassified operations.'
+    },
+    {
+      metric: '50 states + Caribbean',
+      title: 'Distributed mission-critical scope',
+      text: 'Technology services, continuity, cybersecurity oversight, modernization, and operational readiness.'
+    },
+    {
       metric: 'Second line',
-      title: 'Independent risk oversight',
-      text: 'Technology and information-security risk, operational resilience, controls, RCSA, issue remediation, and executive reporting.'
-    },
-    {
-      metric: 'Enterprise-scale',
-      title: 'Regulated-industry experience',
-      text: 'Practical leadership in environments where evidence quality, control design, and accountable decisions must withstand scrutiny.'
-    },
-    {
-      metric: 'Cross-functional',
-      title: 'Leadership alignment',
-      text: 'Work across cybersecurity, legal, privacy, compliance, technology, operations, and business leadership.'
+      title: 'Banking risk oversight',
+      text: 'Technology and information-security risk, operational resilience, controls, RCSA, and remediation at Wells Fargo.'
     }
   ];
 
@@ -382,13 +382,19 @@ function ExecutiveHomePage() {
     {
       eyebrow: 'Decision discipline',
       title: 'The M.A.R.T.I.N.E.Z. Method',
-      text: 'A practical framework for using artificial intelligence with judgment, structure, verification, and accountability—from mapping the problem through zero-trusting the output.',
+      text: 'A practical framework for preserving evidence, exceptions, accountable human judgment, and meaningful human control across AI-enabled work.',
       linkText: 'Explore the Method',
       href: '/martinez-method'
     }
   ];
 
   const insights = [
+    {
+      date: 'August 17, 2026',
+      title: 'When AI Joins the Cyber Defense Team: What Changes in a Manufacturing Environment?',
+      text: 'Using AI to accelerate investigation without surrendering evidence, operational judgment, or human authority.',
+      href: 'https://www.linkedin.com/pulse/when-ai-joins-cyber-defense-team-what-changes-juan-a--offve'
+    },
     {
       date: 'July 20, 2026',
       title: 'Stop Starting with AI. Start with the Workflow.',
@@ -400,31 +406,25 @@ function ExecutiveHomePage() {
       title: 'The Artificial Intelligence Fluency Premium Is Becoming the Real Jobs Story',
       text: 'The emerging advantage for professionals who combine AI fluency with domain context, verification, and sound judgment.',
       href: '/ai-fluency-premium'
-    },
-    {
-      date: 'May 29, 2026',
-      title: 'AI Is Not an Answer Machine. It Is a Test of Human Judgment.',
-      text: 'A research-backed argument for using AI as a disciplined partner in thought rather than a substitute for human agency.',
-      href: '/ai-human-judgment-education'
     }
   ];
 
   const operatingPrinciples = [
     {
       title: 'Start with the workflow',
-      text: 'Before selecting a model or agent, map the work: the purpose, actors, decisions, systems, policies, data, approvals, evidence, and exceptions. That reveals whether AI is addressing a real operating problem or simply being placed on top of a process the organization does not yet understand.'
+      text: 'Map the purpose, decisions, systems, policies, approvals, evidence, and exceptions before selecting a model or agent.'
     },
     {
       title: 'Make authority explicit',
-      text: 'Retrieving, summarizing, drafting, routing, recommending, deciding, and acting are different levels of authority. A governed workflow names which actions are permitted, which remain prohibited, who approves consequential decisions, and what conditions require the system to stop or escalate.'
+      text: 'Name what the system may retrieve, draft, route, recommend, decide, or act on—and where it must stop or escalate.'
     },
     {
       title: 'Engineer the evidence trail',
-      text: 'A clean answer can hide a weak decision path. Important workflows should retain the sources used, model or system version, tool actions, confidence or uncertainty, exception path, human review, override, and final disposition so the result can be reconstructed and challenged later.'
+      text: 'Retain sources, model and prompt versions, tool actions, uncertainty, exceptions, human review, overrides, and final disposition.'
     },
     {
       title: 'Design for intervention and recovery',
-      text: 'Human oversight is useful only when people can recognize a problem and still have authority to intervene. Strong operating models define monitoring, thresholds, revocation, fallback, recovery, and accountable ownership before automation reaches customers, regulated obligations, entitlements, payments, or operationally sensitive systems.'
+      text: 'Define monitoring, intervention authority, stop conditions, fallback, recovery, and accountable ownership before consequential use.'
     }
   ];
 
@@ -436,7 +436,7 @@ function ExecutiveHomePage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 lg:flex-row lg:items-center lg:justify-between">
           <a href="#top" className="min-w-0">
             <div className="text-lg font-semibold tracking-wide text-white md:text-xl">Juan A. Martinez Diaz, MBA</div>
-            <div className="mt-1 text-sm text-[var(--oc-muted)]">Technology leadership, risk, resilience, and applied AI</div>
+            <div className="mt-1 text-sm text-[var(--oc-muted)]">Technology &amp; Cybersecurity Risk Executive | Banking, AI Governance &amp; Operational Risk</div>
           </a>
           <nav aria-label="Primary" className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-[var(--oc-muted)]">
             <a href="#about" className="hover:text-[var(--oc-cyan)] focus:text-[var(--oc-cyan)]">About</a>
@@ -453,12 +453,12 @@ function ExecutiveHomePage() {
         <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--oc-cyan)]">Juan A. Martinez Diaz · Executive Portfolio</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-[var(--oc-cyan)]">Technology &amp; Cybersecurity Risk Executive | Banking, AI Governance &amp; Operational Risk</p>
               <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight text-white md:text-6xl">
                 The test of technology is what happens after everyone says yes.
               </h1>
               <p className="mt-7 max-w-3xl text-lg leading-9 text-stone-300">
-                I have spent my career on that side of the decision—leading large-scale IT, protecting critical operations, challenging technology risk, and turning emerging capabilities into something an organization can actually depend on.
+                I have led large-scale technology operations, protected critical services, and challenged technology risk where reliability, evidence, and accountable decisions matter.
               </p>
               <div className="mt-9 flex flex-wrap gap-4">
                 <a href="#impact" className="rounded-2xl border border-[color:var(--oc-line-strong)] bg-[linear-gradient(90deg,var(--oc-cyan),var(--oc-blue))] px-5 py-3 text-sm font-medium text-[#06101f] shadow-[0_0_24px_rgba(67,231,255,0.18)] transition hover:-translate-y-0.5">See the Work</a>
@@ -532,16 +532,13 @@ function ExecutiveHomePage() {
             </div>
             <div className="space-y-5 text-base leading-8 text-stone-300 md:text-lg">
               <p>
-                My work sits where enterprise AI governance, technology and information-security risk, operational resilience, cybersecurity, and accountable execution meet. I focus on what happens when AI enters a real workflow: who authorized it, what information shaped the result, which tools it could access, where human judgment remained, how exceptions were handled, and what evidence survived.
+                My work covers enterprise AI governance, technology and information-security risk, operational resilience, cybersecurity, and accountable execution. I focus on the authority, evidence, exceptions, and human judgment inside a real workflow.
               </p>
               <p>
                 That perspective is grounded in regulated financial services. As a Vice President in Wells Fargo&apos;s second line of defense, I provided independent oversight of technology and information-security risk, operational resilience, controls, Risk and Control Self-Assessment, issue remediation, and executive risk reporting. The work required translating complex risk into decisions leaders could act on without losing the evidence behind them.
               </p>
               <p>
-                My leadership foundation also includes military technology leadership as a Sergeant Major and responsibility for a 160-person technology organization supporting operations across the United States and Caribbean. That experience shaped a practical view of resilience: plans, controls, and governance matter only when they still work under pressure.
-              </p>
-              <p>
-                I now apply those lessons to governed agentic systems, AI-enabled risk workflows, and cybersecurity and operational-technology learning scenarios. The objective is disciplined adoption—clear authority, bounded tools, reliable evidence, human intervention where consequences require it, and recovery when systems behave differently than expected.
+                My leadership foundation also includes military technology leadership as a Sergeant Major and responsibility for a 160-person organization supporting approximately 250,000 users across all 50 states and the Caribbean. That experience shaped a practical view of resilience: plans and controls matter only when they still work under pressure.
               </p>
             </div>
           </div>
@@ -551,11 +548,8 @@ function ExecutiveHomePage() {
           <div className="mx-auto max-w-6xl px-6 py-20">
             <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Selected Work</p>
             <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-white md:text-4xl">Practical systems for making judgment and accountability visible.</h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-stone-300">
-              These projects turn governance from policy language into something people can examine, challenge, test, and improve.
-            </p>
-            <p className="mt-4 max-w-4xl text-base leading-8 text-stone-300">
-              Together, they form a connected body of work. The M.A.R.T.I.N.E.Z. Method provides the decision discipline. The AI Build Lab lets professionals practice that discipline through bounded, tool-neutral missions. Project Sentinel extends the same thinking into workflow comparison and simulation, where teams can examine authority, evidence, exceptions, human intervention, and operational outcomes before recommending broader automation.
+            <p className="mt-5 max-w-4xl text-lg leading-8 text-stone-300">
+              The M.A.R.T.I.N.E.Z. Method provides the discipline, the AI Build Lab provides guided practice, and Project Sentinel provides a conceptual environment for examining authority, evidence, exceptions, and human intervention before broader automation.
             </p>
             <div className="mt-10 grid gap-6 lg:grid-cols-3">
               {selectedWork.map((item, index) => (
@@ -574,7 +568,7 @@ function ExecutiveHomePage() {
           <p className="text-sm uppercase tracking-[0.2em] text-stone-400">Operating Principles</p>
           <h2 className="mt-3 max-w-4xl text-3xl font-semibold text-white md:text-4xl">Governance becomes real inside the decision path.</h2>
           <p className="mt-5 max-w-4xl text-lg leading-8 text-stone-300">
-            Policies and committees matter, but they do not govern an AI-enabled workflow by themselves. Governance becomes operational through permissions, authoritative-source boundaries, named decision rights, approval gates, evidence capture, monitoring, escalation, and recovery. These principles guide how I evaluate emerging technology in environments where a polished output is not enough—the organization must also be able to explain why the work moved forward and who remained accountable.
+            Policies govern intent. These operating principles make authority, evidence, intervention, and recovery visible inside the work.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {operatingPrinciples.map((item) => (
@@ -584,9 +578,6 @@ function ExecutiveHomePage() {
               </article>
             ))}
           </div>
-          <p className="mt-10 max-w-4xl text-base leading-8 text-stone-300 md:text-lg">
-            For executive teams, this creates a more useful conversation. Instead of asking whether the organization has an AI policy, leaders can ask what problem the workflow solves, what authority moved to the system, which evidence supports the result, where people must intervene, how performance will be monitored, and what happens when the operating model no longer behaves as intended. Those questions turn governance into a practical management discipline.
-          </p>
         </section>
 
         <section id="insights" className="border-y border-[color:var(--oc-line)] bg-[rgba(8,16,31,0.35)]">
