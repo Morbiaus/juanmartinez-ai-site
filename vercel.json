@@ -29,6 +29,10 @@
       "destination": "/career-recovery/index.html"
     },
     {
+      "source": "/translate-your-service",
+      "destination": "/translate-your-service/index.html"
+    },
+    {
       "source": "/ai-build-lab",
       "destination": "/ai-build-lab/index.html"
     },
