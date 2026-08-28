@@ -766,6 +766,12 @@ export default function JuanProfessionalLandingPage() {
       status: 'New AI Build Lab feature'
     },
     {
+      title: 'The Work Did Not Become Smaller When the Uniform Came Off',
+      text: 'Why military experience is difficult to translate, and how Mission 16 helps Veterans build a civilian career record they can defend.',
+      href: '/translate-your-service',
+      status: 'New AI Build Lab feature'
+    },
+    {
       title: 'Why Control Environments Fail Under Pressure',
       text: 'A practical look at the gap between elegant control language and what actually happens inside stressed operating environments.',
       href: '#coming-next',
