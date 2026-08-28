@@ -2,6 +2,15 @@ export const contentAnalyticsDashboardPath = '/admin/content-analytics';
 
 export const articleAnalyticsConfig = [
   {
+    title: 'The Work Did Not Become Smaller When the Uniform Came Off',
+    slug: 'translate-your-service',
+    published_date: '2026-08-28',
+    category: 'AI Build Lab',
+    campaign: 'translate_your_service_mission_16',
+    author: 'Juan A. Martinez Diaz, MBA',
+    estimated_read_time: '8 min'
+  },
+  {
     title: 'A LinkedIn Profile Cannot Fix the Job Market. It Can Keep You from Disappearing.',
     slug: 'career-recovery',
     published_date: '2026-08-24',
