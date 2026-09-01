@@ -1811,7 +1811,7 @@ export default function JuanProfessionalLandingPage() {
           datePublished: currentStandaloneArticle.publishedDateIso || (currentStandaloneArticle.originalVisiblePostingDate === 'June 22, 2026' ? '2026-06-22' : '2026-05-29'),
           dateModified: currentStandaloneArticle.publishedDateIso || (currentStandaloneArticle.originalVisiblePostingDate === 'June 22, 2026' ? '2026-06-22' : '2026-05-29'),
           mainEntityOfPage: articleMeta.url,
-          image: 'https://www.juanmartinez.ai/og-image.svg',
+          image: 'https://www.juanmartinez.ai/decision-xray/decision-xray-poster.png',
           articleSection: currentStandaloneArticle.category,
           keywords: currentStandaloneArticle.tags.join(', ')
         });
